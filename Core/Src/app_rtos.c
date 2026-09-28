@@ -1,5 +1,4 @@
-/* app_rtos.c  -> Core/Src/ 에 넣기
- * FreeRTOS Day 1: LED / Heartbeat(UART) / Producer -> Queue -> Consumer(UART)
+/* FreeRTOS Day 1: LED / Heartbeat(UART) / Producer -> Queue -> Consumer(UART)
  * API: CMSIS-RTOS v2 only (native FreeRTOS API 섞지 않음)
  */
 #include "app_rtos.h"
@@ -9,7 +8,7 @@
 #include <string.h>
 
 /* ===================== 실험 스위치 ===================== */
-#define ENABLE_QUEUE_DEMO   0   /* 4단계(태스크 2개): 0,  5단계(Queue)부터: 1       */
+#define ENABLE_QUEUE_DEMO   1   /* 4단계(태스크 2개): 0,  5단계(Queue)부터: 1       */
 #define QUEUE_FULL_TEST     0   /* 6단계: 1 -> 소비자를 느리게 해서 Queue 포화     */
 #define STACK_REPORT        1   /* 5초마다 태스크별 최소 스택 여유 출력            */
 
