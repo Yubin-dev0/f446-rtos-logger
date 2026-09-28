@@ -172,7 +172,7 @@ static void ProducerTask(void *arg)
 
     /* timeout 0: 가득 차면 기다리지 않고 osErrorResource -> 드롭 카운트 */
     if (osMessageQueuePut(sensorQueue, &s, 0U, 0U) != osOK) {
-      dropCount++;
+    	dropCount++;
     }
 
     next += PRODUCER_PERIOD_MS;
