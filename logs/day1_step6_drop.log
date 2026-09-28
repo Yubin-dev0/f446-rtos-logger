@@ -1,0 +1,87 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2026.09.28 15:26:12 =~=~=~=~=~=~=~=~=~=~=~=
+[DATA] seq=258 t=51600 temp=25.80 C dist=646 mm
+[DATA[DATA] seq=156 t=31200 temp=24.40 C dist=472 mm
+[HB] tick=39155 q=7/8 drop=149
+[STK] min free bytes: LED=368 HB=1432 Prod=792 Cons=1432
+[DATA] seq=161 t=32200 temp=24.10 C dist=657 mm
+[HB] tick=40164 q=7/8 drop=153
+[DATA] seq=166 t=33200 temp=24.60 C dist=842 mm
+[HB] tick=41166 q=7/8 drop=157
+[DATA] seq=171 t=34200 temp=25.10 C dist=127 mm
+[HB] tick=42168 q=7/8 drop=161
+[DATA] seq=176 t=35200 temp=25.60 C dist=312 mm
+[HB] tick=43171 q=7/8 drop=165
+[DATA] seq=181 t=36200 temp=25.90 C dist=497 mm
+[HB] tick=44175 q=7/8 drop=169
+[STK] min free bytes: LED=368 HB=1432 Prod=792 Cons=1432
+[DATA] seq=186 t=37200 temp=25.40 C dist=682 mm
+[HB] tick=45184 q=7/8 drop=173
+
+=== f446-rtos-logger day1 boot ===
+[DATA] seq=0 t=0 temp=24.00 C dist=100 mm
+[HB] tick=3 q=0/8 drop=0
+[DATA] seq=1 t=200 temp=24.10 C dist=137 mm
+[HB] tick=1007 q=4/8 drop=0
+[DATA] seq=2 t=400 temp=24.20 C dist=174 mm
+[HB] tick=2010 q=7/8 drop=1
+[DATA] seq=3 t=600 temp=24.30 C dist=211 mm
+[HB] tick=3013 q=7/8 drop=5
+[DATA] seq=4 t=800 temp=24.40 C dist=248 mm
+[HB] tick=4016 q=7/8 drop=9
+[STK] min free bytes: LED=384 HB=1432 Prod=792 Cons=1432
+[DATA] seq=5 t=1000 temp=24.50 C dist=285 mm
+[HB] tick=5024 q=7/8 drop=13
+[DATA] seq=6 t=1200 temp=24.60 C dist=322 mm
+[HB] tick=6026 q=7/8 drop=17
+[DATA] seq=7 t=1400 temp=24.70 C dist=359 mm
+[HB] tick=7028 q=7/8 drop=21
+[DATA] seq=8 t=1600 temp=24.80 C dist=396 mm
+[HB] tick=8031 q=7/8 drop=25
+[DATA] seq=9 t=1800 temp=24.90 C dist=433 mm
+[HB] tick=9035 q=7/8 drop=29
+[STK] min free bytes: LED=384 HB=1432 Prod=792 Cons=1432
+[DATA] seq=11 t=2200 temp=25.10 C dist=507 mm
+[HB] tick=10043 q=7/8 drop=33
+[DATA] seq=16 t=3200 temp=25.60 C dist=692 mm
+[HB] tick=11045 q=7/8 drop=37
+[DATA] seq=21 t=4200 temp=25.90 C dist=877 mm
+[HB] tick=12047 q=7/8 drop=41
+[DATA] seq=26 t=5200 temp=25.40 C dist=162 mm
+[HB] tick=13051 q=7/8 drop=45
+[DATA] seq=31 t=6200 temp=24.90 C dist=347 mm
+[HB] tick=14055 q=7/8 drop=49
+[STK] min free bytes: LED=384 HB=1432 Prod=792 Cons=1432
+[DATA] seq=36 t=7200 temp=24.40 C dist=532 mm
+[HB] tick=15063 q=7/8 drop=53
+[DATA] seq=41 t=8200 temp=24.10 C dist=717 mm
+[HB] tick=16065 q=7/8 drop=57
+[DATA] seq=46 t=9200 temp=24.60 C dist=902 mm
+[HB] tick=17067 q=7/8 drop=61
+[DATA] seq=51 t=10200 temp=25.10 C dist=187 mm
+[HB] tick=18071 q=7/8 drop=65
+[DATA] seq=56 t=11200 temp=25.60 C dist=372 mm
+[HB] tick=19075 q=7/8 drop=69
+[STK] min free bytes: LED=384 HB=1432 Prod=792 Cons=1432
+[DATA] seq=61 t=12200 temp=25.90 C dist=557 mm
+[HB] tick=20083 q=7/8 drop=73
+[DATA] seq=66 t=13200 temp=25.40 C dist=742 mm
+[HB] tick=21085 q=7/8 drop=77
+[DATA] seq=71 t=14200 temp=24.90 C dist=927 mm
+[HB] tick=22087 q=7/8 drop=81
+[DATA] seq=76 t=15200 temp=24.40 C dist=212 mm
+[HB] tick=23091 q=7/8 drop=85
+[DATA] seq=81 t=16200 temp=24.10 C dist=397 mm
+[HB] tick=24095 q=7/8 drop=89
+[STK] min free bytes: LED=384 HB=1432 Prod=792 Cons=1432
+[DATA] seq=86 t=17200 temp=24.60 C dist=582 mm
+[HB] tick=25103 q=7/8 drop=93
+[DATA] seq=91 t=18200 temp=25.10 C dist=767 mm
+[HB] tick=26105 q=7/8 drop=97
+[DATA] seq=96 t=19200 temp=25.60 C dist=952 mm
+[HB] tick=27107 q=7/8 drop=101
+[DATA] seq=101 t=20200 temp=25.90 C dist=237 mm
+[HB] tick=28111 q=7/8 drop=105
+[DATA] seq=106 t=21200 temp=25.40 C dist=422 mm
+[HB] tick=29115 q=7/8 drop=109
+[STK] min free bytes: LED=384 HB=1432 Prod=792 Cons=1432
+[DATA] s
