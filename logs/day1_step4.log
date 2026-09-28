@@ -1,0 +1,68 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2026.09.28 14:39:41 =~=~=~=~=~=~=~=~=~=~=~=
+
+=== f446-rtos-logger day1 boot ===
+[HB] tick=0 q=0/8 drop=0
+[HB] tick=1002 q=0/8 drop=0
+[HB] tick=2004 q=0/8 drop=0
+[HB] tick=3006 q=0/8 drop=0
+[HB] tick=4008 q=0/8 drop=0
+[STK] min free bytes: LED=384 HB=1432 Prod=0 Cons=0
+[HB] tick=5015 q=0/8 drop=0
+[HB] tick=6017 q=0/8 drop=0
+[HB] tick=7019 q=0/8 drop=0
+[HB] tick=8021 q=0/8 drop=0
+[HB] tick=9023 q=0/8 drop=0
+[STK] min free bytes: LED=384 HB=1432 Prod=0 Cons=0
+[HB] tick=10030 q=0/8 drop=0
+[HB] tick=11032 q=0/8 drop=0
+[HB] tick=12034 q=0/8 drop=0
+[HB] tick=13036 q=0/8 drop=0
+[HB] tick=14038 q=0/8 drop=0
+[STK] min free bytes: LED=384 HB=1404 Prod=0 Cons=0
+[HB] tick=15045 q=0/8 drop=0
+[HB] tick=16047 q=0/8 drop=0
+[HB] tick=17049 q=0/8 drop=0
+[HB] tick=18051 q=0/8 drop=0
+[HB] tick=19053 q=0/8 drop=0
+[STK] min free bytes: LED=384 HB=1404 Prod=0 Cons=0
+[HB] tick=20060 q=0/8 drop=0
+[HB] tick=21062 q=0/8 drop=0
+[HB] tick=22064 q=0/8 drop=0
+[HB] tick=23066 q=0/8 drop=0
+[HB] tick=24068 q=0/8 drop=0
+[STK] min free bytes: LED=384 HB=1404 Prod=0 Cons=0
+[HB] tick=25075 q=0/8 drop=0
+[HB] tick=26077 q=0/8 drop=0
+[HB] tick=27079 q=0/8 drop=0
+[HB] tick=28081 q=0/8 drop=0
+[HB] tick=29083 q=0/8 drop=0
+[STK] min free bytes: LED=384 HB=1404 Prod=0 Cons=0
+[HB] tick=30090 q=0/8 drop=0
+[HB] tick=31092 q=0/8 drop=0
+[HB] tick=32094 q=0/8 drop=0
+[HB] tick=33096 q=0/8 drop=0
+[HB] tick=34098 q=0/8 drop=0
+[STK] min free bytes: LED=384 HB=1404 Prod=0 Cons=0
+[HB] tick=35105 q=0/8 drop=0
+[HB] tick=36107 q=0/8 drop=0
+
+=== f446-rtos-logger day1 boot ===
+[HB] tick=0 q=0/8 drop=0
+[HB] tick=1002 q=0/8 drop=0
+[HB] tick=2004 q=0/8 drop=0
+[HB] tick=3006 q=0/8 drop=0
+[HB] tick=4008 q=0/8 drop=0
+[STK] min free bytes: LED=384 HB=1432 Prod=0 Cons=0
+[HB] tick=5015 q=0/8 drop=0
+[HB] tick=6017 q=0/8 drop=0
+[HB] tick=7019 q=0/8 drop=0
+[HB] tick=8021 q=0/8 drop=0
+[HB] tick=9023 q=0/8 drop=0
+[STK] min free bytes: LED=384 HB=1432 Prod=0 Cons=0
+[HB] tick=10030 q=0/8 drop=0
+[HB] tick=11032 q=0/8 drop=0
+[HB] tick=12034 q=0/8 drop=0
+[HB] tick=13036 q=0/8 drop=0
+[HB] tick=14038 q=0/8 drop=0
+[STK] min free bytes: LED=384 HB=1432 Prod=0 Cons=0
+[HB] tick=1

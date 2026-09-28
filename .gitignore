@@ -1,0 +1,11 @@
+# Build output
+Debug/
+Release/
+
+# IDE local state
+*.launch
+.settings/language.settings.xml
+
+# OS
+Thumbs.db
+desktop.ini
