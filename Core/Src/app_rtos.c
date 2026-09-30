@@ -35,7 +35,7 @@ extern I2C_HandleTypeDef hi2c1;
 /* ===================== 실험 스위치 ===================== */
 #define STACK_REPORT        1   /* 5초마다 태스크별 최소 스택 여유 출력 */
 #define TASK_MARKERS        1   /* PA6/PA7 마커 토글 (로직 분석기)     */
-#define FAULT_INJECT_EVERY  0  /* 0=끔. N이면 seq가 N의 배수일 때마다 센서에 I2C soft reset을 몰래 보냄
+#define FAULT_INJECT_EVERY  0   /* 0=끔. N이면 seq가 N의 배수일 때마다 센서에 I2C soft reset을 몰래 보냄
                                  * -> 전원 글리치로 센서만 리셋된 상황을 반복 재현 (I2C는 계속 ACK)
                                  *    200ms x 50 = 약 10초마다 1회 */
 
@@ -70,11 +70,17 @@ extern I2C_HandleTypeDef hi2c1;
 #endif
 #define APP_LED_TOGGLE()   HAL_GPIO_TogglePin(APP_LED_PORT, APP_LED_PIN)
 
-#if TASK_MARKERS && defined(MK_SENS_Pin) && defined(MK_CONS_Pin)
-  #define MK_SENS_HI()  (MK_SENS_GPIO_Port->BSRR = MK_SENS_Pin)
-  #define MK_SENS_LO()  (MK_SENS_GPIO_Port->BSRR = (uint32_t)MK_SENS_Pin << 16)
-  #define MK_CONS_HI()  (MK_CONS_GPIO_Port->BSRR = MK_CONS_Pin)
-  #define MK_CONS_LO()  (MK_CONS_GPIO_Port->BSRR = (uint32_t)MK_CONS_Pin << 16)
+/* 마커 핀은 CubeMX 라벨에 의존하지 않고 코드에서 직접 설정 (APP_MARKER_INIT)
+ * PA6 = Arduino D12 (Sensor), PA7 = Arduino D11 (Consumer) */
+#define MK_PORT       GPIOA
+#define MK_SENS_PIN   GPIO_PIN_6
+#define MK_CONS_PIN   GPIO_PIN_7
+
+#if TASK_MARKERS
+  #define MK_SENS_HI()  (MK_PORT->BSRR = MK_SENS_PIN)
+  #define MK_SENS_LO()  (MK_PORT->BSRR = (uint32_t)MK_SENS_PIN << 16)
+  #define MK_CONS_HI()  (MK_PORT->BSRR = MK_CONS_PIN)
+  #define MK_CONS_LO()  (MK_PORT->BSRR = (uint32_t)MK_CONS_PIN << 16)
 #else
   #define MK_SENS_HI()  ((void)0)
   #define MK_SENS_LO()  ((void)0)
@@ -91,6 +97,20 @@ static void APP_LED_INIT(void)
   g.Pull  = GPIO_NOPULL;
   g.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(APP_LED_PORT, &g);
+}
+
+static void APP_MARKER_INIT(void)
+{
+#if TASK_MARKERS
+  GPIO_InitTypeDef g = {0};
+  __HAL_RCC_GPIOA_CLK_ENABLE();
+  MK_PORT->BSRR = ((uint32_t)(MK_SENS_PIN | MK_CONS_PIN)) << 16;   /* LOW로 시작 */
+  g.Pin   = MK_SENS_PIN | MK_CONS_PIN;
+  g.Mode  = GPIO_MODE_OUTPUT_PP;
+  g.Pull  = GPIO_NOPULL;
+  g.Speed = GPIO_SPEED_FREQ_HIGH;
+  HAL_GPIO_Init(MK_PORT, &g);
+#endif
 }
 
 /* huart2가 main.c에 없으면(=BSP 모드) 링크 시 NULL이 되도록 weak 선언 */
@@ -480,6 +500,7 @@ static void ConsumerTask(void *arg)
 void App_RTOS_Init(void)
 {
   APP_LED_INIT();
+  APP_MARKER_INIT();
 
   /* 스케줄러 시작 전이라 mutex 없이 직접 송신 */
   static const char banner[] = "\r\n=== f446-rtos-logger day2 boot ===\r\n";
@@ -502,6 +523,19 @@ void App_RTOS_Init(void)
                      (csr & RCC_CSR_BORRSTF)  ? " BOR"  : "");
     uart_write(line, (uint16_t)n);
     __HAL_RCC_CLEAR_RESET_FLAGS();   /* 다음 리셋 원인만 남도록 지움 */
+  }
+
+  /* 실제로 어떤 클럭으로 돌고 있는지 레지스터에서 직접 확인 */
+  {
+    char line[96];
+    uint32_t sws = RCC->CFGR & RCC_CFGR_SWS;
+    int n = snprintf(line, sizeof line, "[CLK] sysclk=%lu Hz sws=%s pll_in=%s hse_on=%d hse_byp=%d\r\n",
+                     (unsigned long)HAL_RCC_GetSysClockFreq(),
+                     (sws == RCC_CFGR_SWS_PLL) ? "PLL" : (sws == RCC_CFGR_SWS_HSE) ? "HSE" : "HSI",
+                     (RCC->PLLCFGR & RCC_PLLCFGR_PLLSRC) ? "HSE" : "HSI",
+                     (RCC->CR & RCC_CR_HSERDY) ? 1 : 0,
+                     (RCC->CR & RCC_CR_HSEBYP) ? 1 : 0);
+    uart_write(line, (uint16_t)n);
   }
 
   /* I2C 버스 스캔: 센서 응답만 먼저 확인 (실제 초기화는 SensorTask에서) */

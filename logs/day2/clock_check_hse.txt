@@ -1,0 +1,18 @@
+clock_check.py result - HSE bypass (ST-LINK MCO 8 MHz), SYSCLK 84 MHz
+date   : 2026-09-30 15:20 KST
+cmd    : py tools/clock_check.py COM3 180
+boot   : [CLK] sysclk=84000000 Hz sws=PLL pll_in=HSE hse_on=1 hse_byp=1
+
+samples      : 900  over 179.8 s
+slope        : 0.9999669  (MCU ms / PC ms)
+MCU vs PC    : -33 ppm   (+ = MCU tick fast)
+drift        : -119.3 ms per hour
+residual std : 0.61 ms  (USB receive jitter)
+=> 200 ms period is actually 200.007 ms
+
+Cross-check with logic analyzer (same firmware, 1 MHz sampling):
+  D2 period 200.020 ms (Timing Averages 100.010 ms x 2)
+  -> MCU vs LA +100 ppm, LA vs PC about -65 ppm; all three clocks agree within ~100 ppm
+
+Reference - HSI (before change), logic analyzer only:
+  D2 period 199.78 ms (-1100 ppm), period jitter p-p ~70 us (HSE: ~1 us)
