@@ -1,0 +1,351 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2026.09.30 13:33:06 =~=~=~=~=~=~=~=~=~=~=~=
+[DATA] seq=114 t=45860 dist=69 mm st=0 sig=22789 kcps meas=37 ms
+[DATA] seq=115 t=46060 dist=66 mm st=0 sig=22125 kcps meas=37 ms
+[DATA] seq=116 t=46260 dist=62 mm st=0 sig=23460 kcps meas=37 ms
+[HB] tick=46445 vl=RUN q=0/8 drop=[HB] tick=46340 vl=ERROR q=0/8 drop=0 miss=0 err=27 last=-20 rec=0
+[HB] tick=47346 vl=ERROR q=0/8 drop=0 miss=0 err=27 last=-20 rec=0
+[VL] state ERROR -> INIT (tick=47461)
+[VL] init FAIL err=-20 attempt=28, retry in 2000 ms
+[VL] state INIT -> ERROR (tick=47469)
+[HB] tick=48352 vl=ERROR q=0/8 drop=0 miss=0 err=28 last=-20 rec=0
+[HB] tick=49358 vl=ERROR q=0/8 drop=0 miss=0 err=28 last=-20 rec=0
+[STK] min free bytes: LED=384 HB=1416 Sens=1312 Cons=1816
+[VL] state ERROR -> INIT (tick=49472)
+[VL] init FAIL err=-20 attempt=29, retry in 2000 ms
+[VL] state INIT -> ERROR (tick=49480)
+[HB] tick=50370 vl=ERROR q=0/8 drop=0 miss=0 err=29 last=-20 rec=0
+[HB] tick=51376 vl=ERROR q=0/8 drop=0 miss=0 err=29 last=-20 rec=0
+[VL] state ERROR -> INIT (tick=51483)
+[VL] init FAIL err=-20 attempt=30, retry in 2000 ms
+[VL] state INIT -> ERROR (tick=51491)
+[HB] tick=52382 vl=ERROR q=0/8 drop=0 miss=0 err=30 last=-20 rec=0
+[HB] tick=53388 vl=ERROR q=0/8 drop=0 miss=0 err=30 last=-20 rec=0
+[VL] state ERROR -> INIT (tick=53494)
+[VL] init FAIL err=-20 attempt=31, retry in 2000 ms
+[VL] state INIT -> ERROR (tick=53502)
+[HB] tick=54394 vl=ERROR q=0/8 drop=0 miss=0 err=31 last=-20 rec=0
+[STK] min free bytes: LED=384 HB=1416 Sens=1312 Cons=1816
+[HB] tick=55406 vl=ERROR q=0/8 drop=0 miss=0 err=31 last=-20 rec=0
+[VL] state ERROR -> INIT (tick=55505)
+[VL] init FAIL err=-20 attempt=32, retry in 2000 ms
+[VL] state INIT -> ERROR (tick=55525)
+[HB] tick=56412 vl=ERROR q=0/8 drop=0 miss=0 err=32 last=-20 rec=0
+[HB] tick=57418 vl=ERROR q=0/8 drop=0 miss=0 err=32 last=-20 rec=0
+[VL] state ERROR -> INIT (tick=57529)
+[VL] init FAIL err=-20 attempt=33, retry in 2000 ms
+[VL] state INIT -> ERROR (tick=57549)
+[HB] tick=58424 vl=ERROR q=0/8 drop=0 miss=0 err=33 last=-20 rec=0
+[HB] tick=59430 vl=ERROR q=0/8 drop=0 miss=0 err=33 last=-20 rec=0
+[STK] min free bytes: LED=384 HB=1416 Sens=1312 Cons=1816
+[VL] state ERROR -> INIT (tick=59553)
+[VL] init FAIL err=-20 attempt=34, retry in 2000 ms
+[VL] state INIT -> ERROR (tick=59573)
+[HB] tick=60442 vl=ERROR q=0/8 drop=0 miss=0 err=34 last=-20 rec=0
+[HB] tick=61448 vl=ERROR q=0/8 drop=0 miss=0 err=34 last=-20 rec=0
+[VL] state ERROR -> INIT (tick=61577)
+[VL] init FAIL err=-20 attempt=35, retry in 2000 ms
+[VL] state INIT -> ERROR (tick=61597)
+[HB] tick=62454 vl=ERROR q=0/8 drop=0 miss=0 err=35 last=-20 rec=0
+[HB] tick=63460 vl=ERROR q=0/8 drop=0 miss=0 err=35 last=-20 rec=0
+[VL] state ERROR -> INIT (tick=63601)
+[VL] init FAIL err=-20 attempt=36, retry in 2000 ms
+[VL] state INIT -> ERROR (tick=63621)
+[HB] tick=64466 vl=ERROR q=0/8 drop=0 miss=0 err=36 last=-20 rec=0
+[STK] min free bytes: LED=384 HB=1416 Sens=1312 Cons=1816
+[HB] tick=65478 vl=ERROR q=0/8 drop=0 miss=0 err=36 last=-20 rec=0
+[VL] state ERROR -> INIT (tick=65625)
+[VL] init FAIL err=-20 attempt=37, retry in 2000 ms
+[VL] state INIT -> ERROR (tick=65645)
+[HB] tick=66484 vl=ERROR q=0/8 drop=0 miss=0 err=37 last=-20 rec=0
+[HB] tick=67490 vl=ERROR q=0/8 drop=0 miss=0 err=37 last=-20 rec=0
+[VL] state ERROR -> INIT (tick=67649)
+[VL] init FAIL err=-20 attempt=38, retry in 2000 ms
+[VL] state INIT -> ERROR (tick=67669)
+[HB] tick=68496 vl=ERROR q=0/8 drop=0 miss=0 err=38 last=-20 rec=0
+[HB] tick=69502 vl=ERROR q=0/8 drop=0 miss=0 err=38 last=-20 rec=0
+[STK] min free bytes: LED=384 HB=1416 Sens=1312 Cons=1816
+[VL] state ERROR -> INIT (tick=69673)
+[VL] init FAIL err=-20 attempt=39, retry in 2000 ms
+[VL] state INIT -> ERROR (tick=69693)
+[HB] tick=70514 vl=ERROR q=0/8 drop=0 miss=0 err=39 last=-20 rec=0
+[HB] tick=71520 vl=ERROR q=0/8 drop=0 miss=0 err=39 last=-20 rec=0
+[VL] state ERROR -> INIT (tick=71697)
+[VL] init FAIL err=-20 attempt=40, retry in 2000 ms
+[VL] state INIT -> ERROR (tick=71717)
+[HB] tick=72526 vl=ERROR q=0/8 drop=0 miss=0 err=40 last=-20 rec=0
+[HB] tick=73532 vl=ERROR q=0/8 drop=0 miss=0 err=40 last=-20 rec=0
+[VL] state ERROR -> INIT (tick=73721)
+[VL] init FAIL err=-20 attempt=41, retry in 2000 ms
+[VL] state INIT -> ERROR (tick=73741)
+[HB] tick=74538 vl=ERROR q=0/8 drop=0 miss=0 err=41 last=-20 rec=0
+[STK] min free bytes: LED=384 HB=1416 Sens=1312 Cons=1816
+[HB] tick=75550 vl=ERROR q=0/8 drop=0 miss=0 err=41 last=-20 rec=0
+[VL] state ERROR -> INIT (tick=75745)
+[VL] init FAIL err=-20 attempt=42, retry in 2000 ms
+[VL] state INIT -> ERROR (tick=75765)
+[HB] tick=76556 vl=ERROR q=0/8 drop=0 miss=0 err=42 last=-20 rec=0
+[HB] tick=77562 vl=ERROR q=0/8 drop=0 miss=0 err=42 last=-20 rec=0
+[VL] state ERROR -> INIT (tick=77769)
+[VL] init FAIL err=-20 attempt=43, retry in 2000 ms
+[VL] state INIT -> ERROR (tick=77789)
+[HB] tick=78568 vl=ERROR q=0/8 drop=0 miss=0 err=43 last=-20 rec=0
+[HB] tick=79574 vl=ERROR q=0/8 drop=0 miss=0 err=43 last=-20 rec=0
+[STK] min free bytes: LED=384 HB=1416 Sens=1312 Cons=1816
+[VL] state ERROR -> INIT (tick=79793)
+[VL] init FAIL err=-20 attempt=44, retry in 2000 ms
+[VL] state INIT -> ERROR (tick=79813)
+[HB] tick=80586 vl=ERROR q=0/8 drop=0 miss=0 err=44 last=-20 rec=0
+[HB] tick=81592 vl=ERROR q=0/8 drop=0 miss=0 err=44 last=-20 rec=0
+[VL] state ERROR -> INIT (tick=81817)
+[VL] init FAIL err=-20 attempt=45, retry in 2000 ms
+[VL] state INIT -> ERROR (tick=81837)
+[HB] tick=82598 vl=ERROR q=0/8 drop=0 miss=0 err=45 last=-20 rec=0
+[HB] tick=83604 vl=ERROR q=0/8 drop=0 miss=0 err=45 last=-20 rec=0
+[VL] state ERROR -> INIT (tick=83841)
+[VL] init FAIL err=-20 attempt=46, retry in 2000 ms
+[VL] state INIT -> ERROR (tick=83861)
+[HB] tick=84610 vl=ERROR q=0/8 drop=0 miss=0 err=46 last=-20 rec=0
+[STK] min free bytes: LED=384 HB=1416 Sens=1312 Cons=1816
+[HB] tick=85622 vl=ERROR q=0/8 drop=0 miss=0 err=46 last=-20 rec=0
+[VL] state ERROR -> INIT (tick=85865)
+[VL] init FAIL err=-20 attempt=47, retry in 2000 ms
+[VL] state INIT -> ERROR (tick=85885)
+[HB] tick=86628 vl=ERROR q=0/8 drop=0 miss=0 err=47 last=-20 rec=0
+[HB] tick=87634 vl=ERROR q=0/8 drop=0 miss=0 err=47 last=-20 rec=0
+[VL] state ERROR -> INIT (tick=87889)
+[VL] init FAIL err=-20 attempt=48, retry in 2000 ms
+[VL] state INIT -> ERROR (tick=87909)
+[HB] tick=88640 vl=ERROR q=0/8 drop=0 miss=0 err=48 last=-20 rec=0
+[HB] tick=89646 vl=ERROR q=0/8 drop=0 miss=0 err=48 last=-20 rec=0
+[STK] min free bytes: LED=384 HB=1416 Sens=1312 Cons=1816
+[VL] state ERROR -> INIT (tick=89913)
+[VL] init FAIL err=-20 attempt=49, retry in 2000 ms
+[VL] state INIT -> ERROR (tick=89933)
+[HB] tick=90658 vl=ERROR q=0/8 drop=0 miss=0 err=49 last=-20 rec=0
+[HB] tick=91664 vl=ERROR q=0/8 drop=0 miss=0 err=49 last=-20 rec=0
+[VL] state ERROR -> INIT (tick=91937)
+[VL] init FAIL err=-20 attempt=50, retry in 2000 ms
+[VL] state INIT -> ERROR (tick=91957)
+[HB] tick=92670 vl=ERROR q=0/8 drop=0 miss=0 err=50 last=-20 rec=0
+[HB] tick=93676 vl=ERROR q=0/8 drop=0 miss=0 err=50 last=-20 rec=0
+[VL] state ERROR -> INIT (tick=93961)
+[VL] init FAIL err=-20 attempt=51, retry in 2000 ms
+[VL] state INIT -> ERROR (tick=93981)
+[HB] tick=94682 vl=ERROR q=0/8 drop=0 miss=0 err=51 last=-20 rec=0
+[STK] min free bytes: LED=384 HB=1416 Sens=1312 Cons=1816
+[HB] tick=95694 vl=ERROR q=0/8 drop=0 miss=0 err=51 last=-20 rec=0
+[VL] state ERROR -> INIT (tick=95985)
+[VL] init FAIL err=-20 attempt=52, retry in 2000 ms
+[VL] state INIT -> ERROR (tick=96005)
+[HB] tick=96700 vl=ERROR q=0/8 drop=0 miss=0 err=52 last=-20 rec=0
+[HB] tick=97706 vl=ERROR q=0/8 drop=0 miss=0 err=52 last=-20 rec=0
+[VL] state ERROR -> INIT (tick=98009)
+[VL] init FAIL err=-20 attempt=53, retry in 2000 ms
+[VL] state INIT -> ERROR (tick=98029)
+[HB] tick=98712 vl=ERROR q=0/8 drop=0 miss=0 err=53 last=-20 rec=0
+[HB] tick=99718 vl=ERROR q=0/8 drop=0 miss=0 err=53 last=-20 rec=0
+[STK] min free bytes: LED=384 HB=1416 Sens=1312 Cons=1816
+[VL] state ERROR -> INIT (tick=100033)
+[VL] init FAIL err=-20 attempt=54, retry in 2000 ms
+[VL] state INIT -> ERROR (tick=100053)
+[HB] tick=100730 vl=ERROR q=0/8 drop=0 miss=0 err=54 last=-20 rec=0
+[HB] tick=101736 vl=ERROR q=0/8 drop=0 miss=0 err=54 last=-20 rec=0
+[VL] state ERROR -> INIT (tick=102057)
+[VL] init FAIL err=-20 attempt=55, retry in 2000 ms
+[VL] state INIT -> ERROR (tick=102077)
+[HB] tick=102742 vl=ERROR q=0/8 drop=0 miss=0 err=55 last=-20 rec=0
+[HB] tick=103748 vl=ERROR q=0/8 drop=0 miss=0 err=55 last=-20 rec=0
+[VL] state ERROR -> INIT (tick=104081)
+[VL] init FAIL err=-20 attempt=56, retry in 2000 ms
+[VL] state INIT -> ERROR (tick=104101)
+[HB] tick=104754 vl=ERROR q=0/8 drop=0 miss=0 err=56 last=-20 rec=0
+[STK] min free bytes: LED=384 HB=1416 Sens=1312 Cons=1816
+[HB] tick=105766 vl=ERROR q=0/8 drop=0 miss=0 err=56 last=-20 rec=0
+[VL] state ERROR -> INIT (tick=106105)
+[VL] init FAIL err=-20 attempt=57, retry in 2000 ms
+[VL] state INIT -> ERROR (tick=106125)
+[HB] tick=106772 vl=ERROR q=0/8 drop=0 miss=0 err=57 last=-20 rec=0
+[HB] tick=107778 vl=ERROR q=0/8 drop=0 miss=0 err=57 last=-20 rec=0
+[VL] state ERROR -> INIT (tick=108129)
+[VL] init FAIL err=-20 attempt=58, retry in 2000 ms
+[VL] state INIT -> ERROR (tick=108149)
+[HB] tick=108784 vl=ERROR q=0/8 drop=0 miss=0 err=58 last=-20 rec=0
+[HB] tick=109790 vl=ERROR q=0/8 drop=0 miss=0 err=58 last=-20 rec=0
+[STK] min free bytes: LED=384 HB=1416 Sens=1312 Cons=1816
+[VL] state ERROR -> INIT (tick=110153)
+[VL] init FAIL err=-20 attempt=59, retry in 2000 ms
+[VL] state INIT -> ERROR (tick=110173)
+[HB] tick=110802 vl=ERROR q=0/8 drop=0 miss=0 err=59 last=-20 rec=0
+[HB] tick=111808 vl=ERROR q=0/8 drop=0 miss=0 err=59 last=-20 rec=0
+[VL] state ERROR -> INIT (tick=112177)
+[VL] init FAIL err=-20 attempt=60, retry in 2000 ms
+[VL] state INIT -> ERROR (tick=112197)
+[HB] tick=112814 vl=ERROR q=0/8 drop=0 miss=0 err=60 last=-20 rec=0
+[HB] tick=113820 vl=ERROR q=0/8 drop=0 miss=0 err=60 last=-20 rec=0
+[VL] state ERROR -> INIT (tick=114201)
+[VL] init FAIL err=-20 attempt=61, retry in 2000 ms
+[VL] state INIT -> ERROR (tick=114221)
+[HB] tick=114826 vl=ERROR q=0/8 drop=0 miss=0 err=61 last=-20 rec=0
+[STK] min free bytes: LED=384 HB=1416 Sens=1312 Cons=1816
+[HB] tick=115838 vl=ERROR q=0/8 drop=0 miss=0 err=61 last=-20 rec=0
+[VL] state ERROR -> INIT (tick=116225)
+[VL] init FAIL err=-20 attempt=62, retry in 2000 ms
+[VL] state INIT -> ERROR (tick=116245)
+[HB] tick=116844 vl=ERROR q=0/8 drop=0 miss=0 err=62 last=-20 rec=0
+[HB] tick=117850 vl=ERROR q=0/8 drop=0 miss=0 err=62 last=-20 rec=0
+[VL] state ERROR -> INIT (tick=118249)
+[VL] init FAIL err=-20 attempt=63, retry in 2000 ms
+[VL] state INIT -> ERROR (tick=118269)
+[HB] tick=118856 vl=ERROR q=0/8 drop=0 miss=0 err=63 last=-20 rec=0
+[HB] tick=119862 vl=ERROR q=0/8 drop=0 miss=0 err=63 last=-20 rec=0
+[STK] min free bytes: LED=384 HB=1416 Sens=1312 Cons=1816
+[VL] state ERROR -> INIT (tick=120273)
+[VL] init FAIL err=-20 attempt=64, retry in 2000 ms
+[VL] state INIT -> ERROR (tick=120293)
+[HB] tick=120874 vl=ERROR q=0/8 drop=0 miss=0 err=64 last=-20 rec=0
+[HB] tick=121880 vl=ERROR q=0/8 drop=0 miss=0 err=64 last=-20 rec=0
+[VL] state ERROR -> INIT (tick=122297)
+[VL] init FAIL err=-20 attempt=65, retry in 2000 ms
+[VL] state INIT -> ERROR (tick=122317)
+[HB] tick=122886 vl=ERROR q=0/8 drop=0 miss=0 err=65 last=-20 rec=0
+[HB] tick=123892 vl=ERROR q=0/8 drop=0 miss=0 err=65 last=-20 rec=0
+[VL] state ERROR -> INIT (tick=124321)
+[VL] init FAIL err=-20 attempt=66, retry in 2000 ms
+[VL] state INIT -> ERROR (tick=124341)
+[HB] tick=124898 vl=ERROR q=0/8 drop=0 miss=0 err=66 last=-20 rec=0
+[STK] min free bytes: LED=384 HB=1416 Sens=1312 Cons=1816
+[HB] tick=125910 vl=ERROR q=0/8 drop=0 miss=0 err=66 last=-20 rec=0
+[VL] state ERROR -> INIT (tick=126345)
+[VL] init FAIL err=-20 attempt=67, retry in 2000 ms
+[VL] state INIT -> ERROR (tick=126365)
+[HB] tick=126916 vl=ERROR q=0/8 drop=0 miss=0 err=67 last=-20 rec=0
+[HB] tick=127922 vl=ERROR q=0/8 drop=0 miss=0 err=67 last=-20 rec=0
+[VL] state ERROR -> INIT (tick=128369)
+[VL] init FAIL err=-20 attempt=68, retry in 2000 ms
+[VL] state INIT -> ERROR (tick=128389)
+
+=== f446-rtos-logger day2 boot ===
+
+=== f446-rtos-logger day2 boot ===
+
+=== f446-rtos-logger day2 boot ===
+
+=== f446-rtos-logger day2 boot ===
+
+=== f446-rtos-logger day2 boot ===
+
+=== f446-rtos-logger day2 boot ===
+
+=== f446-rtos-logger day2 boot ===
+
+=== f446-rtos-logger day2 boot ===
+
+=== f446-rtos-logger day2 boot ===
+
+=== f446-rtos-logger day2 boot ===
+
+=== f446-rtos-logger day2 boot ===
+
+=== f446-rtos-logger day2 boot ===
+[I2C] VL53L0X @0x29: ACK
+[HB] tick=1 vl=INIT q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[VL] init OK spad=3 aperture=1 vhv=23 phase=1
+[VL] state INIT -> RUN (tick=208)
+[DATA] seq=0 t=212 dist=224 mm st=0 sig=1367 kcps meas=37 ms
+[DATA] seq=1 t=408 dist=251 mm st=0 sig=1187 kcps meas=37 ms
+[HB] tick=1083 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[HB] tick=2089 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[HB] tick=3095 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[HB] tick=4101 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[STK] min free bytes: LED=384 HB=1416 Sens=1132 Cons=1424
+[HB] tick=5114 vl=RUN q=0/8 drop=0 miss=20 err=1 last=-7 rec=0
+[HB] tick=6120 vl=RUN q=0/8 drop=0 miss=20 err=1 last=-7 rec=0
+[HB] tick=7126 vl=RUN q=0/8 drop=0 miss=20 err=1 last=-7 rec=0
+[HB] tick=8132 vl=RUN q=0/8 drop=0 miss=20 err=1 last=-7 rec=0
+[HB] tick=9138 vl=RUN q=0/8 drop=0 miss=40 err=2 last=-7 rec=0
+[STK] min free bytes: LED=384 HB=1416 Sens=1132 Cons=1424
+[HB] tick=10151 vl=RUN q=0/8 drop=0 miss=40 err=2 last=-7 rec=0
+[HB] tick=11158 vl=RUN q=0/8 drop=0 miss=40 err=2 last=-7 rec=0
+[HB] tick=12164 vl=RUN q=0/8 drop=0 miss=40 err=2 last=-7 rec=0
+[VL] 3 consecutive errors (last=-7)
+[VL] state RUN -> ERROR (tick=13012)
+[VL] state ERROR -> INIT (tick=13116)
+[HB] tick=13199 vl=INIT q=0/8 drop=0 miss=40 err=3 last=-7 rec=0
+[VL] init OK spad=3 aperture=1 vhv=23 phase=1
+[VL] recovered: attempts=1 downtime=4319 ms
+[VL] state INIT -> RUN (tick=13331)
+[DATA] seq=2 t=13335 dist=101 mm st=0 sig=11492 kcps meas=37 ms
+[DATA] seq=3 t=13531 dist=101 mm st=0 sig=11507 kcps meas=37 ms
+[DATA] seq=4 t=13731 dist=101 mm st=0 sig=11609 kcps meas=37 ms
+[DATA] seq=5 t=13931 dist=103 mm st=0 sig=11515 kcps meas=37 ms
+[DATA] seq=6 t=14131 dist=98 mm st=0 sig=11484 kcps meas=37 ms
+[HB] tick=14206 vl=RUN q=0/8 drop=0 miss=40 err=3 last=-7 rec=1
+[STK] min free bytes: LED=384 HB=1416 Sens=1132 Cons=1424
+[DATA] seq=7 t=14331 dist=101 mm st=0 sig=11500 kcps meas=37 ms
+[DATA] seq=8 t=14531 dist=99 mm st=0 sig=11523 kcps meas=37 ms
+[DATA] seq=9 t=14731 dist=105 mm st=0 sig=11593 kcps meas=37 ms
+[DATA] seq=10 t=14931 dist=99 mm st=0 sig=11476 kcps meas=37 ms
+[DATA] seq=11 t=15131 dist=104 mm st=0 sig=11515 kcps meas=37 ms
+[HB] tick=15217 vl=RUN q=0/8 drop=0 miss=40 err=3 last=-7 rec=1
+[DATA] seq=12 t=15331 dist=102 mm st=0 sig=11726 kcps meas=37 ms
+[DATA] seq=13 t=15531 dist=102 mm st=0 sig=11585 kcps meas=37 ms
+[DATA] seq=14 t=15731 dist=103 mm st=0 sig=11578 kcps meas=37 ms
+[DATA] seq=15 t=15931 dist=101 mm st=0 sig=11718 kcps meas=37 ms
+[DATA] seq=16 t=16131 dist=100 mm st=0 sig=11664 kcps meas=37 ms
+[HB] tick=16222 vl=RUN q=0/8 drop=0 miss=40 err=3 last=-7 rec=1
+[DATA] seq=17 t=16331 dist=101 mm st=0 sig=11531 kcps meas=37 ms
+[DATA] seq=18 t=16531 dist=102 mm st=0 sig=11468 kcps meas=37 ms
+[DATA] seq=19 t=16731 dist=104 mm st=0 sig=11500 kcps meas=37 ms
+[DATA] seq=20 t=16931 dist=101 mm st=0 sig=11554 kcps meas=37 ms
+[DATA] seq=21 t=17131 dist=102 mm st=0 sig=11531 kcps meas=37 ms
+[HB] tick=17227 vl=RUN q=0/8 drop=0 miss=40 err=3 last=-7 rec=1
+[DATA] seq=22 t=17331 dist=100 mm st=0 sig=11367 kcps meas=37 ms
+[DATA] seq=23 t=17531 dist=100 mm st=0 sig=11523 kcps meas=37 ms
+[DATA] seq=24 t=17731 dist=106 mm st=0 sig=11593 kcps meas=37 ms
+[DATA] seq=25 t=17931 dist=100 mm st=0 sig=11687 kcps meas=37 ms
+[DATA] seq=26 t=18131 dist=99 mm st=0 sig=11546 kcps meas=37 ms
+[HB] tick=18232 vl=RUN q=0/8 drop=0 miss=40 err=3 last=-7 rec=1
+[DATA] seq=27 t=18331 dist=104 mm st=0 sig=11546 kcps meas=37 ms
+[DATA] seq=28 t=18531 dist=106 mm st=0 sig=11539 kcps meas=37 ms
+[DATA] seq=29 t=18731 dist=102 mm st=0 sig=11593 kcps meas=37 ms
+[DATA] seq=30 t=18931 dist=101 mm st=0 sig=11562 kcps meas=37 ms
+[DATA] seq=31 t=19131 dist=104 mm st=0 sig=11742 kcps meas=37 ms
+[HB] tick=19237 vl=RUN q=0/8 drop=0 miss=40 err=3 last=-7 rec=1
+[STK] min free bytes: LED=384 HB=1416 Sens=1132 Cons=1424
+[DATA] seq=32 t=19331 dist=101 mm st=0 sig=11546 kcps meas=37 ms
+[DATA] seq=33 t=19531 dist=102 mm st=0 sig=11484 kcps meas=37 ms
+[DATA] seq=34 t=19731 dist=101 mm st=0 sig=11445 kcps meas=37 ms
+[DATA] seq=35 t=19931 dist=103 mm st=0 sig=11421 kcps meas=37 ms
+[DATA] seq=36 t=20131 dist=100 mm st=0 sig=11515 kcps meas=37 ms
+[HB] tick=20248 vl=RUN q=0/8 drop=0 miss=40 err=3 last=-7 rec=1
+[DATA] seq=37 t=20331 dist=101 mm st=0 sig=11531 kcps meas=37 ms
+[DATA] seq=38 t=20531 dist=100 mm st=0 sig=11578 kcps meas=37 ms
+[DATA] seq=39 t=20731 dist=99 mm st=0 sig=11554 kcps meas=37 ms
+[DATA] seq=40 t=20931 dist=100 mm st=0 sig=11515 kcps meas=37 ms
+[DATA] seq=41 t=21131 dist=101 mm st=0 sig=11656 kcps meas=37 ms
+[HB] tick=21253 vl=RUN q=0/8 drop=0 miss=40 err=3 last=-7 rec=1
+[DATA] seq=42 t=21331 dist=104 mm st=0 sig=11578 kcps meas=37 ms
+[DATA] seq=43 t=21531 dist=104 mm st=0 sig=11664 kcps meas=37 ms
+[DATA] seq=44 t=21731 dist=101 mm st=0 sig=11585 kcps meas=37 ms
+[DATA] seq=45 t=21931 dist=100 mm st=0 sig=11523 kcps meas=37 ms
+[DATA] seq=46 t=22131 dist=100 mm st=0 sig=11453 kcps meas=37 ms
+[HB] tick=22258 vl=RUN q=0/8 drop=0 miss=40 err=3 last=-7 rec=1
+[DATA] seq=47 t=22331 dist=101 mm st=0 sig=11476 kcps meas=37 ms
+[DATA] seq=48 t=22531 dist=104 mm st=0 sig=11617 kcps meas=37 ms
+[DATA] seq=49 t=22731 dist=102 mm st=0 sig=11593 kcps meas=37 ms
+[DATA] seq=50 t=22931 dist=101 mm st=0 sig=11531 kcps meas=37 ms
+[DATA] seq=51 t=23131 dist=100 mm st=0 sig=11617 kcps meas=37 ms
+[HB] tick=23263 vl=RUN q=0/8 drop=0 miss=40 err=3 last=-7 rec=1
+[DATA] seq=52 t=23331 dist=105 mm st=0 sig=11554 kcps meas=37 ms
+[DATA] seq=53 t=23531 dist=102 mm st=0 sig=11554 kcps meas=37 ms
+[DATA] seq=54 t=23731 dist=102 mm st=0 sig=11539 kcps meas=37 ms
+[DATA] seq=55 t=23931 dist=103 mm st=0 sig=11453 kcps meas=37 ms
+[DATA] seq=56 t=24131 dist=102 mm st=0 sig=11742 kcps meas=37 ms
+[HB] tick=24268 vl=RUN q=0/8 drop=0 miss=40 err=3 last=-7 rec=1
+[STK] min free bytes: LED=384 HB=1416 Sens=1132 Cons=1424
+[DATA] seq=57 t=24331 dist=100 mm st=0 sig=11546 kcps meas=37 ms
+[DATA] seq=58 t=24531 dist=101 mm st=0 sig=11546 kcps meas=37 ms
+[DATA] seq=59 t=24731 dist=102 mm st=0 sig=11554 kcps meas=37 ms
+[DATA] seq=60 t=24931 dist=108 mm st=0 sig=11484 kcps meas=37 ms
+[DATA] seq=61 t=25131 dist=101 mm st=0 sig=11585 kcps meas=37 ms
+[HB] tick

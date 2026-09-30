@@ -1,0 +1,51 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2026.09.30 13:50:51 =~=~=~=~=~=~=~=~=~=~=~=
+[DATA] seq=52 t=19799 dist=216 mm st=0 sig=1437 kcps meas=37 ms
+[DATA] seq=53 t=19999 dist=218 mm st=0 sig=1281 kcps meas=37 ms
+[HB] tick=20134 vl=RUN q=0/8 drop=0 miss=0 err=8 last=-20 rec=1
+[DATA] seq=54 t=20199 dist=224 mm st=0 sig=1257 kcps meas=37 ms
+[DATA] seq=55 t=20399 dist=216 mm st=0 sig=13=[HB] tick=45293 vl=ERROR q=0/8 drop=0 miss=0 err=25 last=-7 rec=0
+
+=== f446-rtos-logger day2 boot ===
+[RST] csr=0x04000000 PIN
+[I2C] VL53L0X @0x29: ACK
+[HB] tick=1 vl=INIT q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[VL] init FAIL err=-7 attempt=1, retry in 100 ms
+[VL] state INIT -> ERROR (tick=105)
+[VL] state ERROR -> INIT (tick=208)
+[VL] init FAIL err=-7 attempt=2, retry in 200 ms
+[VL] state INIT -> ERROR (tick=316)
+[VL] state ERROR -> INIT (tick=519)
+[VL] init FAIL err=-7 attempt=3, retry in 400 ms
+[VL] state INIT -> ERROR (tick=627)
+[HB] tick=1007 vl=ERROR q=0/8 drop=0 miss=0 err=3 last=-7 rec=0
+[VL] state ERROR -> INIT (tick=1030)
+[VL] init FAIL err=-7 attempt=4, retry in 800 ms
+[VL] state INIT -> ERROR (tick=1138)
+[VL] state ERROR -> INIT (tick=1941)
+[HB] tick=2012 vl=INIT q=0/8 drop=0 miss=0 err=4 last=-7 rec=0
+[VL] init FAIL err=-7 attempt=5, retry in 1600 ms
+[VL] state INIT -> ERROR (tick=2049)
+[HB] tick=3018 vl=ERROR q=0/8 drop=0 miss=0 err=5 last=-7 rec=0
+[VL] state ERROR -> INIT (tick=3652)
+[VL] init FAIL err=-7 attempt=6, retry in 2000 ms
+[VL] state INIT -> ERROR (tick=3760)
+[HB] tick=4023 vl=ERROR q=0/8 drop=0 miss=0 err=6 last=-7 rec=0
+[STK] min free bytes: LED=384 HB=1416 Sens=1344 Cons=1816
+[HB] tick=5034 vl=ERROR q=0/8 drop=0 miss=0 err=6 last=-7 rec=0
+[VL] state ERROR -> INIT (tick=5763)
+[VL] init FAIL err=-7 attempt=7, retry in 2000 ms
+[VL] state INIT -> ERROR (tick=5871)
+[HB] tick=6039 vl=ERROR q=0/8 drop=0 miss=0 err=7 last=-7 rec=0
+[HB] tick=7044 vl=ERROR q=0/8 drop=0 miss=0 err=7 last=-7 rec=0
+[VL] state ERROR -> INIT (tick=7874)
+[VL] init FAIL err=-7 attempt=8, retry in 2000 ms
+[VL] state INIT -> ERROR (tick=7982)
+[HB] tick=8049 vl=ERROR q=0/8 drop=0 miss=0 err=8 last=-7 rec=0
+[HB] tick=9054 vl=ERROR q=0/8 drop=0 miss=0 err=8 last=-7 rec=0
+[STK] min free bytes: LED=344 HB=1416 Sens=1344 Cons=1816
+[VL] state ERROR -> INIT (tick=9985)
+[HB] tick=10065 vl=INIT q=0/8 drop=0 miss=0 err=8 last=-7 rec=0
+[VL] init FAIL err=-7 attempt=9, retry in 2000 ms
+[VL] state INIT -> ERROR (tick=10093)
+[HB] tick=11072 vl=ERROR q=0/8 drop=0 miss=0 err=9 last=-7 rec=0
+[HB] tic

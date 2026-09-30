@@ -1,0 +1,182 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2026.09.30 13:15:16 =~=~=~=~=~=~=~=~=~=~=~=
+[DATA] seq=97 t=19400 temp=25.70 C dist=989 mm
+[DATA] seq=98 t=19600 temp=25.80 C dist=126 mm
+[DATA] seq=99 t=19800 temp=25.90 C dist=163 mm
+[DATA] seq=100 t=20000 temp=26.00 C dist=200 mm
+[HB] tick=20068 q=0/8 drop=0
+[DATA] seq=101 t=20200 temp=25.90 C dist=237 mm
+[DATA] seq=102 t=20400 temp=25.80 C dist=274 mm
+[DATA] seq=103 t=20600 temp=25.70 C dist=311 mm
+[DATA] seq=104 t=20800 temp=25.60 C dist=348 mm
+[DATA] seq=105 t=21000 temp=25.50 C dist=385 mm
+[HB] tick=21070 q=0/8 drop=0
+[DATA] seq=106 t=21200 temp=25.40 C dist=422 mm
+[DATA] seq=107 t=21400 temp=25.30 C dist=459 mm
+[DATA] seq=108 t=21600 temp=25.20 C dist=496 mm
+[DATA] seq=109 t=21800 temp=25.10 C dist=533 mm
+[DATA] seq=110 t=22000 temp=25.00 C dist=570 mm
+[HB] tick=22072 q=0/8 drop=0
+[DATA] seq=111 t=22200 temp=24.90 C dist=607 mm
+[DATA] seq=112 t=22400 temp=24.80 C dist=644 mm
+[DATA] seq=113 t=22600 temp=24.70 C dist=681 mm
+[DATA] seq=114 t=22800 temp=24.60 C dist=718 mm
+[DATA] seq=115 t=23000 temp=24.50 C dist=755 mm
+[HB] tick=23074 q=0/8 drop=0
+[DATA] seq=116 t=23200 temp=24.40 C dist=792 mm
+[DATA] seq=117 t=23400 temp=24.30 C dist=829 mm
+[DATA] seq=118 t=23600 temp=24.20 C dist=866 mm
+[DATA] seq=119 t=23800 temp=24.10 C dist=903 mm
+[DATA] seq=120 t=24000 temp=24.00 C dist=940 mm
+[HB] tick=24076 q=0/8 drop=0
+[STK] min free bytes: LED=384 HB=1432 Prod=792 Cons=1432
+[DATA] seq=121 t=24200 temp=24.10 C dist=977 mm
+[DATA] seq=122 t=24400 temp=24.20 C dist=114 mm
+[DATA] seq=123 t=24600 temp=24.30 C dist=151 mm
+[DATA] seq=124 t=24800 temp=24.40 C dist=188 mm
+[DATA] seq=125 t=25000 temp=24.50 C dist=225 mm
+[HB] tick=25084 q=0/8 drop=0
+[DATA] seq=126 t=25200 temp=24.60 C dist=262 mm
+[DATA] seq=127 t=25400 temp=24.70 C dist=299 mm
+[DATA] seq=128 t=25600 temp=24.80 C dist=336 mm
+[DATA] seq=129 t=25800 temp=24.90 C dist=373 mm
+
+=== f446-rtos-logger day1 boot ===
+[I2C] VL53L0X @0x29: ACK
+[DATA] seq=0 t=0 temp=24.00 C dist=100 mm
+[HB] tick=3 q=0/8 drop=0
+[DATA] seq=1 t=200 temp=24.10 C dist=137 mm
+[DATA] seq=2 t=400 temp=24.20 C dist=174 mm
+[DATA] seq=3 t=600 temp=24.30 C dist=211 mm
+[DATA] seq=4 t=800 temp=24.40 C dist=248 mm
+[DATA] seq=5 t=1000 temp=24.50 C dist=285 mm
+[HB] tick=1006 q=0/8 drop=0
+[DATA] seq=6 t=1200 temp=24.60 C dist=322 mm
+[DATA] seq=7 t=1400 temp=24.70 C dist=359 mm
+[DATA] seq=8 t=1600 temp=24.80 C dist=396 mm
+[DATA] seq=9 t=1800 temp=24.90 C dist=433 mm
+[DATA] seq=10 t=2000 temp=25.00 C dist=470 mm
+[HB] tick=2008 q=0/8 drop=0
+[DATA] seq=11 t=2200 temp=25.10 C dist=507 mm
+[DATA] seq=12 t=2400 temp=25.20 C dist=544 mm
+[DATA] seq=13 t=2600 temp=25.30 C dist=581 mm
+[DATA] seq=14 t=2800 temp=25.40 C dist=618 mm
+[DATA] seq=15 t=3000 temp=25.50 C dist=655 mm
+[HB] tick=3010 q=0/8 drop=0
+[DATA] seq=16 t=3200 temp=25.60 C dist=692 mm
+[DATA] seq=17 t=3400 temp=25.70 C dist=729 mm
+[DATA] seq=18 t=3600 temp=25.80 C dist=766 mm
+[DATA] seq=19 t=3800 temp=25.90 C dist=803 mm
+[DATA] seq=20 t=4000 temp=26.00 C dist=840 mm
+[HB] tick=4012 q=0/8 drop=0
+[STK] min free bytes: LED=384 HB=1432 Prod=792 Cons=1432
+[DATA] seq=21 t=4200 temp=25.90 C dist=877 mm
+[DATA] seq=22 t=4400 temp=25.80 C dist=914 mm
+[DATA] seq=23 t=4600 temp=25.70 C dist=951 mm
+[DATA] seq=24 t=4800 temp=25.60 C dist=988 mm
+[DATA] seq=25 t=5000 temp=25.50 C dist=125 mm
+[HB] tick=5020 q=0/8 drop=0
+[DATA] seq=26 t=5200 temp=25.40 C dist=162 mm
+[DATA] seq=27 t=5400 temp=25.30 C dist=199 mm
+[DATA] seq=28 t=5600 temp=25.20 C dist=236 mm
+[DATA] seq=29 t=5800 temp=25.10 C dist=273 mm
+[DATA] seq=30 t=6000 temp=25.00 C dist=310 mm
+[HB] tick=6022 q=0/8 drop=0
+[DATA] seq=31 t=6200 temp=24.90 C dist=347 mm
+[DATA] seq=32 t=6400 temp=24.80 C dist=384 mm
+[DATA] seq=33 t=6600 temp=24.70 C dist=421 mm
+
+=== f446-rtos-logger day1 boot ===
+[I2C] VL53L0X @0x29: ACK
+[DATA] seq=0 t=0 temp=24.00 C dist=100 mm
+[HB] tick=3 q=0/8 drop=0
+[DATA] seq=1 t=200 temp=24.10 C dist=137 mm
+[DATA] seq=2 t=400 temp=24.20 C dist=174 mm
+[DATA] seq=3 t=600 temp=24.30 C dist=211 mm
+[DATA] seq=4 t=800 temp=24.40 C dist=248 mm
+[DATA] seq=5 t=1000 temp=24.50 C dist=285 mm
+[HB] tick=1006 q=0/8 drop=0
+[DATA] seq=6 t=1200 temp=24.60 C dist=322 mm
+[DATA] seq=7 t=1400 temp=24.70 C dist=359 mm
+[DATA] seq=8 t=1600 temp=24.80 C dist=396 mm
+[DATA] seq=9 t=1800 temp=24.90 C dist=433 mm
+[DATA] seq=10 t=2000 temp=25.00 C dist=470 mm
+[HB] tick=2008 q=0/8 drop=0
+[DATA] seq=11 t=2200 temp=25.10 C dist=507 mm
+[DATA] seq=12 t=2400 temp=25.20 C dist=544 mm
+[DATA] seq=13 t=2600 temp=25.30 C dist=581 mm
+[DATA] seq=14 t=2800 temp=25.40 C dist=618 mm
+[DATA] seq=15 t=3000 temp=25.50 C dist=655 mm
+[HB] tick=3010 q=0/8 drop=0
+[DATA] seq=16 t=3200 temp=25.60 C dist=692 mm
+[DATA] seq=17 t=3400 temp=25.70 C dist=729 mm
+[DATA] seq=18 t=3600 temp=25.80 C dist=766 mm
+[DATA] seq=19 t=3800 temp=25.90 C dist=803 mm
+[DATA] seq=20 t=4000 temp=26.00 C dist=840 mm
+[HB] tick=4012 q=0/8 drop=0
+[STK] min free bytes: LED=384 HB=1432 Prod=792 Cons=1432
+[DATA] seq=21 t=4200 temp=25.90 C dist=877 mm
+[DATA] seq=22 t=4400 temp=25.80 C dist=914 mm
+[DATA] seq=23 t=4600 temp=25.70 C dist=951 mm
+[DATA] seq=24 t=4800 temp=25.60 C dist=988 mm
+[DATA] seq=25 t=5000 temp=25.50 C dist=125 mm
+[HB] tick=5020 q=0/8 drop=0
+[DATA] seq=26 t=5200 temp=25.40 C dist=162 mm
+[DATA] seq=27 t=5400 temp=25.30 C dist=199 mm
+[DATA] seq=28 t=5600 temp=25.20 C dist=236 mm
+[DATA] seq=29 t=5800 temp=25.10 C dist=273 mm
+[DATA] seq=30 t=6000 temp=25.00 C dist=310 mm
+[HB] tick=6022 q=0/8 drop=0
+[DATA] seq=31 t=6200 temp=24.90 C dist=347 mm
+[DATA] seq=32 t=6400 temp=24.80 C dist=384 mm
+[DATA] seq=33 t=6600 temp=24.70 C dist=421 mm
+[DATA] seq=34 t=6800 temp=24.60 C dist=458 mm
+[DATA] seq=35 t=7000 temp=24.50 C dist=495 mm
+[HB] tick=7024 q=0/8 drop=0
+[DATA] seq=36 t=7200 temp=24.40 C dist=532 mm
+[DATA] seq=37 t=7400 temp=24.30 C dist=569 mm
+[DATA] seq=38 t=7600 temp=24.20 C dist=606 mm
+[DATA] seq=39 t=7800 temp=24.10 C dist=643 mm
+[DATA] seq=40 t=8000 temp=24.00 C dist=680 mm
+[HB] tick=8026 q=0/8 drop=0
+[DATA] seq=41 t=8200 temp=24.10 C dist=717 mm
+[DATA] seq=42 t=8400 temp=24.20 C dist=754 mm
+[DATA] seq=43 t=8600 temp=24.30 C dist=791 mm
+[DATA] seq=44 t=8800 temp=24.40 C dist=828 mm
+[DATA] seq=45 t=9000 temp=24.50 C dist=865 mm
+[HB] tick=9028 q=0/8 drop=0
+[STK] min free bytes: LED=384 HB=1432 Prod=792 Cons=1432
+[DATA] seq=46 t=9200 temp=24.60 C dist=902 mm
+[DATA] seq=47 t=9400 temp=24.70 C dist=939 mm
+[DATA] seq=48 t=9600 temp=24.80 C dist=976 mm
+[DATA] seq=49 t=9800 temp=24.90 C dist=113 mm
+[DATA] seq=50 t=10000 temp=25.00 C dist=150 mm
+[HB] tick=10036 q=0/8 drop=0
+[DATA] seq=51 t=10200 temp=25.10 C dist=187 mm
+
+=== f446-rtos-logger day1 boot ===
+[I2C] VL53L0X @0x29: ACK
+[DATA] seq=0 t=0 temp=24.00 C dist=100 mm
+[HB] tick=3 q=0/8 drop=0
+[DATA] seq=1 t=200 temp=24.10 C dist=137 mm
+[DATA] seq=2 t=400 temp=24.20 C dist=174 mm
+[DATA] seq=3 t=600 temp=24.30 C dist=211 mm
+[DATA] seq=4 t=800 temp=24.40 C dist=248 mm
+[DATA] seq=5 t=1000 temp=24.50 C dist=285 mm
+[HB] tick=1006 q=0/8 drop=0
+[DATA] seq=6 t=1200 temp=24.60 C dist=322 mm
+[DATA] seq=7 t=1400 temp=24.70 C dist=359 mm
+[DATA] seq=8 t=1600 temp=24.80 C dist=396 mm
+[DATA] seq=9 t=1800 temp=24.90 C dist=433 mm
+[DATA] seq=10 t=2000 temp=25.00 C dist=470 mm
+[HB] tick=2008 q=0/8 drop=0
+[DATA] seq=11 t=2200 temp=25.10 C dist=507 mm
+[DATA] seq=12 t=2400 temp=25.20 C dist=544 mm
+[DATA] seq=13 t=2600 temp=25.30 C dist=581 mm
+[DATA] seq=14 t=2800 temp=25.40 C dist=618 mm
+[DATA] seq=15 t=3000 temp=25.50 C dist=655 mm
+[HB] tick=3010 q=0/8 drop=0
+[DATA] seq=16 t=3200 temp=25.60 C dist=692 mm
+[DATA] seq=17 t=3400 temp=25.70 C dist=729 mm
+[DATA] seq=18 t=3600 temp=25.80 C dist=766 mm
+[DATA] seq=19 t=3800 temp=25.90 C dist=803 mm
+[DATA] s

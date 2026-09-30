@@ -1,0 +1,356 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2026.09.30 13:41:46 =~=~=~=~=~=~=~=~=~=~=~=
+[HB] tick=90672 vl=RUN q=0/8 drop=0 miss=0 err=9 last=-20 rec=1
+[DATA] seq=4[HB] tick=137989 vl=ERROR q=0/8 drop=0 miss=1 err=21 last=-20 rec=1
+[HB] tick=138995 vl=ERROR q=0/8 drop=0 miss=1 err=21 last=-20 rec=1
+[VL] state ERROR -> INIT (tick=139803)
+[VL] init FAIL err=-20 attempt=10, retry in 2000 ms
+[VL] state INIT -> ERROR (tick=139811)
+[HB] tick=140001 vl=ERROR q=0/8 drop=0 miss=1 err=22 last=-20 rec=1
+[STK] min free bytes: LED=384 HB=1416 Sens=1132 Cons=1424
+
+=== f446-rtos-logger day2 boot ===
+[RST] csr=0x04000000 PIN
+[I2C] VL53L0X @0x29: NO RESPONSE
+[VL] init FAIL err=-20 attempt=1, retry in 100 ms
+[VL] state INIT -> ERROR (tick=4)
+[HB] tick=7 vl=ERROR q=0/8 drop=0 miss=0 err=1 last=-20 rec=0
+[VL] state ERROR -> INIT (tick=107)
+[VL] init FAIL err=-20 attempt=2, retry in 200 ms
+[VL] state INIT -> ERROR (tick=115)
+[VL] state ERROR -> INIT (tick=318)
+[VL] init FAIL err=-20 attempt=3, retry in 400 ms
+[VL] state INIT -> ERROR (tick=326)
+[VL] state ERROR -> INIT (tick=729)
+[VL] init FAIL err=-20 attempt=4, retry in 800 ms
+[VL] state INIT -> ERROR (tick=737)
+[HB] tick=1013 vl=ERROR q=0/8 drop=0 miss=0 err=4 last=-20 rec=0
+[VL] state ERROR -> INIT (tick=1540)
+[VL] init FAIL err=-20 attempt=5, retry in 1600 ms
+[VL] state INIT -> ERROR (tick=1548)
+[HB] tick=2018 vl=ERROR q=0/8 drop=0 miss=0 err=5 last=-20 rec=0
+[HB] tick=3023 vl=ERROR q=0/8 drop=0 miss=0 err=5 last=-20 rec=0
+[VL] state ERROR -> INIT (tick=3151)
+[VL] init FAIL err=-20 attempt=6, retry in 2000 ms
+[VL] state INIT -> ERROR (tick=3159)
+[HB] tick=4028 vl=ERROR q=0/8 drop=0 miss=0 err=6 last=-20 rec=0
+[STK] min free bytes: LED=384 HB=1416 Sens=1344 Cons=1816
+[HB] tick=5040 vl=ERROR q=0/8 drop=0 miss=0 err=6 last=-20 rec=0
+[VL] state ERROR -> INIT (tick=5162)
+[VL] init FAIL err=-20 attempt=7, retry in 2000 ms
+[VL] state INIT -> ERROR (tick=5170)
+[HB] tick=6045 vl=ERROR q=0/8 drop=0 miss=0 err=7 last=-20 rec=0
+[HB] tick=7050 vl=ERROR q=0/8 drop=0 miss=0 err=7 last=-20 rec=0
+[VL] state ERROR -> INIT (tick=7173)
+[VL] init FAIL err=-20 attempt=8, retry in 2000 ms
+[VL] state INIT -> ERROR (tick=7181)
+[HB] tick=8055 vl=ERROR q=0/8 drop=0 miss=0 err=8 last=-20 rec=0
+[HB] tick=9060 vl=ERROR q=0/8 drop=0 miss=0 err=8 last=-20 rec=0
+[STK] min free bytes: LED=368 HB=1416 Sens=1344 Cons=1816
+[VL] state ERROR -> INIT (tick=9184)
+[VL] init FAIL err=-20 attempt=9, retry in 2000 ms
+[VL] state INIT -> ERROR (tick=9192)
+[HB] tick=10072 vl=ERROR q=0/8 drop=0 miss=0 err=9 last=-20 rec=0
+[HB] tick=11077 vl=ERROR q=0/8 drop=0 miss=0 err=9 last=-20 rec=0
+[VL] state ERROR -> INIT (tick=11195)
+[VL] init FAIL err=-20 attempt=10, retry in 2000 ms
+[VL] state INIT -> ERROR (tick=11203)
+[HB] tick=12082 vl=ERROR q=0/8 drop=0 miss=0 err=10 last=-20 rec=0
+[HB] tick=13088 vl=ERROR q=0/8 drop=0 miss=0 err=10 last=-20 rec=0
+[VL] state ERROR -> INIT (tick=13206)
+[VL] init FAIL err=-20 attempt=11, retry in 2000 ms
+[VL] state INIT -> ERROR (tick=13214)
+[HB] tick=14094 vl=ERROR q=0/8 drop=0 miss=0 err=11 last=-20 rec=0
+[STK] min free bytes: LED=368 HB=1416 Sens=1344 Cons=1816
+[HB] tick=15106 vl=ERROR q=0/8 drop=0 miss=0 err=11 last=-20 rec=0
+[VL] state ERROR -> INIT (tick=15217)
+[VL] init FAIL err=-20 attempt=12, retry in 2000 ms
+[VL] state INIT -> ERROR (tick=15225)
+[HB] tick=16112 vl=ERROR q=0/8 drop=0 miss=0 err=12 last=-20 rec=0
+[HB] tick=17118 vl=ERROR q=0/8 drop=0 miss=0 err=12 last=-20 rec=0
+[VL] state ERROR -> INIT (tick=17228)
+[VL] init FAIL err=-20 attempt=13, retry in 2000 ms
+[VL] state INIT -> ERROR (tick=17236)
+[HB] tick=18124 vl=ERROR q=0/8 drop=0 miss=0 err=13 last=-20 rec=0
+[HB] tick=19130 vl=ERROR q=0/8 drop=0 miss=0 err=13 last=-20 rec=0
+[STK] min free bytes: LED=368 HB=1416 Sens=1344 Cons=1816
+[VL] state ERROR -> INIT (tick=19239)
+[VL] init FAIL err=-20 attempt=14, retry in 2000 ms
+[VL] state INIT -> ERROR (tick=19272)
+[HB] tick=20142 vl=ERROR q=0/8 drop=0 miss=0 err=14 last=-20 rec=0
+[HB] tick=21148 vl=ERROR q=0/8 drop=0 miss=0 err=14 last=-20 rec=0
+[VL] state ERROR -> INIT (tick=21275)
+[VL] init FAIL err=-20 attempt=15, retry in 2000 ms
+[VL] state INIT -> ERROR (tick=21308)
+[HB] tick=22154 vl=ERROR q=0/8 drop=0 miss=0 err=15 last=-20 rec=0
+[HB] tick=23160 vl=ERROR q=0/8 drop=0 miss=0 err=15 last=-20 rec=0
+[VL] state ERROR -> INIT (tick=23311)
+[VL] init FAIL err=-20 attempt=16, retry in 2000 ms
+[VL] state INIT -> ERROR (tick=23319)
+[HB] tick=24166 vl=ERROR q=0/8 drop=0 miss=0 err=16 last=-20 rec=0
+[STK] min free bytes: LED=368 HB=1416 Sens=1344 Cons=1816
+[HB] tick=25178 vl=ERROR q=0/8 drop=0 miss=0 err=16 last=-20 rec=0
+[VL] state ERROR -> INIT (tick=25322)
+[VL] init FAIL err=-20 attempt=17, retry in 2000 ms
+[VL] state INIT -> ERROR (tick=25330)
+[HB] tick=26184 vl=ERROR q=0/8 drop=0 miss=0 err=17 last=-20 rec=0
+[HB] tick=27190 vl=ERROR q=0/8 drop=0 miss=0 err=17 last=-20 rec=0
+[VL] state ERROR -> INIT (tick=27333)
+[VL] init OK spad=3 aperture=1 vhv=23 phase=1
+[VL] recovered: attempts=18 downtime=27544 ms
+[VL] state INIT -> RUN (tick=27549)
+[DATA] seq=0 t=27552 dist=185 mm st=0 sig=2765 kcps meas=37 ms
+[DATA] seq=1 t=27749 dist=191 mm st=0 sig=2523 kcps meas=37 ms
+[DATA] seq=2 t=27949 dist=224 mm st=0 sig=1820 kcps meas=37 ms
+[DATA] seq=3 t=28149 dist=272 mm st=0 sig=1476 kcps meas=37 ms
+[HB] tick=28196 vl=RUN q=0/8 drop=0 miss=0 err=17 last=-20 rec=1
+[DATA] seq=4 t=28349 dist=288 mm st=0 sig=1632 kcps meas=37 ms
+[DATA] seq=5 t=28549 dist=283 mm st=0 sig=1382 kcps meas=37 ms
+[DATA] seq=6 t=28749 dist=286 mm st=0 sig=1375 kcps meas=37 ms
+[DATA] seq=7 t=28949 dist=290 mm st=0 sig=1421 kcps meas=37 ms
+[DATA] seq=8 t=29149 dist=285 mm st=0 sig=1328 kcps meas=37 ms
+[HB] tick=29201 vl=RUN q=0/8 drop=0 miss=0 err=17 last=-20 rec=1
+[STK] min free bytes: LED=368 HB=1416 Sens=1132 Cons=1400
+[DATA] seq=9 t=29349 dist=292 mm st=0 sig=1390 kcps meas=37 ms
+[DATA] seq=10 t=29549 dist=281 mm st=0 sig=1445 kcps meas=37 ms
+[DATA] seq=11 t=29749 dist=300 mm st=0 sig=1281 kcps meas=37 ms
+[DATA] seq=12 t=29949 dist=287 mm st=0 sig=1429 kcps meas=37 ms
+[DATA] seq=13 t=30149 dist=296 mm st=0 sig=1460 kcps meas=37 ms
+[HB] tick=30212 vl=RUN q=0/8 drop=0 miss=0 err=17 last=-20 rec=1
+[DATA] seq=14 t=30349 dist=290 mm st=0 sig=1390 kcps meas=37 ms
+[DATA] seq=15 t=30549 dist=294 mm st=0 sig=1437 kcps meas=37 ms
+[DATA] seq=16 t=30749 dist=301 mm st=0 sig=1273 kcps meas=37 ms
+[DATA] seq=17 t=30949 dist=289 mm st=0 sig=1429 kcps meas=37 ms
+[DATA] seq=18 t=31149 dist=293 mm st=0 sig=1453 kcps meas=37 ms
+[HB] tick=31217 vl=RUN q=0/8 drop=0 miss=0 err=17 last=-20 rec=1
+[DATA] seq=19 t=31349 dist=290 mm st=0 sig=1312 kcps meas=37 ms
+[DATA] seq=20 t=31549 dist=294 mm st=0 sig=1398 kcps meas=37 ms
+[DATA] seq=21 t=31749 dist=296 mm st=0 sig=1382 kcps meas=37 ms
+[DATA] seq=22 t=31949 dist=287 mm st=0 sig=1484 kcps meas=37 ms
+[DATA] seq=23 t=32149 dist=270 mm st=0 sig=1406 kcps meas=37 ms
+[HB] tick=32222 vl=RUN q=0/8 drop=0 miss=0 err=17 last=-20 rec=1
+[DATA] seq=24 t=32349 dist=288 mm st=0 sig=1445 kcps meas=37 ms
+[DATA] seq=25 t=32549 dist=293 mm st=0 sig=1367 kcps meas=37 ms
+[DATA] seq=26 t=32749 dist=291 mm st=0 sig=1421 kcps meas=37 ms
+[DATA] seq=27 t=32949 dist=289 mm st=0 sig=1390 kcps meas=37 ms
+[DATA] seq=28 t=33149 dist=290 mm st=0 sig=1375 kcps meas=37 ms
+[HB] tick=33227 vl=RUN q=0/8 drop=0 miss=0 err=17 last=-20 rec=1
+[DATA] seq=29 t=33349 dist=300 mm st=0 sig=1218 kcps meas=37 ms
+[DATA] seq=30 t=33549 dist=296 mm st=0 sig=1351 kcps meas=37 ms
+[DATA] seq=31 t=33749 dist=297 mm st=0 sig=1500 kcps meas=37 ms
+[DATA] seq=32 t=33949 dist=276 mm st=0 sig=1382 kcps meas=37 ms
+[DATA] seq=33 t=34149 dist=302 mm st=0 sig=1500 kcps meas=37 ms
+[HB] tick=34232 vl=RUN q=0/8 drop=0 miss=0 err=17 last=-20 rec=1
+[STK] min free bytes: LED=368 HB=1416 Sens=1132 Cons=1400
+[DATA] seq=34 t=34349 dist=295 mm st=0 sig=1429 kcps meas=37 ms
+[DATA] seq=35 t=34549 dist=286 mm st=0 sig=1359 kcps meas=37 ms
+[DATA] seq=36 t=34749 dist=296 mm st=0 sig=1390 kcps meas=37 ms
+[DATA] seq=37 t=34949 dist=284 mm st=0 sig=1367 kcps meas=37 ms
+[DATA] seq=38 t=35149 dist=302 mm st=0 sig=1367 kcps meas=37 ms
+[HB] tick=35243 vl=RUN q=0/8 drop=0 miss=0 err=17 last=-20 rec=1
+[DATA] seq=39 t=35349 dist=282 mm st=0 sig=1398 kcps meas=37 ms
+[DATA] seq=40 t=35549 dist=310 mm st=0 sig=1445 kcps meas=37 ms
+[DATA] seq=41 t=35749 dist=278 mm st=0 sig=1351 kcps meas=37 ms
+[DATA] seq=42 t=35949 dist=310 mm st=0 sig=1406 kcps meas=37 ms
+[DATA] seq=43 t=36149 dist=294 mm st=0 sig=1460 kcps meas=37 ms
+[HB] tick=36248 vl=RUN q=0/8 drop=0 miss=0 err=17 last=-20 rec=1
+[DATA] seq=44 t=36349 dist=294 mm st=0 sig=1382 kcps meas=37 ms
+[DATA] seq=45 t=36549 dist=291 mm st=0 sig=1500 kcps meas=37 ms
+[DATA] seq=46 t=36749 dist=286 mm st=0 sig=1492 kcps meas=37 ms
+[DATA] seq=47 t=36949 dist=284 mm st=0 sig=1515 kcps meas=37 ms
+[DATA] seq=48 t=37149 dist=287 mm st=0 sig=1351 kcps meas=37 ms
+[HB] tick=37253 vl=RUN q=0/8 drop=0 miss=0 err=17 last=-20 rec=1
+[DATA] seq=49 t=37349 dist=301 mm st=0 sig=1242 kcps meas=37 ms
+[DATA] seq=50 t=37549 dist=282 mm st=0 sig=1296 kcps meas=37 ms
+[DATA] seq=51 t=37749 dist=294 mm st=0 sig=1250 kcps meas=37 ms
+[DATA] seq=52 t=37949 dist=290 mm st=0 sig=1351 kcps meas=37 ms
+[DATA] seq=53 t=38149 dist=290 mm st=0 sig=1335 kcps meas=37 ms
+[HB] tick=38258 vl=RUN q=0/8 drop=0 miss=0 err=17 last=-20 rec=1
+[DATA] seq=54 t=38349 dist=283 mm st=0 sig=1375 kcps meas=37 ms
+[DATA] seq=55 t=38549 dist=304 mm st=0 sig=1429 kcps meas=37 ms
+[DATA] seq=56 t=38749 dist=295 mm st=0 sig=1367 kcps meas=37 ms
+[DATA] seq=57 t=38949 dist=289 mm st=0 sig=1382 kcps meas=37 ms
+[DATA] seq=58 t=39149 dist=282 mm st=0 sig=1507 kcps meas=37 ms
+[HB] tick=39263 vl=RUN q=0/8 drop=0 miss=0 err=17 last=-20 rec=1
+[STK] min free bytes: LED=368 HB=1416 Sens=1132 Cons=1400
+[DATA] seq=59 t=39349 dist=260 mm st=0 sig=1515 kcps meas=37 ms
+[DATA] seq=60 t=39549 dist=260 mm st=0 sig=1515 kcps meas=37 ms
+[DATA] seq=61 t=39749 dist=245 mm st=0 sig=1414 kcps meas=37 ms
+[DATA] seq=62 t=39949 dist=261 mm st=0 sig=1578 kcps meas=37 ms
+[DATA] seq=63 t=40149 dist=257 mm st=0 sig=1539 kcps meas=37 ms
+[HB] tick=40274 vl=RUN q=0/8 drop=0 miss=0 err=17 last=-20 rec=1
+[DATA] seq=64 t=40349 dist=250 mm st=0 sig=1585 kcps meas=37 ms
+[DATA] seq=65 t=40549 dist=254 mm st=0 sig=1578 kcps meas=37 ms
+[DATA] seq=66 t=40749 dist=261 mm st=0 sig=1531 kcps meas=37 ms
+[DATA] seq=67 t=40949 dist=246 mm st=0 sig=1539 kcps meas=37 ms
+[DATA] seq=68 t=41149 dist=254 mm st=0 sig=1578 kcps meas=37 ms
+[HB] tick=41279 vl=RUN q=0/8 drop=0 miss=0 err=17 last=-20 rec=1
+[DATA] seq=69 t=41349 dist=252 mm st=0 sig=1656 kcps meas=37 ms
+[DATA] seq=70 t=41549 dist=257 mm st=0 sig=1539 kcps meas=37 ms
+[DATA] seq=71 t=41749 dist=250 mm st=0 sig=1531 kcps meas=37 ms
+[DATA] seq=72 t=41949 dist=264 mm st=0 sig=1695 kcps meas=37 ms
+[DATA] seq=73 t=42149 dist=253 mm st=0 sig=1476 kcps meas=37 ms
+[HB] tick=42284 vl=RUN q=0/8 drop=0 miss=0 err=17 last=-20 rec=1
+[DATA] seq=74 t=42349 dist=258 mm st=0 sig=1484 kcps meas=37 ms
+
+=== f446-rtos-logger day2 boot ===
+[RST] csr=0x04000000 PIN
+[I2C] VL53L0X @0x29: ACK
+[HB] tick=1 vl=INIT q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[VL] init OK spad=3 aperture=1 vhv=23 phase=1
+[VL] state INIT -> RUN (tick=208)
+[DATA] seq=0 t=212 dist=253 mm st=0 sig=1578 kcps meas=37 ms
+[DATA] seq=1 t=408 dist=257 mm st=0 sig=1593 kcps meas=37 ms
+[DATA] seq=2 t=608 dist=248 mm st=0 sig=1656 kcps meas=37 ms
+[DATA] seq=3 t=808 dist=242 mm st=0 sig=1625 kcps meas=37 ms
+[DATA] seq=4 t=1008 dist=249 mm st=0 sig=1578 kcps meas=37 ms
+[HB] tick=1083 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=5 t=1208 dist=254 mm st=0 sig=1664 kcps meas=37 ms
+[DATA] seq=6 t=1408 dist=273 mm st=0 sig=1640 kcps meas=37 ms
+[HB] tick=2088 vl=RUN q=0/8 drop=0 miss=1 err=2 last=-20 rec=0
+[VL] 3 consecutive errors (last=-20)
+[VL] state RUN -> ERROR (tick=2419)
+[VL] state ERROR -> INIT (tick=2522)
+[VL] init FAIL err=-20 attempt=1, retry in 200 ms
+[VL] state INIT -> ERROR (tick=2542)
+[VL] state ERROR -> INIT (tick=2745)
+[VL] init FAIL err=-20 attempt=2, retry in 400 ms
+[VL] state INIT -> ERROR (tick=2765)
+[HB] tick=3093 vl=ERROR q=0/8 drop=0 miss=1 err=5 last=-20 rec=0
+[VL] state ERROR -> INIT (tick=3168)
+[VL] init FAIL err=-20 attempt=3, retry in 800 ms
+[VL] state INIT -> ERROR (tick=3176)
+[VL] state ERROR -> INIT (tick=3979)
+[VL] init FAIL err=-20 attempt=4, retry in 1600 ms
+[VL] state INIT -> ERROR (tick=3987)
+[HB] tick=4098 vl=ERROR q=0/8 drop=0 miss=1 err=7 last=-20 rec=0
+[STK] min free bytes: LED=384 HB=1416 Sens=1132 Cons=1424
+[HB] tick=5109 vl=ERROR q=0/8 drop=0 miss=1 err=7 last=-20 rec=0
+[VL] state ERROR -> INIT (tick=5590)
+[VL] init FAIL err=-20 attempt=5, retry in 2000 ms
+[VL] state INIT -> ERROR (tick=5598)
+[HB] tick=6114 vl=ERROR q=0/8 drop=0 miss=1 err=8 last=-20 rec=0
+[HB] tick=7119 vl=ERROR q=0/8 drop=0 miss=1 err=8 last=-20 rec=0
+[VL] state ERROR -> INIT (tick=7601)
+[VL] init FAIL err=-20 attempt=6, retry in 2000 ms
+[VL] state INIT -> ERROR (tick=7609)
+[HB] tick=8124 vl=ERROR q=0/8 drop=0 miss=1 err=9 last=-20 rec=0
+
+=== f446-rtos-logger day2 boot ===
+[RST] csr=0x04000000 PIN
+[I2C] VL53L0X @0x29: NO RESPONSE
+[VL] init FAIL err=-20 attempt=1, retry in 100 ms
+[VL] state INIT -> ERROR (tick=4)
+[HB] tick=7 vl=ERROR q=0/8 drop=0 miss=0 err=1 last=-20 rec=0
+[VL] state ERROR -> INIT (tick=107)
+[VL] init FAIL err=-20 attempt=2, retry in 200 ms
+[VL] state INIT -> ERROR (tick=115)
+[VL] state ERROR -> INIT (tick=318)
+[VL] init FAIL err=-20 attempt=3, retry in 400 ms
+[VL] state INIT -> ERROR (tick=326)
+[VL] state ERROR -> INIT (tick=729)
+[VL] init FAIL err=-20 attempt=4, retry in 800 ms
+[VL] state INIT -> ERROR (tick=737)
+[HB] tick=1013 vl=ERROR q=0/8 drop=0 miss=0 err=4 last=-20 rec=0
+[VL] state ERROR -> INIT (tick=1540)
+[VL] init FAIL err=-20 attempt=5, retry in 1600 ms
+[VL] state INIT -> ERROR (tick=1548)
+
+=== f446-rtos-logger day2 boot ===
+[RST] csr=0x0E000000 POR PIN BOR
+[I2C] VL53L0X @0x29: NO RESPONSE
+[VL] init FAIL err=-20 attempt=1, retry in 100 ms
+[VL] state INIT -> ERROR (tick=4)
+[HB] tick=7 vl=ERROR q=0/8 drop=0 miss=0 err=1 last=-20 rec=0
+[VL] state ERROR -> INIT (tick=107)
+[VL] init FAIL err=-20 attempt=2, retry in 200 ms
+[VL] state INIT -> ERROR (tick=115)
+[VL] state ERROR -> INIT (tick=318)
+[VL] init FAIL err=-20 attempt=3, retry in 400 ms
+[VL] state INIT -> ERROR (tick=326)
+[VL] state ERROR -> INIT (tick=729)
+[VL] init FAIL err=-20 attempt=4, retry in 800 ms
+[VL] state INIT -> ERROR (tick=737)
+[HB] tick=1013 vl=ERROR q=0/8 drop=0 miss=0 err=4 last=-20 rec=0
+[VL] state ERROR -> INIT (tick=1540)
+[VL] init FAIL err=-20 attempt=5, retry in 1600 ms
+[VL] state INIT -> ERROR (tick=1548)
+[HB] tick=2018 vl=ERROR q=0/8 drop=0 miss=0 err=5 last=-20 rec=0
+[HB] tick=3023 vl=ERROR q=0/8 drop=0 miss=0 err=5 last=-20 rec=0
+[VL] state ERROR -> INIT (tick=3151)
+[VL] init FAIL err=-20 attempt=6, retry in 2000 ms
+[VL] state INIT -> ERROR (tick=3159)
+[HB] tick=4028 vl=ERROR q=0/8 drop=0 miss=0 err=6 last=-20 rec=0
+[STK] min free bytes: LED=384 HB=1416 Sens=1344 Cons=1816
+[HB] tick=5040 vl=ERROR q=0/8 drop=0 miss=0 err=6 last=-20 rec=0
+[VL] state ERROR -> INIT (tick=5162)
+[VL] init FAIL err=-20 attempt=7, retry in 2000 ms
+[VL] state INIT -> ERROR (tick=5170)
+[HB] tick=6045 vl=ERROR q=0/8 drop=0 miss=0 err=7 last=-20 rec=0
+[HB] tick=7050 vl=ERROR q=0/8 drop=0 miss=0 err=7 last=-20 rec=0
+[VL] state ERROR -> INIT (tick=7173)
+[VL] init FAIL err=-20 attempt=8, retry in 2000 ms
+[VL] state INIT -> ERROR (tick=7181)
+[HB] tick=8055 vl=ERROR q=0/8 drop=0 miss=0 err=8 last=-20 rec=0
+[HB] tick=9060 vl=ERROR q=0/8 drop=0 miss=0 err=8 last=-20 rec=0
+[STK] min free bytes: LED=384 HB=1416 Sens=1344 Cons=1816
+[VL] state ERROR -> INIT (tick=9184)
+[VL] init OK spad=3 aperture=1 vhv=23 phase=1
+[VL] recovered: attempts=9 downtime=9395 ms
+[VL] state INIT -> RUN (tick=9399)
+[DATA] seq=0 t=9403 dist=182 mm st=0 sig=1687 kcps meas=37 ms
+[DATA] seq=1 t=9599 dist=195 mm st=0 sig=1562 kcps meas=37 ms
+[DATA] seq=2 t=9799 dist=216 mm st=0 sig=1406 kcps meas=37 ms
+[DATA] seq=3 t=9999 dist=217 mm st=0 sig=1328 kcps meas=37 ms
+[HB] tick=10072 vl=RUN q=0/8 drop=0 miss=0 err=8 last=-20 rec=1
+[DATA] seq=4 t=10199 dist=224 mm st=0 sig=1390 kcps meas=37 ms
+[DATA] seq=5 t=10399 dist=222 mm st=0 sig=1398 kcps meas=37 ms
+[DATA] seq=6 t=10599 dist=230 mm st=0 sig=1414 kcps meas=37 ms
+[DATA] seq=7 t=10799 dist=223 mm st=0 sig=1312 kcps meas=37 ms
+[DATA] seq=8 t=10999 dist=229 mm st=0 sig=1312 kcps meas=37 ms
+[HB] tick=11077 vl=RUN q=0/8 drop=0 miss=0 err=8 last=-20 rec=1
+[DATA] seq=9 t=11199 dist=223 mm st=0 sig=1281 kcps meas=37 ms
+[DATA] seq=10 t=11399 dist=219 mm st=0 sig=1328 kcps meas=37 ms
+[DATA] seq=11 t=11599 dist=227 mm st=0 sig=1359 kcps meas=37 ms
+[DATA] seq=12 t=11799 dist=226 mm st=0 sig=1375 kcps meas=37 ms
+[DATA] seq=13 t=11999 dist=239 mm st=0 sig=1281 kcps meas=37 ms
+[HB] tick=12082 vl=RUN q=0/8 drop=0 miss=0 err=8 last=-20 rec=1
+[DATA] seq=14 t=12199 dist=218 mm st=0 sig=1304 kcps meas=37 ms
+[DATA] seq=15 t=12399 dist=221 mm st=0 sig=1312 kcps meas=37 ms
+[DATA] seq=16 t=12599 dist=238 mm st=0 sig=1359 kcps meas=37 ms
+[DATA] seq=17 t=12799 dist=213 mm st=0 sig=1367 kcps meas=37 ms
+[DATA] seq=18 t=12999 dist=218 mm st=0 sig=1398 kcps meas=37 ms
+[HB] tick=13087 vl=RUN q=0/8 drop=0 miss=0 err=8 last=-20 rec=1
+[DATA] seq=19 t=13199 dist=230 mm st=0 sig=1421 kcps meas=37 ms
+[DATA] seq=20 t=13399 dist=230 mm st=0 sig=1250 kcps meas=37 ms
+[DATA] seq=21 t=13599 dist=228 mm st=0 sig=1328 kcps meas=37 ms
+[DATA] seq=22 t=13799 dist=242 mm st=0 sig=1335 kcps meas=37 ms
+[DATA] seq=23 t=13999 dist=229 mm st=0 sig=1281 kcps meas=37 ms
+[HB] tick=14092 vl=RUN q=0/8 drop=0 miss=0 err=8 last=-20 rec=1
+[STK] min free bytes: LED=384 HB=1416 Sens=1132 Cons=1424
+[DATA] seq=24 t=14199 dist=233 mm st=0 sig=1359 kcps meas=37 ms
+[DATA] seq=25 t=14399 dist=238 mm st=0 sig=1367 kcps meas=37 ms
+[DATA] seq=26 t=14599 dist=224 mm st=0 sig=1359 kcps meas=37 ms
+[DATA] seq=27 t=14799 dist=215 mm st=0 sig=1406 kcps meas=37 ms
+[DATA] seq=28 t=14999 dist=215 mm st=0 sig=1335 kcps meas=37 ms
+[HB] tick=15103 vl=RUN q=0/8 drop=0 miss=0 err=8 last=-20 rec=1
+[DATA] seq=29 t=15199 dist=226 mm st=0 sig=1273 kcps meas=37 ms
+[DATA] seq=30 t=15399 dist=213 mm st=0 sig=1320 kcps meas=37 ms
+[DATA] seq=31 t=15599 dist=221 mm st=0 sig=1210 kcps meas=37 ms
+[DATA] seq=32 t=15799 dist=219 mm st=0 sig=1296 kcps meas=37 ms
+[DATA] seq=33 t=15999 dist=233 mm st=0 sig=1218 kcps meas=37 ms
+[HB] tick=16108 vl=RUN q=0/8 drop=0 miss=0 err=8 last=-20 rec=1
+[DATA] seq=34 t=16199 dist=237 mm st=0 sig=1257 kcps meas=37 ms
+[DATA] seq=35 t=16399 dist=233 mm st=0 sig=1304 kcps meas=37 ms
+[DATA] seq=36 t=16599 dist=231 mm st=0 sig=1234 kcps meas=37 ms
+[DATA] seq=37 t=16799 dist=239 mm st=0 sig=1257 kcps meas=37 ms
+[DATA] seq=38 t=16999 dist=228 mm st=0 sig=1414 kcps meas=37 ms
+[HB] tick=17113 vl=RUN q=0/8 drop=0 miss=0 err=8 last=-20 rec=1
+[DATA] seq=39 t=17199 dist=233 mm st=0 sig=1226 kcps meas=37 ms
+[DATA] seq=40 t=17399 dist=231 mm st=0 sig=1445 kcps meas=37 ms
+[DATA] seq=41 t=17599 dist=216 mm st=0 sig=1320 kcps meas=37 ms
+[DATA] seq=42 t=17799 dist=222 mm st=0 sig=1289 kcps meas=37 ms
+[DATA] seq=43 t=17999 dist=218 mm st=0 sig=1414 kcps meas=37 ms
+[HB] tick=18118 vl=RUN q=0/8 drop=0 miss=0 err=8 last=-20 rec=1
+[DATA] seq=44 t=18199 dist=237 mm st=0 sig=1359 kcps meas=37 ms
+[DATA] seq=45 t=18399 dist=220 mm st=0 sig=1242 kcps meas=37 ms
+[DATA] se

@@ -1,0 +1,269 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2026.09.30 13:27:46 =~=~=~=~=~=~=~=~=~=~=~=
+[DATA] seq=165 t=33208 dist=95 mm st=0 sig=21976 kcps meas=37 ms
+[HB] tick=33262 q=0/8 drop=0 i2c_err=0 last_err=0
+[DATA] seq=166 t=33[DATA] seq=54 t=11008 dist=93 mm st=0 sig=24070 kcps meas=37 ms
+[HB] tick=11145 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=55 t=11208 dist=82 mm st=0 sig=22125 kcps meas=37 ms
+[DATA] seq=56 t=11408 dist=80 mm st=0 sig=22640 kcps meas=37 ms
+[DATA] seq=57 t=11608 dist=72 mm st=0 sig=23640 kcps meas=37 ms
+[DATA] seq=58 t=11808 dist=75 mm st=0 sig=14140 kcps meas=37 ms
+[DATA] seq=59 t=12008 dist=120 mm st=0 sig=21523 kcps meas=37 ms
+[HB] tick=12150 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=60 t=12208 dist=145 mm st=0 sig=6718 kcps meas=37 ms
+[DATA] seq=61 t=12408 dist=125 mm st=0 sig=12554 kcps meas=37 ms
+[DATA] seq=62 t=12608 dist=121 mm st=0 sig=17804 kcps meas=37 ms
+[DATA] seq=63 t=12808 dist=126 mm st=0 sig=15679 kcps meas=37 ms
+[DATA] seq=64 t=13008 dist=125 mm st=0 sig=16453 kcps meas=37 ms
+[HB] tick=13155 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=65 t=13208 dist=123 mm st=0 sig=18945 kcps meas=37 ms
+[DATA] seq=66 t=13408 dist=126 mm st=0 sig=17289 kcps meas=37 ms
+
+=== f446-rtos-logger day2 boot ===
+[I2C] VL53L0X @0x29: ACK
+[HB] tick=1 vl=INIT q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[VL] init OK spad=3 aperture=1 vhv=24 phase=1
+[VL] state INIT -> RUN (tick=208)
+[DATA] seq=0 t=212 dist=133 mm st=0 sig=14671 kcps meas=37 ms
+[DATA] seq=1 t=408 dist=131 mm st=0 sig=14546 kcps meas=37 ms
+[DATA] seq=2 t=608 dist=131 mm st=0 sig=14507 kcps meas=37 ms
+[DATA] seq=3 t=808 dist=131 mm st=0 sig=14445 kcps meas=37 ms
+[DATA] seq=4 t=1008 dist=124 mm st=0 sig=14375 kcps meas=37 ms
+[HB] tick=1083 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=5 t=1208 dist=123 mm st=0 sig=14765 kcps meas=37 ms
+[DATA] seq=6 t=1408 dist=128 mm st=0 sig=13414 kcps meas=37 ms
+[DATA] seq=7 t=1608 dist=134 mm st=0 sig=9164 kcps meas=37 ms
+[DATA] seq=8 t=1808 dist=133 mm st=0 sig=7875 kcps meas=37 ms
+[DATA] seq=9 t=2008 dist=160 mm st=0 sig=4671 kcps meas=37 ms
+[HB] tick=2088 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=10 t=2208 dist=226 mm st=0 sig=2320 kcps meas=37 ms
+[DATA] seq=11 t=2408 dist=279 mm st=0 sig=2062 kcps meas=37 ms
+[DATA] seq=12 t=2608 dist=297 mm st=0 sig=2382 kcps meas=37 ms
+[DATA] seq=13 t=2808 dist=283 mm st=0 sig=3164 kcps meas=37 ms
+[DATA] seq=14 t=3008 dist=279 mm st=0 sig=3437 kcps meas=37 ms
+[HB] tick=3093 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=15 t=3208 dist=272 mm st=0 sig=3453 kcps meas=37 ms
+[DATA] seq=16 t=3408 dist=274 mm st=0 sig=3429 kcps meas=37 ms
+[DATA] seq=17 t=3608 dist=272 mm st=0 sig=3500 kcps meas=37 ms
+[DATA] seq=18 t=3808 dist=269 mm st=0 sig=3851 kcps meas=37 ms
+[DATA] seq=19 t=4008 dist=263 mm st=0 sig=3632 kcps meas=37 ms
+[HB] tick=4098 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[STK] min free bytes: LED=384 HB=1416 Sens=1132 Cons=1424
+[DATA] seq=20 t=4208 dist=253 mm st=0 sig=3585 kcps meas=37 ms
+[DATA] seq=21 t=4408 dist=262 mm st=0 sig=3671 kcps meas=37 ms
+[DATA] seq=22 t=4608 dist=257 mm st=0 sig=3593 kcps meas=37 ms
+[DATA] seq=23 t=4808 dist=260 mm st=0 sig=3593 kcps meas=37 ms
+[DATA] seq=24 t=5008 dist=245 mm st=0 sig=4210 kcps meas=37 ms
+[HB] tick=5109 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=25 t=5208 dist=130 mm st=0 sig=15632 kcps meas=37 ms
+[DATA] seq=26 t=5408 dist=96 mm st=0 sig=19085 kcps meas=37 ms
+[DATA] seq=27 t=5608 dist=113 mm st=0 sig=12210 kcps meas=37 ms
+[DATA] seq=28 t=5808 dist=84 mm st=0 sig=22382 kcps meas=37 ms
+[DATA] seq=29 t=6008 dist=67 mm st=0 sig=21632 kcps meas=37 ms
+[HB] tick=6114 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=30 t=6208 dist=65 mm st=0 sig=16914 kcps meas=37 ms
+[DATA] seq=31 t=6408 dist=86 mm st=0 sig=11875 kcps meas=37 ms
+[DATA] seq=32 t=6608 dist=223 mm st=0 sig=1367 kcps meas=37 ms
+[DATA] seq=33 t=6808 dist=508 mm st=0 sig=742 kcps meas=37 ms
+[DATA] seq=34 t=7008 dist=820 mm st=0 sig=515 kcps meas=37 ms
+[HB] tick=7119 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=35 t=7208 dist=868 mm st=0 sig=539 kcps meas=37 ms
+[DATA] seq=36 t=7408 dist=867 mm st=0 sig=601 kcps meas=37 ms
+[DATA] seq=37 t=7608 dist=784 mm st=0 sig=500 kcps meas=37 ms
+[DATA] seq=38 t=7808 dist=806 mm st=0 sig=507 kcps meas=37 ms
+[DATA] seq=39 t=8008 dist=838 mm st=0 sig=578 kcps meas=37 ms
+[HB] tick=8124 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=40 t=8208 dist=795 mm st=0 sig=445 kcps meas=37 ms
+[DATA] seq=41 t=8408 dist=795 mm st=0 sig=554 kcps meas=37 ms
+[DATA] seq=42 t=8608 dist=780 mm st=0 sig=492 kcps meas=37 ms
+[DATA] seq=43 t=8808 dist=822 mm st=0 sig=718 kcps meas=37 ms
+[DATA] seq=44 t=9008 dist=777 mm st=0 sig=539 kcps meas=37 ms
+[HB] tick=9129 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[STK] min free bytes: LED=384 HB=1416 Sens=1132 Cons=1424
+[DATA] seq=45 t=9208 dist=798 mm st=0 sig=687 kcps meas=37 ms
+[DATA] seq=46 t=9408 dist=885 mm st=0 sig=562 kcps meas=37 ms
+[DATA] seq=47 t=9608 dist=732 mm st=0 sig=593 kcps meas=37 ms
+[DATA] seq=48 t=9808 dist=788 mm st=0 sig=500 kcps meas=37 ms
+[DATA] seq=49 t=10008 dist=751 mm st=0 sig=546 kcps meas=37 ms
+[HB] tick=10140 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=50 t=10208 dist=810 mm st=0 sig=578 kcps meas=37 ms
+[DATA] seq=51 t=10408 dist=787 mm st=0 sig=531 kcps meas=37 ms
+[DATA] seq=52 t=10608 dist=781 mm st=0 sig=570 kcps meas=37 ms
+[DATA] seq=53 t=10808 dist=783 mm st=0 sig=562 kcps meas=37 ms
+[HB] tick=11145 vl=RUN q=0/8 drop=0 miss=0 err=1 last=-20 rec=0
+[VL] 3 consecutive errors (last=-20)
+[VL] state RUN -> ERROR (tick=11412)
+[VL] state ERROR -> INIT (tick=11515)
+[VL] init FAIL err=-20 attempt=1, retry in 200 ms
+[VL] state INIT -> ERROR (tick=11523)
+[VL] state ERROR -> INIT (tick=11726)
+[VL] init FAIL err=-20 attempt=2, retry in 400 ms
+[VL] state INIT -> ERROR (tick=11734)
+[VL] state ERROR -> INIT (tick=12137)
+[VL] init FAIL err=-20 attempt=3, retry in 800 ms
+[VL] state INIT -> ERROR (tick=12145)
+[HB] tick=12150 vl=ERROR q=0/8 drop=0 miss=0 err=6 last=-20 rec=0
+[VL] state ERROR -> INIT (tick=12948)
+[VL] init FAIL err=-20 attempt=4, retry in 1600 ms
+[VL] state INIT -> ERROR (tick=12956)
+[HB] tick=13155 vl=ERROR q=0/8 drop=0 miss=0 err=7 last=-20 rec=0
+[HB] tick=14160 vl=ERROR q=0/8 drop=0 miss=0 err=7 last=-20 rec=0
+[STK] min free bytes: LED=384 HB=1416 Sens=1132 Cons=1424
+[VL] state ERROR -> INIT (tick=14559)
+[VL] init FAIL err=-20 attempt=5, retry in 2000 ms
+[VL] state INIT -> ERROR (tick=14567)
+[HB] tick=15172 vl=ERROR q=0/8 drop=0 miss=0 err=8 last=-20 rec=0
+[HB] tick=16177 vl=ERROR q=0/8 drop=0 miss=0 err=8 last=-20 rec=0
+[VL] state ERROR -> INIT (tick=16570)
+[VL] init FAIL err=-20 attempt=6, retry in 2000 ms
+[VL] state INIT -> ERROR (tick=16578)
+[HB] tick=17182 vl=ERROR q=0/8 drop=0 miss=0 err=9 last=-20 rec=0
+[HB] tick=18187 vl=ERROR q=0/8 drop=0 miss=0 err=9 last=-20 rec=0
+[VL] state ERROR -> INIT (tick=18581)
+[VL] init OK spad=3 aperture=1 vhv=24 phase=1
+[VL] recovered: attempts=7 downtime=7384 ms
+[VL] state INIT -> RUN (tick=18796)
+[DATA] seq=54 t=18800 dist=803 mm st=0 sig=531 kcps meas=37 ms
+[DATA] seq=55 t=18996 dist=857 mm st=0 sig=453 kcps meas=37 ms
+[HB] tick=19192 vl=RUN q=0/8 drop=0 miss=0 err=9 last=-20 rec=1
+[STK] min free bytes: LED=384 HB=1416 Sens=1132 Cons=1424
+[DATA] seq=56 t=19196 dist=767 mm st=0 sig=539 kcps meas=37 ms
+[DATA] seq=57 t=19396 dist=814 mm st=0 sig=609 kcps meas=37 ms
+[DATA] seq=58 t=19596 dist=868 mm st=0 sig=585 kcps meas=37 ms
+[DATA] seq=59 t=19796 dist=814 mm st=0 sig=507 kcps meas=37 ms
+[DATA] seq=60 t=19996 dist=772 mm st=1 sig=398 kcps meas=37 ms
+[HB] tick=20208 vl=RUN q=0/8 drop=0 miss=0 err=9 last=-20 rec=1
+[DATA] seq=61 t=20196 dist=832 mm st=0 sig=726 kcps meas=37 ms
+[DATA] seq=62 t=20396 dist=763 mm st=0 sig=648 kcps meas=37 ms
+[DATA] seq=63 t=20596 dist=823 mm st=0 sig=554 kcps meas=37 ms
+[DATA] seq=64 t=20796 dist=794 mm st=0 sig=507 kcps meas=37 ms
+[DATA] seq=65 t=20996 dist=8190 mm st=4 sig=406 kcps meas=37 ms
+[HB] tick=21214 vl=RUN q=0/8 drop=0 miss=0 err=9 last=-20 rec=1
+[DATA] seq=66 t=21196 dist=853 mm st=0 sig=578 kcps meas=37 ms
+[DATA] seq=67 t=21396 dist=867 mm st=1 sig=406 kcps meas=37 ms
+[DATA] seq=68 t=21596 dist=834 mm st=0 sig=500 kcps meas=37 ms
+[DATA] seq=69 t=21796 dist=826 mm st=1 sig=414 kcps meas=37 ms
+[DATA] seq=70 t=21996 dist=842 mm st=0 sig=515 kcps meas=37 ms
+[HB] tick=22220 vl=RUN q=0/8 drop=0 miss=0 err=9 last=-20 rec=1
+[DATA] seq=71 t=22196 dist=823 mm st=0 sig=593 kcps meas=37 ms
+[DATA] seq=72 t=22396 dist=823 mm st=0 sig=640 kcps meas=37 ms
+[DATA] seq=73 t=22596 dist=837 mm st=0 sig=531 kcps meas=37 ms
+[DATA] seq=74 t=22796 dist=825 mm st=0 sig=562 kcps meas=37 ms
+[DATA] seq=75 t=22996 dist=8190 mm st=4 sig=585 kcps meas=37 ms
+[HB] tick=23226 vl=RUN q=0/8 drop=0 miss=0 err=9 last=-20 rec=1
+[DATA] seq=76 t=23196 dist=827 mm st=0 sig=625 kcps meas=37 ms
+[DATA] seq=77 t=23396 dist=795 mm st=0 sig=421 kcps meas=37 ms
+[DATA] seq=78 t=23596 dist=817 mm st=1 sig=375 kcps meas=37 ms
+[DATA] seq=79 t=23796 dist=813 mm st=0 sig=562 kcps meas=37 ms
+[DATA] seq=80 t=23996 dist=811 mm st=0 sig=429 kcps meas=37 ms
+[DATA] seq=81 t=24196 dist=833 mm st=0 sig=484 kcps meas=37 ms
+[HB] tick=24240 vl=RUN q=0/8 drop=0 miss=0 err=9 last=-20 rec=1
+[STK] min free bytes: LED=384 HB=1416 Sens=1132 Cons=1424
+[DATA] seq=82 t=24396 dist=818 mm st=0 sig=554 kcps meas=37 ms
+[DATA] seq=83 t=24596 dist=729 mm st=0 sig=492 kcps meas=37 ms
+[DATA] seq=84 t=24796 dist=626 mm st=0 sig=695 kcps meas=37 ms
+[DATA] seq=85 t=24996 dist=424 mm st=0 sig=750 kcps meas=37 ms
+[DATA] seq=86 t=25196 dist=96 mm st=0 sig=7015 kcps meas=37 ms
+[HB] tick=25251 vl=RUN q=0/8 drop=0 miss=0 err=9 last=-20 rec=1
+[DATA] seq=87 t=25396 dist=66 mm st=0 sig=23789 kcps meas=37 ms
+[DATA] seq=88 t=25596 dist=63 mm st=0 sig=22867 kcps meas=37 ms
+[DATA] seq=89 t=25796 dist=59 mm st=0 sig=24179 kcps meas=37 ms
+[DATA] seq=90 t=25996 dist=59 mm st=0 sig=23703 kcps meas=37 ms
+[DATA] seq=91 t=26196 dist=59 mm st=0 sig=22804 kcps meas=37 ms
+[HB] tick=26256 vl=RUN q=0/8 drop=0 miss=0 err=9 last=-20 rec=1
+[DATA] seq=92 t=26396 dist=60 mm st=0 sig=20210 kcps meas=37 ms
+[DATA] seq=93 t=26596 dist=61 mm st=0 sig=23601 kcps meas=37 ms
+[DATA] seq=94 t=26796 dist=60 mm st=0 sig=23585 kcps meas=37 ms
+[DATA] seq=95 t=26996 dist=70 mm st=0 sig=21578 kcps meas=37 ms
+[DATA] seq=96 t=27196 dist=79 mm st=0 sig=20820 kcps meas=37 ms
+[HB] tick=27261 vl=RUN q=0/8 drop=0 miss=0 err=9 last=-20 rec=1
+[DATA] seq=97 t=27396 dist=82 mm st=0 sig=19531 kcps meas=37 ms
+[DATA] seq=98 t=27596 dist=627 mm st=0 sig=507 kcps meas=37 ms
+[DATA] seq=99 t=27796 dist=517 mm st=0 sig=656 kcps meas=37 ms
+[DATA] seq=100 t=27996 dist=537 mm st=0 sig=734 kcps meas=37 ms
+[DATA] seq=101 t=28196 dist=435 mm st=0 sig=765 kcps meas=37 ms
+[HB] tick=28266 vl=RUN q=0/8 drop=0 miss=0 err=9 last=-20 rec=1
+[DATA] seq=102 t=28396 dist=415 mm st=0 sig=820 kcps meas=37 ms
+[DATA] seq=103 t=28596 dist=380 mm st=0 sig=1015 kcps meas=37 ms
+[DATA] seq=104 t=28796 dist=378 mm st=0 sig=1070 kcps meas=37 ms
+[DATA] seq=105 t=28996 dist=382 mm st=0 sig=1218 kcps meas=37 ms
+[DATA] seq=106 t=29196 dist=380 mm st=0 sig=1195 kcps meas=37 ms
+[HB] tick=29271 vl=RUN q=0/8 drop=0 miss=0 err=9 last=-20 rec=1
+[STK] min free bytes: LED=384 HB=1416 Sens=1132 Cons=1424
+[DATA] seq=107 t=29396 dist=373 mm st=0 sig=1000 kcps meas=37 ms
+[DATA] seq=108 t=29596 dist=364 mm st=0 sig=1046 kcps meas=37 ms
+[DATA] seq=109 t=29796 dist=380 mm st=0 sig=1078 kcps meas=37 ms
+[DATA] seq=110 t=29996 dist=362 mm st=0 sig=1234 kcps meas=37 ms
+[DATA] seq=111 t=30196 dist=381 mm st=0 sig=1171 kcps meas=37 ms
+[HB] tick=30282 vl=RUN q=0/8 drop=0 miss=0 err=9 last=-20 rec=1
+[DATA] seq=112 t=30396 dist=359 mm st=0 sig=1187 kcps meas=37 ms
+[DATA] seq=113 t=30596 dist=372 mm st=0 sig=1265 kcps meas=37 ms
+[DATA] seq=114 t=30796 dist=371 mm st=0 sig=1101 kcps meas=37 ms
+[DATA] seq=115 t=30996 dist=389 mm st=0 sig=1023 kcps meas=37 ms
+[DATA] seq=116 t=31196 dist=383 mm st=0 sig=1078 kcps meas=37 ms
+[HB] tick=31287 vl=RUN q=0/8 drop=0 miss=0 err=9 last=-20 rec=1
+[DATA] seq=117 t=31396 dist=371 mm st=0 sig=1140 kcps meas=37 ms
+[DATA] seq=118 t=31596 dist=400 mm st=0 sig=1085 kcps meas=37 ms
+[DATA] seq=119 t=31796 dist=361 mm st=0 sig=1242 kcps meas=37 ms
+[DATA] seq=120 t=31996 dist=378 mm st=0 sig=1187 kcps meas=37 ms
+[DATA] seq=121 t=32196 dist=357 mm st=0 sig=1289 kcps meas=37 ms
+[HB] tick=32292 vl=RUN q=0/8 drop=0 miss=0 err=9 last=-20 rec=1
+[DATA] seq=122 t=32396 dist=366 mm st=0 sig=1171 kcps meas=37 ms
+[DATA] seq=123 t=32596 dist=374 mm st=0 sig=1148 kcps meas=37 ms
+[DATA] seq=124 t=32796 dist=376 mm st=0 sig=1148 kcps meas=37 ms
+[DATA] seq=125 t=32996 dist=377 mm st=0 sig=1250 kcps meas=37 ms
+[DATA] seq=126 t=33196 dist=372 mm st=0 sig=1140 kcps meas=37 ms
+[HB] tick=33297 vl=RUN q=0/8 drop=0 miss=0 err=9 last=-20 rec=1
+[DATA] seq=127 t=33396 dist=372 mm st=0 sig=1234 kcps meas=37 ms
+[DATA] seq=128 t=33596 dist=372 mm st=0 sig=1031 kcps meas=37 ms
+[DATA] seq=129 t=33796 dist=342 mm st=0 sig=1046 kcps meas=37 ms
+[DATA] seq=130 t=33996 dist=354 mm st=0 sig=1203 kcps meas=37 ms
+[DATA] seq=131 t=34196 dist=366 mm st=0 sig=1117 kcps meas=37 ms
+[HB] tick=34302 vl=RUN q=0/8 drop=0 miss=0 err=9 last=-20 rec=1
+[STK] min free bytes: LED=384 HB=1416 Sens=1132 Cons=1424
+[DATA] seq=132 t=34396 dist=343 mm st=0 sig=1132 kcps meas=37 ms
+[DATA] seq=133 t=34596 dist=358 mm st=0 sig=1218 kcps meas=37 ms
+[DATA] seq=134 t=34796 dist=367 mm st=0 sig=1125 kcps meas=37 ms
+[DATA] seq=135 t=34996 dist=356 mm st=0 sig=1195 kcps meas=37 ms
+[DATA] seq=136 t=35196 dist=376 mm st=0 sig=1187 kcps meas=37 ms
+[HB] tick=35313 vl=RUN q=0/8 drop=0 miss=0 err=9 last=-20 rec=1
+[DATA] seq=137 t=35396 dist=363 mm st=0 sig=1304 kcps meas=37 ms
+[DATA] seq=138 t=35596 dist=360 mm st=0 sig=1156 kcps meas=37 ms
+[DATA] seq=139 t=35796 dist=363 mm st=0 sig=1070 kcps meas=37 ms
+[DATA] seq=140 t=35996 dist=384 mm st=0 sig=1210 kcps meas=37 ms
+[DATA] seq=141 t=36196 dist=360 mm st=0 sig=1242 kcps meas=37 ms
+[HB] tick=36318 vl=RUN q=0/8 drop=0 miss=0 err=9 last=-20 rec=1
+[DATA] seq=142 t=36396 dist=357 mm st=0 sig=1210 kcps meas=37 ms
+[DATA] seq=143 t=36596 dist=357 mm st=0 sig=1195 kcps meas=37 ms
+[DATA] seq=144 t=36796 dist=370 mm st=0 sig=1148 kcps meas=37 ms
+[DATA] seq=145 t=36996 dist=343 mm st=0 sig=1273 kcps meas=37 ms
+[DATA] seq=146 t=37196 dist=373 mm st=0 sig=1085 kcps meas=37 ms
+[HB] tick=37323 vl=RUN q=0/8 drop=0 miss=0 err=9 last=-20 rec=1
+[DATA] seq=147 t=37396 dist=371 mm st=0 sig=1101 kcps meas=37 ms
+[DATA] seq=148 t=37596 dist=360 mm st=0 sig=1156 kcps meas=37 ms
+[DATA] seq=149 t=37796 dist=360 mm st=0 sig=1203 kcps meas=37 ms
+[DATA] seq=150 t=37996 dist=369 mm st=0 sig=1117 kcps meas=37 ms
+[DATA] seq=151 t=38196 dist=352 mm st=0 sig=1078 kcps meas=37 ms
+[HB] tick=38328 vl=RUN q=0/8 drop=0 miss=0 err=9 last=-20 rec=1
+[DATA] seq=152 t=38396 dist=382 mm st=0 sig=1296 kcps meas=37 ms
+[DATA] seq=153 t=38596 dist=350 mm st=0 sig=1164 kcps meas=37 ms
+[DATA] seq=154 t=38796 dist=376 mm st=0 sig=1187 kcps meas=37 ms
+[DATA] seq=155 t=38996 dist=369 mm st=0 sig=1195 kcps meas=37 ms
+[DATA] seq=156 t=39196 dist=360 mm st=0 sig=1312 kcps meas=37 ms
+[HB] tick=39333 vl=RUN q=0/8 drop=0 miss=0 err=9 last=-20 rec=1
+[STK] min free bytes: LED=384 HB=1416 Sens=1132 Cons=1424
+[DATA] seq=157 t=39396 dist=364 mm st=0 sig=1250 kcps meas=37 ms
+[DATA] seq=158 t=39596 dist=339 mm st=0 sig=1210 kcps meas=37 ms
+[DATA] seq=159 t=39796 dist=358 mm st=0 sig=1265 kcps meas=37 ms
+[DATA] seq=160 t=39996 dist=356 mm st=0 sig=1257 kcps meas=37 ms
+[DATA] seq=161 t=40196 dist=379 mm st=0 sig=1210 kcps meas=37 ms
+[HB] tick=40344 vl=RUN q=0/8 drop=0 miss=0 err=9 last=-20 rec=1
+[DATA] seq=162 t=40396 dist=347 mm st=0 sig=1148 kcps meas=37 ms
+[DATA] seq=163 t=40596 dist=348 mm st=0 sig=1156 kcps meas=37 ms
+[DATA] seq=164 t=40796 dist=379 mm st=0 sig=1164 kcps meas=37 ms
+[DATA] seq=165 t=40996 dist=351 mm st=0 sig=1179 kcps meas=37 ms
+[DATA] seq=166 t=41196 dist=381 mm st=0 sig=1140 kcps meas=37 ms
+[HB] tick=41349 vl=RUN q=0/8 drop=0 miss=0 err=9 last=-20 rec=1
+[DATA] seq=167 t=41396 dist=380 mm st=0 sig=1203 kcps meas=37 ms
+[DATA] seq=168 t=41596 dist=365 mm st=0 sig=1164 kcps meas=37 ms
+[DATA] seq=169 t=41796 dist=359 mm st=0 sig=1093 kcps meas=37 ms
+[DATA] s

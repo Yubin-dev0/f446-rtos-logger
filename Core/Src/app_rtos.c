@@ -1,34 +1,66 @@
-/* FreeRTOS Day 1: LED / Heartbeat(UART) / Producer -> Queue -> Consumer(UART)
+/* FreeRTOS Day 2: LED / Heartbeat(UART) / Sensor(VL53L0X) -> Queue -> Consumer(UART)
  * API: CMSIS-RTOS v2 only (native FreeRTOS API 섞지 않음)
+ *
+ * Day 2 변경점
+ *  - Producer(모의 데이터) -> SensorTask(VL53L0X 실측, I2C1 PB8/PB9)
+ *  - 측정 방식: single-shot. 200ms 주기마다 1회 측정 -> 샘플 시각이 주기에 정렬됨
+ *  - 센서 초기화는 태스크 안에서 수행 (ST API가 osDelay 기반 polling을 쓰므로 스케줄러 필요)
+ *  - ST VL53L0X_ResetDevice()는 타임아웃 없는 while 루프가 있어서 사용하지 않음
+ *    -> 재시도 횟수 제한 soft reset(vl_soft_reset) 직접 구현
+ *  - PA6(MK_SENS)/PA7(MK_CONS): 로직 분석기용 태스크 실행 구간 마커 (CubeMX 라벨 있을 때만)
+ *
+ * Day 2 / 3단계: I2C 에러 처리
+ *  - 센서 상태 머신: INIT -> RUN -> ERROR(backoff) -> INIT ...
+ *  - RUN 중 연속 VL_ERR_THRESHOLD회 실패 -> ERROR (1회성 glitch는 흡수)
+ *  - ERROR: I2C 버스 복구(SCL 9클럭 + STOP + I2C1 peripheral reset) 후 센서 재초기화
+ *           재시도 간격 100 -> 200 -> ... -> 2000ms (지수 backoff)
+ *  - osDelayUntil catch-up burst 방지: 주기를 놓쳤으면 밀린 슬롯을 건너뛰고 missed++
+ *
+ * 3단계 수정(T1~T4 결과 반영)
+ *  - ST PerformSingleRangingMeasurement는 완료 대기를 2000회 x PollingDelay(2ms) = 약 4초까지 함.
+ *    센서가 전원 글리치로 조용히 리셋되면 I2C는 ACK하지만 data-ready가 영원히 안 떠서
+ *    측정 1회당 4초 블록 -> 3회 연속 판정까지 약 12초 동안 RUN으로 보이면서 데이터 없음.
+ *    -> vl_measure(): 완료 대기를 VL_MEAS_TIMEOUT_MS로 직접 제한.
+ *  - downtime을 '첫 실패 시점'부터 계산 (이전엔 3번째 실패 시점 기준이라 과소 측정)
  */
 #include "app_rtos.h"
 #include "main.h"
+#include "vl53l0x_api.h"
 #include <stdio.h>
 #include <stdarg.h>
 #include <string.h>
 
+extern I2C_HandleTypeDef hi2c1;
+
 /* ===================== 실험 스위치 ===================== */
-#define ENABLE_QUEUE_DEMO   1   /* 4단계(태스크 2개): 0,  5단계(Queue)부터: 1       */
-#define QUEUE_FULL_TEST     0   /* 6단계: 1 -> 소비자를 느리게 해서 Queue 포화     */
-#define STACK_REPORT        1   /* 5초마다 태스크별 최소 스택 여유 출력            */
+#define STACK_REPORT        1   /* 5초마다 태스크별 최소 스택 여유 출력 */
+#define TASK_MARKERS        1   /* PA6/PA7 마커 토글 (로직 분석기)     */
+#define FAULT_INJECT_EVERY  0  /* 0=끔. N이면 seq가 N의 배수일 때마다 센서에 I2C soft reset을 몰래 보냄
+                                 * -> 전원 글리치로 센서만 리셋된 상황을 반복 재현 (I2C는 계속 ACK)
+                                 *    200ms x 50 = 약 10초마다 1회 */
 
 #define LED_PERIOD_MS       500
 #define HB_PERIOD_MS        1000
-#define PRODUCER_PERIOD_MS  200
+#define SENSOR_PERIOD_MS    200
 #define QUEUE_LEN           8
 
-#if QUEUE_FULL_TEST
-#define CONSUMER_DELAY_MS   1000   /* 소비 1개/1s < 생산 5개/1s -> 가득 참 */
-#else
-#define CONSUMER_DELAY_MS   0
-#endif
+#define VL_I2C_ADDR         0x52      /* 8-bit (7-bit 0x29) */
+#define VL_TIMING_BUDGET_US 33000U    /* ST 기본값. 200ms 주기 안에 여유 충분 */
+#define VL_MODEL_ID         0xEEU     /* reg 0xC0 고정값 = 센서 존재 확인용 */
+#define VL_RESET_POLL_MAX   50U       /* soft reset polling 최대 횟수 (x2ms) */
 
-/* ===================== 보드 매핑 =====================
- * CubeMX가 보드를 어떤 모드로 생성했는지에 따라 LED/UART 이름이 다르다.
- *  - 일반 모드: PA5 = LD2_GPIO_Port/LD2_Pin, UART = huart2 (main.c)
- *  - BSP  모드: PA5 = BSP LED_GREEN,        UART = hcom_uart[COM1] (stm32f4xx_nucleo.c)
- * 둘 다 자동으로 처리한다.
- */
+#define VL_ERR_THRESHOLD    3U        /* RUN -> ERROR 전환 연속 실패 횟수 */
+#define VL_MEAS_TIMEOUT_MS  100U      /* 측정 완료 대기 상한 (버짓 33ms의 약 3배) */
+#define VL_BACKOFF_MIN_MS   100U
+#define VL_BACKOFF_MAX_MS   2000U
+
+/* I2C1 핀 (버스 복구 시 GPIO로 직접 제어) */
+#define I2C_SCL_PORT        GPIOB
+#define I2C_SCL_PIN         GPIO_PIN_8
+#define I2C_SDA_PORT        GPIOB
+#define I2C_SDA_PIN         GPIO_PIN_9
+
+/* ===================== 보드 매핑 ===================== */
 #if defined(LD2_Pin)
   #define APP_LED_PORT   LD2_GPIO_Port
   #define APP_LED_PIN    LD2_Pin
@@ -38,8 +70,18 @@
 #endif
 #define APP_LED_TOGGLE()   HAL_GPIO_TogglePin(APP_LED_PORT, APP_LED_PIN)
 
-/* BSP API 이름은 패키지 버전마다 달라서 쓰지 않고, PA5를 직접 출력으로 설정.
- * MX_GPIO_Init()/BSP가 이미 설정했어도 같은 값으로 다시 쓰는 거라 무해. */
+#if TASK_MARKERS && defined(MK_SENS_Pin) && defined(MK_CONS_Pin)
+  #define MK_SENS_HI()  (MK_SENS_GPIO_Port->BSRR = MK_SENS_Pin)
+  #define MK_SENS_LO()  (MK_SENS_GPIO_Port->BSRR = (uint32_t)MK_SENS_Pin << 16)
+  #define MK_CONS_HI()  (MK_CONS_GPIO_Port->BSRR = MK_CONS_Pin)
+  #define MK_CONS_LO()  (MK_CONS_GPIO_Port->BSRR = (uint32_t)MK_CONS_Pin << 16)
+#else
+  #define MK_SENS_HI()  ((void)0)
+  #define MK_SENS_LO()  ((void)0)
+  #define MK_CONS_HI()  ((void)0)
+  #define MK_CONS_LO()  ((void)0)
+#endif
+
 static void APP_LED_INIT(void)
 {
   GPIO_InitTypeDef g = {0};
@@ -74,28 +116,37 @@ static void uart_write(const char *s, uint16_t len)
 
 /* ===================== 데이터 타입 ===================== */
 typedef struct {
-  uint32_t seq;         /* 연속 번호: 빠진 번호 = 드롭된 샘플 */
-  uint32_t tick;        /* 생산 시각 (ms)                      */
-  int16_t  temp_centi;  /* 0.01 degC (float printf 회피)        */
-  uint16_t dist_mm;     /* 모의 거리                            */
+  uint32_t seq;          /* 연속 번호: 빠진 번호 = 드롭된 샘플        */
+  uint32_t tick;         /* 측정 시작 시각 (ms)                       */
+  uint16_t dist_mm;      /* RangeMilliMeter                          */
+  uint16_t signal_kcps;  /* SignalRateRtnMegaCps(16.16) -> kcps 정수 */
+  uint8_t  range_status; /* 0 = valid, 그 외 = ST RangeStatus 코드    */
+  uint8_t  meas_ms;      /* 측정 1회 소요 시간 (ms)                   */
 } SensorSample_t;
 
-/* ===================== 핸들 ===================== */
-static osThreadId_t       ledTask, hbTask, prodTask, consTask;
+/* ===================== 핸들 / 상태 ===================== */
+static osThreadId_t       ledTask, hbTask, sensTask, consTask;
 static osMessageQueueId_t sensorQueue;
 static osMutexId_t        uartMutex;
 static volatile uint32_t  dropCount;
+static volatile uint32_t  i2cErrCount;  /* 실패한 측정/초기화 시도 누적      */
+static volatile int32_t   lastVlErr;    /* 마지막 VL53L0X_Error 코드          */
+static volatile uint32_t  recoverCount; /* ERROR -> RUN 복구 성공 횟수         */
+static volatile uint32_t  missedSlots;  /* osDelayUntil 주기 놓쳐서 건너뛴 수  */
 
-/* 우선순위: Consumer > Producer > Heartbeat > LED
- * stack_size 단위는 byte. printf 쓰는 태스크는 넉넉하게. */
+typedef enum { VL_ST_INIT = 0, VL_ST_RUN, VL_ST_ERROR } VlState_t;
+static volatile VlState_t vlState = VL_ST_INIT;
+static const char *const vlStateName[] = { "INIT", "RUN", "ERROR" };
+
+static VL53L0X_Dev_t vlDev;            /* 수백 byte라 스택 대신 static */
+
+/* 우선순위: Consumer > Sensor > Heartbeat > LED
+ * stack_size 단위는 byte. ST API 호출하는 Sensor는 넉넉하게. */
 static const osThreadAttr_t ledAttr  = { .name = "LED",  .stack_size = 128 * 4, .priority = osPriorityLow };
 static const osThreadAttr_t hbAttr   = { .name = "HB",   .stack_size = 512 * 4, .priority = osPriorityBelowNormal };
-#if ENABLE_QUEUE_DEMO
-static const osThreadAttr_t prodAttr = { .name = "Prod", .stack_size = 256 * 4, .priority = osPriorityNormal };
+static const osThreadAttr_t sensAttr = { .name = "Sens", .stack_size = 512 * 4, .priority = osPriorityNormal };
 static const osThreadAttr_t consAttr = { .name = "Cons", .stack_size = 512 * 4, .priority = osPriorityAboveNormal };
 static const osMessageQueueAttr_t queueAttr = { .name = "sensorQ" };
-#endif
-
 static const osMutexAttr_t uartMutexAttr = { .name = "uart", .attr_bits = osMutexPrioInherit };
 
 /* ===================== UART 헬퍼 (태스크 전용) ===================== */
@@ -109,11 +160,140 @@ static void uart_printf(const char *fmt, ...)
   if (n <= 0) return;
   if (n >= (int)sizeof buf) n = (int)sizeof buf - 1;
 
-  /* 여러 태스크가 동시에 찍으면 줄이 섞이므로 mutex로 직렬화 */
   if (osMutexAcquire(uartMutex, osWaitForever) == osOK) {
     uart_write(buf, (uint16_t)n);
     osMutexRelease(uartMutex);
   }
+}
+
+/* ===================== I2C 버스 복구 ===================== */
+static void i2c_bb_delay(void)
+{
+  for (volatile uint32_t i = 0; i < 200U; i++) { }   /* 수 us. 느려도 I2C는 상관없음 */
+}
+
+/* 슬레이브가 SDA를 LOW로 잡고 멈춘 경우(전송 중 끊김 등) 풀어주는 표준 절차 +
+ * STM32F4 I2C의 BUSY 플래그 고착(errata) 해제용 peripheral reset. */
+static void i2c_bus_recover(void)
+{
+  GPIO_InitTypeDef g = {0};
+
+  HAL_I2C_DeInit(&hi2c1);                 /* MspDeInit: 핀 AF 해제, 클럭 off */
+
+  __HAL_RCC_GPIOB_CLK_ENABLE();
+  g.Mode  = GPIO_MODE_OUTPUT_OD;
+  g.Pull  = GPIO_PULLUP;
+  g.Speed = GPIO_SPEED_FREQ_LOW;
+  g.Pin   = I2C_SCL_PIN;  HAL_GPIO_Init(I2C_SCL_PORT, &g);
+  g.Pin   = I2C_SDA_PIN;  HAL_GPIO_Init(I2C_SDA_PORT, &g);
+
+  HAL_GPIO_WritePin(I2C_SDA_PORT, I2C_SDA_PIN, GPIO_PIN_SET);
+  for (int i = 0; i < 9; i++) {           /* SCL 9클럭: 슬레이브가 남은 비트 밀어내게 */
+    HAL_GPIO_WritePin(I2C_SCL_PORT, I2C_SCL_PIN, GPIO_PIN_RESET); i2c_bb_delay();
+    HAL_GPIO_WritePin(I2C_SCL_PORT, I2C_SCL_PIN, GPIO_PIN_SET);   i2c_bb_delay();
+    if (HAL_GPIO_ReadPin(I2C_SDA_PORT, I2C_SDA_PIN) == GPIO_PIN_SET) break;
+  }
+  /* STOP: SCL HIGH 상태에서 SDA LOW -> HIGH */
+  HAL_GPIO_WritePin(I2C_SDA_PORT, I2C_SDA_PIN, GPIO_PIN_RESET); i2c_bb_delay();
+  HAL_GPIO_WritePin(I2C_SCL_PORT, I2C_SCL_PIN, GPIO_PIN_SET);   i2c_bb_delay();
+  HAL_GPIO_WritePin(I2C_SDA_PORT, I2C_SDA_PIN, GPIO_PIN_SET);   i2c_bb_delay();
+
+  __HAL_RCC_I2C1_FORCE_RESET();           /* BUSY 고착 해제 */
+  __HAL_RCC_I2C1_RELEASE_RESET();
+
+  HAL_I2C_Init(&hi2c1);                   /* MspInit: 핀 AF 복귀, 클럭 on */
+}
+
+/* ===================== VL53L0X ===================== */
+/* ST VL53L0X_ResetDevice() 대체: polling 횟수 제한 + model ID로 존재 확인.
+ * XSHUT 핀이 없는 4핀 모듈이라 이게 유일한 센서 리셋 수단. */
+static uint8_t vlRstPhase;   /* soft reset 실패 진단: 1=리셋 진입 대기, 2=부팅 완료 대기 */
+static uint8_t vlRstLastId;  /* 실패 시점에 마지막으로 읽은 MODEL_ID                     */
+
+static VL53L0X_Error vl_soft_reset(VL53L0X_DEV dev)
+{
+  VL53L0X_Error st;
+  uint8_t id = 0xFF;
+  uint32_t i;
+
+  vlRstPhase = 1;
+
+  st = VL53L0X_WrByte(dev, VL53L0X_REG_SOFT_RESET_GO2_SOFT_RESET_N, 0x00);
+  if (st != VL53L0X_ERROR_NONE) return st;
+
+  for (i = 0; i < VL_RESET_POLL_MAX; i++) {          /* 리셋 진입: ID가 0으로 읽힘 */
+    st = VL53L0X_RdByte(dev, VL53L0X_REG_IDENTIFICATION_MODEL_ID, &id);
+    if (st == VL53L0X_ERROR_NONE && id == 0x00) break;
+    osDelay(2);
+  }
+  vlRstLastId = id;
+  if (i == VL_RESET_POLL_MAX) return VL53L0X_ERROR_TIME_OUT;
+
+  vlRstPhase = 2;
+
+  st = VL53L0X_WrByte(dev, VL53L0X_REG_SOFT_RESET_GO2_SOFT_RESET_N, 0x01);
+  if (st != VL53L0X_ERROR_NONE) return st;
+
+  for (i = 0; i < VL_RESET_POLL_MAX; i++) {          /* 부팅 완료: ID = 0xEE */
+    st = VL53L0X_RdByte(dev, VL53L0X_REG_IDENTIFICATION_MODEL_ID, &id);
+    if (st == VL53L0X_ERROR_NONE && id == VL_MODEL_ID) return VL53L0X_ERROR_NONE;
+    osDelay(2);
+  }
+  vlRstLastId = id;
+  return VL53L0X_ERROR_TIME_OUT;
+}
+
+/* single-shot 1회. ST PerformSingleRangingMeasurement와 같은 순서지만 완료 대기 시간을 제한.
+ * (StartMeasurement 안의 start-bit 대기 루프는 delay 없는 I2C read라 수 ms 안에 끝남) */
+static VL53L0X_Error vl_measure(VL53L0X_DEV dev, VL53L0X_RangingMeasurementData_t *m)
+{
+  VL53L0X_Error st;
+  uint8_t ready = 0;
+  uint32_t t0 = osKernelGetTickCount();
+
+  if ((st = VL53L0X_StartMeasurement(dev)) != VL53L0X_ERROR_NONE) return st;
+
+  for (;;) {
+    if ((st = VL53L0X_GetMeasurementDataReady(dev, &ready)) != VL53L0X_ERROR_NONE) return st;
+    if (ready) break;
+    if (osKernelGetTickCount() - t0 >= VL_MEAS_TIMEOUT_MS) return VL53L0X_ERROR_TIME_OUT;
+    osDelay(2);
+  }
+
+  if ((st = VL53L0X_GetRangingMeasurementData(dev, m)) != VL53L0X_ERROR_NONE) return st;
+  return VL53L0X_ClearInterruptMask(dev, 0);
+}
+
+/* 논문 펌웨어와 같은 순서, 단 ResetDevice 대신 vl_soft_reset, 모드는 single-shot */
+static VL53L0X_Error vl_init(VL53L0X_DEV dev)
+{
+  VL53L0X_Error st;
+  uint32_t refSpadCount = 0;
+  uint8_t  isAperture = 0, vhv = 0, phase = 0;
+
+  memset(dev, 0, sizeof *dev);
+  dev->I2cHandle  = &hi2c1;
+  dev->I2cDevAddr = VL_I2C_ADDR;
+
+  st = vl_soft_reset(dev);
+  if (st == VL53L0X_ERROR_TIME_OUT) {
+    /* I2C는 살아 있는데 리셋 상태 전이가 안 보이는 경우: 진단만 남기고 DataInit으로 진행.
+     * DataInit/StaticInit이 필요한 레지스터를 다시 쓰므로 그걸로 복구되는지 확인한다. */
+    uart_printf("[VL] soft reset timeout phase=%u id=0x%02X -> continue with DataInit\r\n",
+                vlRstPhase, vlRstLastId);
+  } else if (st != VL53L0X_ERROR_NONE) {
+    return st;                               /* I2C 자체 실패 (-20): 센서 없음 */
+  }
+  if ((st = VL53L0X_DataInit(dev)) != VL53L0X_ERROR_NONE) return st;
+  if ((st = VL53L0X_StaticInit(dev)) != VL53L0X_ERROR_NONE) return st;
+  if ((st = VL53L0X_PerformRefCalibration(dev, &vhv, &phase)) != VL53L0X_ERROR_NONE) return st;
+  if ((st = VL53L0X_PerformRefSpadManagement(dev, &refSpadCount, &isAperture)) != VL53L0X_ERROR_NONE) return st;
+  if ((st = VL53L0X_SetDeviceMode(dev, VL53L0X_DEVICEMODE_SINGLE_RANGING)) != VL53L0X_ERROR_NONE) return st;
+  if ((st = VL53L0X_SetMeasurementTimingBudgetMicroSeconds(dev, VL_TIMING_BUDGET_US)) != VL53L0X_ERROR_NONE) return st;
+
+  uart_printf("[VL] init OK spad=%lu aperture=%u vhv=%u phase=%u\r\n",
+              (unsigned long)refSpadCount, isAperture, vhv, phase);
+  return VL53L0X_ERROR_NONE;
 }
 
 /* ===================== 태스크 ===================== */
@@ -121,7 +301,7 @@ static void LedTask(void *arg)
 {
   (void)arg;
   for (;;) {
-    APP_LED_TOGGLE();              /* PA5 (LD2) */
+    APP_LED_TOGGLE();
     osDelay(LED_PERIOD_MS);
   }
 }
@@ -132,19 +312,21 @@ static void HeartbeatTask(void *arg)
   uint32_t n = 0;
   for (;;) {
     uint32_t qCount = sensorQueue ? osMessageQueueGetCount(sensorQueue) : 0;
-    uart_printf("[HB] tick=%lu q=%lu/%u drop=%lu\r\n",
+    uart_printf("[HB] tick=%lu vl=%s q=%lu/%u drop=%lu miss=%lu err=%lu last=%ld rec=%lu\r\n",
                 (unsigned long)osKernelGetTickCount(),
+                vlStateName[vlState],
                 (unsigned long)qCount, QUEUE_LEN,
-                (unsigned long)dropCount);
+                (unsigned long)dropCount, (unsigned long)missedSlots,
+                (unsigned long)i2cErrCount, (long)lastVlErr,
+                (unsigned long)recoverCount);
 
 #if STACK_REPORT
     if ((++n % 5U) == 0U) {
-      /* osThreadGetStackSpace = uxTaskGetStackHighWaterMark x 4 (byte, 지금까지의 최소 여유) */
-      uart_printf("[STK] min free bytes: LED=%lu HB=%lu Prod=%lu Cons=%lu\r\n",
+      uart_printf("[STK] min free bytes: LED=%lu HB=%lu Sens=%lu Cons=%lu\r\n",
                   (unsigned long)osThreadGetStackSpace(ledTask),
                   (unsigned long)osThreadGetStackSpace(hbTask),
-                  (unsigned long)(prodTask ? osThreadGetStackSpace(prodTask) : 0),
-                  (unsigned long)(consTask ? osThreadGetStackSpace(consTask) : 0));
+                  (unsigned long)osThreadGetStackSpace(sensTask),
+                  (unsigned long)osThreadGetStackSpace(consTask));
     }
 #else
     (void)n;
@@ -153,30 +335,127 @@ static void HeartbeatTask(void *arg)
   }
 }
 
-#if ENABLE_QUEUE_DEMO
-static void ProducerTask(void *arg)
+static void vl_set_state(VlState_t s)
+{
+  if (vlState != s) {
+    uart_printf("[VL] state %s -> %s (tick=%lu)\r\n",
+                vlStateName[vlState], vlStateName[s],
+                (unsigned long)osKernelGetTickCount());
+    vlState = s;
+  }
+}
+
+static void SensorTask(void *arg)
 {
   (void)arg;
-  uint32_t seq  = 0;
-  uint32_t next = osKernelGetTickCount();
+  VL53L0X_Error st;
+  uint32_t seq        = 0;
+  uint32_t consecErr  = 0;
+  uint32_t backoff    = VL_BACKOFF_MIN_MS;
+  uint32_t attempts   = 0;      /* 이번 복구 구간에서 init 시도 횟수 */
+  uint8_t  recovering = 0;      /* 1 = ERROR를 한 번이라도 거침       */
+  uint32_t downSince  = osKernelGetTickCount();
+  uint32_t next       = 0;
 
   for (;;) {
-    SensorSample_t s;
-    uint32_t p   = seq % 40U;
-    int32_t  tri = (p < 20U) ? (int32_t)p : (int32_t)(40U - p);   /* 0..20..0 */
+    switch (vlState) {
 
-    s.seq        = seq++;
-    s.tick       = osKernelGetTickCount();
-    s.temp_centi = (int16_t)(2400 + tri * 10);                    /* 24.00~26.00 C */
-    s.dist_mm    = (uint16_t)(100U + (s.seq * 37U) % 900U);       /* 100~999 mm   */
+    case VL_ST_INIT:
+      attempts++;
+      st = vl_init(&vlDev);
+      if (st == VL53L0X_ERROR_NONE) {
+        if (recovering) {
+          recoverCount++;
+          uart_printf("[VL] recovered: attempts=%lu downtime=%lu ms\r\n",
+                      (unsigned long)attempts,
+                      (unsigned long)(osKernelGetTickCount() - downSince));
+        }
+        consecErr  = 0;
+        attempts   = 0;
+        recovering = 0;
+        backoff    = VL_BACKOFF_MIN_MS;
+        next      = osKernelGetTickCount();   /* 주기 기준점 재설정 -> 복구 후 burst 없음 */
+        vl_set_state(VL_ST_RUN);
+      } else {
+        lastVlErr = st;
+        i2cErrCount++;
+        recovering = 1;
+        uart_printf("[VL] init FAIL err=%d attempt=%lu, retry in %lu ms\r\n",
+                    (int)st, (unsigned long)attempts, (unsigned long)backoff);
+        vl_set_state(VL_ST_ERROR);
+      }
+      break;
 
-    /* timeout 0: 가득 차면 기다리지 않고 osErrorResource -> 드롭 카운트 */
-    if (osMessageQueuePut(sensorQueue, &s, 0U, 0U) != osOK) {
-    	dropCount++;
+    case VL_ST_RUN: {
+      VL53L0X_RangingMeasurementData_t m;
+      uint32_t t0 = osKernelGetTickCount();
+
+      MK_SENS_HI();
+      st = vl_measure(&vlDev, &m);
+      MK_SENS_LO();
+
+      if (st == VL53L0X_ERROR_NONE) {
+        SensorSample_t s;
+        uint32_t dt = osKernelGetTickCount() - t0;
+        consecErr      = 0;
+        s.seq          = seq++;
+        s.tick         = t0;
+        s.dist_mm      = m.RangeMilliMeter;
+        s.signal_kcps  = (uint16_t)(((uint32_t)m.SignalRateRtnMegaCps * 1000U) >> 16);
+        s.range_status = m.RangeStatus;
+        s.meas_ms      = (uint8_t)(dt > 255U ? 255U : dt);
+
+        if (osMessageQueuePut(sensorQueue, &s, 0U, 0U) != osOK) {
+          dropCount++;
+        }
+#if FAULT_INJECT_EVERY
+        if (s.seq != 0U && (s.seq % FAULT_INJECT_EVERY) == 0U) {
+          static uint32_t fiCount;
+          uart_printf("[FI] #%lu inject sensor soft reset after seq=%lu\r\n",
+                      (unsigned long)++fiCount, (unsigned long)s.seq);
+          VL53L0X_WrByte(&vlDev, VL53L0X_REG_SOFT_RESET_GO2_SOFT_RESET_N, 0x00);
+          osDelay(2);
+          VL53L0X_WrByte(&vlDev, VL53L0X_REG_SOFT_RESET_GO2_SOFT_RESET_N, 0x01);
+        }
+#endif
+      } else {
+        lastVlErr = st;
+        i2cErrCount++;
+        if (++consecErr == 1U) downSince = t0;     /* 마지막 정상 샘플 이후 첫 실패 시점 */
+        if (consecErr >= VL_ERR_THRESHOLD) {
+          uart_printf("[VL] %lu consecutive errors (last=%d)\r\n",
+                      (unsigned long)consecErr, (int)st);
+          attempts   = 0;
+          recovering = 1;
+          backoff    = VL_BACKOFF_MIN_MS;
+          vl_set_state(VL_ST_ERROR);
+          break;
+        }
+      }
+
+      /* 다음 주기. 이미 지났으면(측정이 주기보다 길었던 경우 등) 밀린 슬롯은 버린다.
+       * 그냥 osDelayUntil 하면 지난 시각이라 즉시 리턴 -> 연속 측정 burst 발생. */
+      next += SENSOR_PERIOD_MS;
+      {
+        uint32_t now = osKernelGetTickCount();
+        if ((int32_t)(next - now) <= 0) {
+          uint32_t late = now - next;
+          missedSlots += late / SENSOR_PERIOD_MS + 1U;
+          next += (late / SENSOR_PERIOD_MS + 1U) * SENSOR_PERIOD_MS;
+        }
+      }
+      osDelayUntil(next);
+      break;
     }
 
-    next += PRODUCER_PERIOD_MS;
-    osDelayUntil(next);            /* 처리 시간과 무관하게 정확히 200ms 주기 */
+    case VL_ST_ERROR:
+    default:
+      osDelay(backoff);
+      backoff = (backoff * 2U > VL_BACKOFF_MAX_MS) ? VL_BACKOFF_MAX_MS : backoff * 2U;
+      i2c_bus_recover();
+      vl_set_state(VL_ST_INIT);
+      break;
+    }
   }
 }
 
@@ -187,17 +466,15 @@ static void ConsumerTask(void *arg)
 
   for (;;) {
     if (osMessageQueueGet(sensorQueue, &s, NULL, osWaitForever) == osOK) {
-      uart_printf("[DATA] seq=%lu t=%lu temp=%d.%02d C dist=%u mm\r\n",
+      MK_CONS_HI();
+      uart_printf("[DATA] seq=%lu t=%lu dist=%u mm st=%u sig=%u kcps meas=%u ms\r\n",
                   (unsigned long)s.seq, (unsigned long)s.tick,
-                  s.temp_centi / 100, s.temp_centi % 100,
-                  (unsigned)s.dist_mm);
+                  (unsigned)s.dist_mm, (unsigned)s.range_status,
+                  (unsigned)s.signal_kcps, (unsigned)s.meas_ms);
+      MK_CONS_LO();
     }
-#if CONSUMER_DELAY_MS
-    osDelay(CONSUMER_DELAY_MS);
-#endif
   }
 }
-#endif /* ENABLE_QUEUE_DEMO */
 
 /* ===================== 초기화 ===================== */
 void App_RTOS_Init(void)
@@ -205,20 +482,47 @@ void App_RTOS_Init(void)
   APP_LED_INIT();
 
   /* 스케줄러 시작 전이라 mutex 없이 직접 송신 */
-  static const char banner[] = "\r\n=== f446-rtos-logger day1 boot ===\r\n";
+  static const char banner[] = "\r\n=== f446-rtos-logger day2 boot ===\r\n";
   uart_write(banner, sizeof banner - 1);
 
-  uartMutex = osMutexNew(&uartMutexAttr);
-  ledTask   = osThreadNew(LedTask, NULL, &ledAttr);
-  hbTask    = osThreadNew(HeartbeatTask, NULL, &hbAttr);
+  /* 리셋 원인 기록: RCC->CSR 플래그는 다음 리셋까지 남아 있음.
+   * F4는 내부 리셋 시 NRST도 LOW로 끌려서 PIN은 거의 항상 같이 뜬다.
+   *  POR PIN BOR = 전원 저하(약 1.7V 미만), PIN만 = 버튼/ST-LINK/NRST 노이즈 */
+  {
+    char line[96];
+    uint32_t csr = RCC->CSR;
+    int n = snprintf(line, sizeof line, "[RST] csr=0x%08lX%s%s%s%s%s%s%s\r\n",
+                     (unsigned long)csr,
+                     (csr & RCC_CSR_LPWRRSTF) ? " LPWR" : "",
+                     (csr & RCC_CSR_WWDGRSTF) ? " WWDG" : "",
+                     (csr & RCC_CSR_IWDGRSTF) ? " IWDG" : "",
+                     (csr & RCC_CSR_SFTRSTF)  ? " SW"   : "",
+                     (csr & RCC_CSR_PORRSTF)  ? " POR"  : "",
+                     (csr & RCC_CSR_PINRSTF)  ? " PIN"  : "",
+                     (csr & RCC_CSR_BORRSTF)  ? " BOR"  : "");
+    uart_write(line, (uint16_t)n);
+    __HAL_RCC_CLEAR_RESET_FLAGS();   /* 다음 리셋 원인만 남도록 지움 */
+  }
 
-#if ENABLE_QUEUE_DEMO
+  /* I2C 버스 스캔: 센서 응답만 먼저 확인 (실제 초기화는 SensorTask에서) */
+  {
+    char line[64];
+    HAL_StatusTypeDef hs = HAL_I2C_IsDeviceReady(&hi2c1, VL_I2C_ADDR, 3, 10);
+    int n = snprintf(line, sizeof line, "[I2C] VL53L0X @0x29: %s\r\n",
+                     hs == HAL_OK ? "ACK" : "NO RESPONSE");
+    uart_write(line, (uint16_t)n);
+  }
+
+  uartMutex   = osMutexNew(&uartMutexAttr);
   sensorQueue = osMessageQueueNew(QUEUE_LEN, sizeof(SensorSample_t), &queueAttr);
-  prodTask    = osThreadNew(ProducerTask, NULL, &prodAttr);
+  ledTask     = osThreadNew(LedTask, NULL, &ledAttr);
+  hbTask      = osThreadNew(HeartbeatTask, NULL, &hbAttr);
+  sensTask    = osThreadNew(SensorTask, NULL, &sensAttr);
   consTask    = osThreadNew(ConsumerTask, NULL, &consAttr);
-  if (sensorQueue == NULL || prodTask == NULL || consTask == NULL) Error_Handler();
-#endif
 
   /* NULL이면 대부분 FreeRTOS heap 부족 -> TOTAL_HEAP_SIZE 확인 */
-  if (uartMutex == NULL || ledTask == NULL || hbTask == NULL) Error_Handler();
+  if (uartMutex == NULL || sensorQueue == NULL ||
+      ledTask == NULL || hbTask == NULL || sensTask == NULL || consTask == NULL) {
+    Error_Handler();
+  }
 }
