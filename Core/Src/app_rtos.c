@@ -9,6 +9,8 @@
  *    -> 재시도 횟수 제한 soft reset(vl_soft_reset) 직접 구현
  *  - PA6(MK_SENS)/PA7(MK_CONS): 로직 분석기용 태스크 실행 구간 마커 (CubeMX 라벨 있을 때만)
  *
+ * Day 2 / 목표 4: 큐 정책 스위치 (QUEUE_POLICY, QUEUE_LEN, CONSUMER_DELAY_MS), 소비 시 age 출력
+ *
  * Day 2 / 3단계: I2C 에러 처리
  *  - 센서 상태 머신: INIT -> RUN -> ERROR(backoff) -> INIT ...
  *  - RUN 중 연속 VL_ERR_THRESHOLD회 실패 -> ERROR (1회성 glitch는 흡수)
@@ -43,6 +45,16 @@ extern I2C_HandleTypeDef hi2c1;
 #define HB_PERIOD_MS        1000
 #define SENSOR_PERIOD_MS    200
 #define QUEUE_LEN           8
+
+/* 큐가 가득 찼을 때의 정책 (목표 4 비교 실험)
+ *  QP_DROP_NEWEST : 새 샘플을 버림 (1일차 방식). 큐에 오래된 값이 고여 age가 커짐
+ *  QP_DROP_OLDEST : 가장 오래된 샘플을 꺼내 버리고 새 샘플을 넣음 (최신 값 우선)
+ *  QUEUE_LEN=1 + QP_DROP_OLDEST = 메일박스 (항상 가장 최근 1개만 유지) */
+#define QP_DROP_NEWEST      0
+#define QP_DROP_OLDEST      1
+#define QUEUE_POLICY        QP_DROP_OLDEST
+
+#define CONSUMER_DELAY_MS   0     /* 스트레스 실험: 1000 -> 소비 1/s < 생산 5/s */
 
 #define VL_I2C_ADDR         0x52      /* 8-bit (7-bit 0x29) */
 #define VL_TIMING_BUDGET_US 33000U    /* ST 기본값. 200ms 주기 안에 여유 충분 */
@@ -355,6 +367,23 @@ static void HeartbeatTask(void *arg)
   }
 }
 
+/* 큐 넣기. 정책에 따라 가득 찼을 때 새 값 또는 가장 오래된 값을 버린다.
+ * DROP_OLDEST: Get(비움) -> Put 사이에 더 높은 우선순위인 Consumer가 끼어들어 하나를 가져가도
+ * 그건 '소비'라 손실이 아니다. 두 번째 Put은 실패할 수 없지만 방어적으로 카운트한다. */
+static void queue_push(const SensorSample_t *s)
+{
+  if (osMessageQueuePut(sensorQueue, s, 0U, 0U) == osOK) return;
+#if QUEUE_POLICY == QP_DROP_OLDEST
+  {
+    SensorSample_t old;
+    if (osMessageQueueGet(sensorQueue, &old, NULL, 0U) == osOK) dropCount++;
+    if (osMessageQueuePut(sensorQueue, s, 0U, 0U) != osOK) dropCount++;
+  }
+#else
+  dropCount++;
+#endif
+}
+
 static void vl_set_state(VlState_t s)
 {
   if (vlState != s) {
@@ -425,9 +454,7 @@ static void SensorTask(void *arg)
         s.range_status = m.RangeStatus;
         s.meas_ms      = (uint8_t)(dt > 255U ? 255U : dt);
 
-        if (osMessageQueuePut(sensorQueue, &s, 0U, 0U) != osOK) {
-          dropCount++;
-        }
+        queue_push(&s);
 #if FAULT_INJECT_EVERY
         if (s.seq != 0U && (s.seq % FAULT_INJECT_EVERY) == 0U) {
           static uint32_t fiCount;
@@ -486,13 +513,19 @@ static void ConsumerTask(void *arg)
 
   for (;;) {
     if (osMessageQueueGet(sensorQueue, &s, NULL, osWaitForever) == osOK) {
+      /* age: 측정 시작(tick)부터 소비자가 꺼낸 시점까지. 로거가 보여주는 값이 얼마나 낡았는지 */
+      uint32_t age = osKernelGetTickCount() - s.tick;
       MK_CONS_HI();
-      uart_printf("[DATA] seq=%lu t=%lu dist=%u mm st=%u sig=%u kcps meas=%u ms\r\n",
+      uart_printf("[DATA] seq=%lu t=%lu dist=%u mm st=%u sig=%u kcps meas=%u ms age=%lu ms\r\n",
                   (unsigned long)s.seq, (unsigned long)s.tick,
                   (unsigned)s.dist_mm, (unsigned)s.range_status,
-                  (unsigned)s.signal_kcps, (unsigned)s.meas_ms);
+                  (unsigned)s.signal_kcps, (unsigned)s.meas_ms,
+                  (unsigned long)age);
       MK_CONS_LO();
     }
+#if CONSUMER_DELAY_MS
+    osDelay(CONSUMER_DELAY_MS);
+#endif
   }
 }
 
@@ -535,6 +568,14 @@ void App_RTOS_Init(void)
                      (RCC->PLLCFGR & RCC_PLLCFGR_PLLSRC) ? "HSE" : "HSI",
                      (RCC->CR & RCC_CR_HSERDY) ? 1 : 0,
                      (RCC->CR & RCC_CR_HSEBYP) ? 1 : 0);
+    uart_write(line, (uint16_t)n);
+  }
+
+  {
+    char line[80];
+    int n = snprintf(line, sizeof line, "[CFG] queue=%s len=%u cons_delay=%u ms\r\n",
+                     (QUEUE_POLICY == QP_DROP_OLDEST) ? "DROP_OLDEST" : "DROP_NEWEST",
+                     (unsigned)QUEUE_LEN, (unsigned)CONSUMER_DELAY_MS);
     uart_write(line, (uint16_t)n);
   }
 
