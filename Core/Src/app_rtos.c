@@ -63,6 +63,13 @@ extern I2C_HandleTypeDef hi2c1;
 
 #define VL_ERR_THRESHOLD    3U        /* RUN -> ERROR 전환 연속 실패 횟수 */
 #define VL_MEAS_TIMEOUT_MS  100U      /* 측정 완료 대기 상한 (버짓 33ms의 약 3배) */
+/* 측정 시작 후 첫 data-ready 폴링까지 쉬는 시간 (0 = 기존: 바로 2ms 폴링)
+ * 버짓 33ms 전에는 결과가 나올 수 없으므로 그 전의 폴링은 버스만 점유한다.
+ * 버짓보다 작게 잡아야 함 (osDelay(n)은 최대 1틱 짧게 깨어날 수 있음 -> 여유 3ms) */
+#define VL_FIRST_POLL_MS    30U
+#if VL_FIRST_POLL_MS >= (VL_TIMING_BUDGET_US / 1000U)
+  #error "VL_FIRST_POLL_MS must be shorter than the timing budget"
+#endif
 #define VL_BACKOFF_MIN_MS   100U
 #define VL_BACKOFF_MAX_MS   2000U
 
@@ -275,8 +282,10 @@ static VL53L0X_Error vl_soft_reset(VL53L0X_DEV dev)
   return VL53L0X_ERROR_TIME_OUT;
 }
 
-/* single-shot 1회. ST PerformSingleRangingMeasurement와 같은 순서지만 완료 대기 시간을 제한.
- * (StartMeasurement 안의 start-bit 대기 루프는 delay 없는 I2C read라 수 ms 안에 끝남) */
+/* single-shot 1회. ST PerformSingleRangingMeasurement와 같은 순서지만
+ *  (1) 결과가 나올 수 없는 구간은 폴링하지 않고 osDelay로 양보 (VL_FIRST_POLL_MS)
+ *  (2) 완료 대기 상한을 VL_MEAS_TIMEOUT_MS로 제한 (ST 원본은 약 4초)
+ * StartMeasurement 안의 start-bit 대기 루프는 delay 없는 I2C read라 수 ms 안에 끝남. */
 static VL53L0X_Error vl_measure(VL53L0X_DEV dev, VL53L0X_RangingMeasurementData_t *m)
 {
   VL53L0X_Error st;
@@ -284,6 +293,10 @@ static VL53L0X_Error vl_measure(VL53L0X_DEV dev, VL53L0X_RangingMeasurementData_
   uint32_t t0 = osKernelGetTickCount();
 
   if ((st = VL53L0X_StartMeasurement(dev)) != VL53L0X_ERROR_NONE) return st;
+
+#if VL_FIRST_POLL_MS
+  osDelay(VL_FIRST_POLL_MS);
+#endif
 
   for (;;) {
     if ((st = VL53L0X_GetMeasurementDataReady(dev, &ready)) != VL53L0X_ERROR_NONE) return st;

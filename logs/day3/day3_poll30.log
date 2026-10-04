@@ -1,0 +1,468 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2026.10.05 08:34:52 =~=~=~=~=~=~=~=~=~=~=~=
+136 mm st=0 sig=695 kcps meas=37 ms age=37 ms
+[DATA] seq=4690 t=938208 dist=133 mm st=0 sig=710 kcps meas=37 ms age=37 ms
+[HB] tick=938413 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=4691 t=938408 dist=123 mm st=0 sig=617 kcps meas=37 ms age=37 ms
+[DATA] seq=4692 t=938608 dist=133 mm st=0 sig=664 kcps meas=37 ms age=37 ms
+[DATA] seq=4693 t=938808 dist=129 mm st=0 sig=656 kcps meas=37 ms age=37 ms
+[DATA] seq=4694 t=939008 dist=146 mm st=0 sig=687 kcps meas=37 ms age=37 ms
+[DATA] seq=4695 [DATA] seq=23 t=4808 dist=199 mm st=0 sig=531 kcps meas=38 ms age=38 ms
+[DATA] seq=24 t=5008 dist=182 mm st=0 sig=531 kcps meas=38 ms age=38 ms
+[HB] tick=5109 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=25 t=5208 dist=179 mm st=0 sig=617 kcps meas=38 ms age=38 ms
+[DATA] seq=26 t=5408 dist=176 mm st=0 sig=500 kcps meas=38 ms age=38 ms
+[DATA] seq=27 t=5608 dist=181 mm st=0 sig=585 kcps meas=38 ms age=38 ms
+[DATA] seq=28 t=5808 dist=175 mm st=0 sig=539 kcps meas=38 ms age=38 ms
+[DATA] seq=29 t=6008 dist=182 mm st=0 sig=546 kcps meas=38 ms age=38 ms
+[HB] tick=6114 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=30 t=6208 dist=193 mm st=0 sig=523 kcps meas=38 ms age=38 ms
+[DATA] seq=31 t=6408 dist=197 mm st=0 sig=562 kcps meas=38 ms age=38 ms
+[DATA] seq=32 t=6608 dist=176 mm st=0 sig=546 kcps meas=38 ms age=38 ms
+[DATA] seq=33 t=6808 dist=189 mm st=0 sig=578 kcps meas=38 ms age=38 ms
+[DATA] seq=34 t=7008 dist=182 mm st=0 sig=539 kcps meas=38 ms age=38 ms
+[HB] tick=7119 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=35 t=7208 dist=185 mm st=0 sig=515 kcps meas=38 ms age=38 ms
+[DATA] seq=36 t=7408 dist=183 mm st=0 sig=554 kcps meas=38 ms age=38 ms
+[DATA] seq=37 t=7608 dist=181 mm st=0 sig=539 kcps meas=38 ms age=38 ms
+[DATA] seq=38 t=7808 dist=205 mm st=0 sig=531 kcps meas=38 ms age=38 ms
+[DATA] seq=39 t=8008 dist=189 mm st=0 sig=539 kcps meas=38 ms age=38 ms
+[HB] tick=8124 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=40 t=8208 dist=193 mm st=0 sig=507 kcps meas=38 ms age=38 ms
+[DATA] seq=41 t=8408 dist=191 mm st=0 sig=515 kcps meas=38 ms age=38 ms
+[DATA] seq=42 t=8608 dist=184 mm st=0 sig=546 kcps meas=38 ms age=38 ms
+[DATA] seq=43 t=8808 dist=197 mm st=0 sig=523 kcps meas=38 ms age=38 ms
+[DATA] seq=44 t=9008 dist=202 mm st=0 sig=484 kcps meas=38 ms age=38 ms
+[HB] tick=9129 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[STK] min free bytes: LED=384 HB=1416 Sens=1132 Cons=1408
+[DATA] seq=45 t=9208 dist=190 mm st=0 sig=539 kcps meas=38 ms age=38 ms
+[DATA] seq=46 t=9408 dist=172 mm st=0 sig=570 kcps meas=38 ms age=38 ms
+[DATA] seq=47 t=9608 dist=173 mm st=0 sig=523 kcps meas=38 ms age=38 ms
+[DATA] seq=48 t=9808 dist=169 mm st=0 sig=554 kcps meas=38 ms age=38 ms
+[DATA] seq=49 t=10008 dist=201 mm st=0 sig=546 kcps meas=38 ms age=38 ms
+[HB] tick=10140 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=50 t=10208 dist=165 mm st=0 sig=578 kcps meas=38 ms age=38 ms
+[DATA] seq=51 t=10408 dist=156 mm st=0 sig=414 kcps meas=38 ms age=38 ms
+[DATA] seq=52 t=10608 dist=152 mm st=0 sig=531 kcps meas=38 ms age=38 ms
+[DATA] seq=53 t=10808 dist=170 mm st=0 sig=515 kcps meas=38 ms age=38 ms
+[DATA] seq=54 t=11008 dist=198 mm st=0 sig=492 kcps meas=38 ms age=38 ms
+[HB] tick=11145 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=55 t=11208 dist=165 mm st=0 sig=476 kcps meas=38 ms age=38 ms
+[DATA] seq=56 t=11408 dist=170 mm st=0 sig=460 kcps meas=38 ms age=38 ms
+[DATA] seq=57 t=11608 dist=159 mm st=0 sig=492 kcps meas=38 ms age=38 ms
+[DATA] seq=58 t=11808 dist=164 mm st=0 sig=515 kcps meas=38 ms age=38 ms
+[DATA] seq=59 t=12008 dist=148 mm st=0 sig=593 kcps meas=38 ms age=38 ms
+[HB] tick=12150 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=60 t=12208 dist=167 mm st=0 sig=484 kcps meas=38 ms age=38 ms
+[DATA] seq=61 t=12408 dist=183 mm st=0 sig=515 kcps meas=38 ms age=38 ms
+[DATA] seq=62 t=12608 dist=170 mm st=0 sig=523 kcps meas=38 ms age=38 ms
+[DATA] seq=63 t=12808 dist=171 mm st=0 sig=507 kcps meas=38 ms age=38 ms
+[DATA] seq=64 t=13008 dist=141 mm st=0 sig=468 kcps meas=38 ms age=38 ms
+[HB] tick=13155 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=65 t=13208 dist=165 mm st=0 sig=531 kcps meas=38 ms age=38 ms
+[DATA] seq=66 t=13408 dist=159 mm st=0 sig=515 kcps meas=38 ms age=38 ms
+[DATA] seq=67 t=13608 dist=173 mm st=0 sig=546 kcps meas=38 ms age=38 ms
+[DATA] seq=68 t=13808 dist=175 mm st=0 sig=476 kcps meas=38 ms age=38 ms
+[DATA] seq=69 t=14008 dist=171 mm st=0 sig=468 kcps meas=38 ms age=38 ms
+[HB] tick=14160 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[STK] min free bytes: LED=384 HB=1416 Sens=1132 Cons=1408
+[DATA] seq=70 t=14208 dist=187 mm st=0 sig=546 kcps meas=38 ms age=38 ms
+[DATA] seq=71 t=14408 dist=180 mm st=0 sig=515 kcps meas=38 ms age=38 ms
+[DATA] seq=72 t=14608 dist=158 mm st=0 sig=500 kcps meas=38 ms age=38 ms
+[DATA] seq=73 t=14808 dist=181 mm st=0 sig=460 kcps meas=38 ms age=38 ms
+[DATA] seq=74 t=15008 dist=156 mm st=0 sig=445 kcps meas=38 ms age=38 ms
+[HB] tick=15171 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=75 t=15208 dist=167 mm st=0 sig=546 kcps meas=38 ms age=38 ms
+[DATA] seq=76 t=15408 dist=154 mm st=0 sig=539 kcps meas=38 ms age=38 ms
+[DATA] seq=77 t=15608 dist=160 mm st=0 sig=515 kcps meas=38 ms age=38 ms
+[DATA] seq=78 t=15808 dist=180 mm st=0 sig=539 kcps meas=38 ms age=38 ms
+[DATA] seq=79 t=16008 dist=160 mm st=0 sig=531 kcps meas=38 ms age=38 ms
+[HB] tick=16176 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=80 t=16208 dist=175 mm st=0 sig=476 kcps meas=38 ms age=38 ms
+[DATA] seq=81 t=16408 dist=174 mm st=0 sig=460 kcps meas=38 ms age=38 ms
+[DATA] seq=82 t=16608 dist=180 mm st=0 sig=437 kcps meas=38 ms age=38 ms
+[DATA] seq=83 t=16808 dist=174 mm st=0 sig=539 kcps meas=38 ms age=38 ms
+[DATA] seq=84 t=17008 dist=152 mm st=0 sig=531 kcps meas=38 ms age=38 ms
+[HB] tick=17181 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=85 t=17208 dist=153 mm st=0 sig=531 kcps meas=38 ms age=38 ms
+[DATA] seq=86 t=17408 dist=164 mm st=0 sig=500 kcps meas=38 ms age=38 ms
+[DATA] seq=87 t=17608 dist=167 mm st=0 sig=523 kcps meas=38 ms age=38 ms
+[DATA] seq=88 t=17808 dist=139 mm st=0 sig=539 kcps meas=38 ms age=38 ms
+[DATA] seq=89 t=18008 dist=144 mm st=0 sig=468 kcps meas=38 ms age=38 ms
+[HB] tick=18186 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=90 t=18208 dist=148 mm st=0 sig=578 kcps meas=38 ms age=38 ms
+[DATA] seq=91 t=18408 dist=156 mm st=0 sig=570 kcps meas=38 ms age=38 ms
+[DATA] seq=92 t=18608 dist=146 mm st=0 sig=546 kcps meas=38 ms age=38 ms
+[DATA] seq=93 t=18808 dist=176 mm st=0 sig=492 kcps meas=38 ms age=38 ms
+[DATA] seq=94 t=19008 dist=179 mm st=0 sig=539 kcps meas=38 ms age=38 ms
+[HB] tick=19191 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[STK] min free bytes: LED=384 HB=1416 Sens=1132 Cons=1408
+[DATA] seq=95 t=19208 dist=154 mm st=0 sig=500 kcps meas=38 ms age=38 ms
+[DATA] seq=96 t=19408 dist=168 mm st=0 sig=500 kcps meas=38 ms age=38 ms
+[DATA] seq=97 t=19608 dist=161 mm st=0 sig=531 kcps meas=38 ms age=38 ms
+[DATA] seq=98 t=19808 dist=197 mm st=0 sig=554 kcps meas=38 ms age=38 ms
+[DATA] seq=99 t=20008 dist=176 mm st=0 sig=570 kcps meas=38 ms age=38 ms
+[HB] tick=20202 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=100 t=20208 dist=203 mm st=0 sig=523 kcps meas=38 ms age=38 ms
+[DATA] seq=101 t=20408 dist=198 mm st=0 sig=523 kcps meas=38 ms age=38 ms
+[DATA] seq=102 t=20608 dist=177 mm st=0 sig=546 kcps meas=38 ms age=38 ms
+[DATA] seq=103 t=20808 dist=193 mm st=0 sig=539 kcps meas=38 ms age=38 ms
+[DATA] seq=104 t=21008 dist=182 mm st=0 sig=570 kcps meas=38 ms age=38 ms
+[HB] tick=21207 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=105 t=21208 dist=200 mm st=0 sig=515 kcps meas=38 ms age=38 ms
+[DATA] seq=106 t=21408 dist=157 mm st=0 sig=562 kcps meas=38 ms age=38 ms
+[DATA] seq=107 t=21608 dist=175 mm st=0 sig=492 kcps meas=38 ms age=38 ms
+[DATA] seq=108 t=21808 dist=159 mm st=0 sig=492 kcps meas=38 ms age=38 ms
+[DATA] seq=109 t=22008 dist=170 mm st=0 sig=500 kcps meas=38 ms age=38 ms
+[HB] tick=22215 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=110 t=22208 dist=171 mm st=0 sig=523 kcps meas=38 ms age=38 ms
+[DATA] seq=111 t=22408 dist=195 mm st=0 sig=445 kcps meas=38 ms age=38 ms
+[DATA] seq=112 t=22608 dist=172 mm st=0 sig=562 kcps meas=38 ms age=38 ms
+[DATA] seq=113 t=22808 dist=169 mm st=0 sig=476 kcps meas=38 ms age=38 ms
+[DATA] seq=114 t=23008 dist=192 mm st=0 sig=531 kcps meas=38 ms age=38 ms
+[HB] tick=23220 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=115 t=23208 dist=176 mm st=0 sig=523 kcps meas=38 ms age=38 ms
+[DATA] seq=116 t=23408 dist=183 mm st=0 sig=546 kcps meas=38 ms age=38 ms
+[DATA] seq=117 t=23608 dist=159 mm st=0 sig=453 kcps meas=38 ms age=38 ms
+[DATA] seq=118 t=23808 dist=171 mm st=0 sig=585 kcps meas=38 ms age=38 ms
+[DATA] seq=119 t=24008 dist=171 mm st=0 sig=546 kcps meas=38 ms age=38 ms
+[HB] tick=24225 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[STK] min free bytes: LED=384 HB=1416 Sens=1132 Cons=1408
+[DATA] seq=120 t=24208 dist=173 mm st=0 sig=492 kcps meas=38 ms age=38 ms
+[DATA] seq=121 t=24408 dist=184 mm st=0 sig=531 kcps meas=38 ms age=38 ms
+[DATA] seq=122 t=24608 dist=199 mm st=0 sig=609 kcps meas=38 ms age=38 ms
+[DATA] seq=123 t=24808 dist=173 mm st=0 sig=500 kcps meas=38 ms age=38 ms
+[DATA] seq=124 t=25008 dist=183 mm st=0 sig=531 kcps meas=38 ms age=38 ms
+[HB] tick=25236 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=125 t=25208 dist=188 mm st=0 sig=609 kcps meas=38 ms age=38 ms
+[DATA] seq=126 t=25408 dist=211 mm st=0 sig=546 kcps meas=38 ms age=38 ms
+[DATA] seq=127 t=25608 dist=186 mm st=0 sig=531 kcps meas=38 ms age=38 ms
+[DATA] seq=128 t=25808 dist=174 mm st=0 sig=523 kcps meas=38 ms age=38 ms
+[DATA] seq=129 t=26008 dist=202 mm st=0 sig=593 kcps meas=38 ms age=38 ms
+[HB] tick=26241 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=130 t=26208 dist=180 mm st=0 sig=585 kcps meas=38 ms age=38 ms
+[DATA] seq=131 t=26408 dist=178 mm st=0 sig=539 kcps meas=38 ms age=38 ms
+[DATA] seq=132 t=26608 dist=198 mm st=0 sig=546 kcps meas=38 ms age=38 ms
+[DATA] seq=133 t=26808 dist=180 mm st=0 sig=585 kcps meas=38 ms age=38 ms
+[DATA] seq=134 t=27008 dist=167 mm st=0 sig=546 kcps meas=38 ms age=38 ms
+[DATA] seq=135 t=27208 dist=178 mm st=0 sig=500 kcps meas=38 ms age=38 ms
+[HB] tick=27256 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=136 t=27408 dist=161 mm st=0 sig=476 kcps meas=38 ms age=38 ms
+[DATA] seq=137 t=27608 dist=183 mm st=0 sig=554 kcps meas=38 ms age=38 ms
+[DATA] seq=138 t=27808 dist=188 mm st=0 sig=539 kcps meas=38 ms age=38 ms
+[DATA] seq=139 t=28008 dist=186 mm st=0 sig=523 kcps meas=38 ms age=38 ms
+[DATA] seq=140 t=28208 dist=183 mm st=0 sig=554 kcps meas=38 ms age=38 ms
+[HB] tick=28261 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=141 t=28408 dist=179 mm st=0 sig=578 kcps meas=38 ms age=38 ms
+[DATA] seq=142 t=28608 dist=192 mm st=0 sig=570 kcps meas=38 ms age=38 ms
+[DATA] seq=143 t=28808 dist=204 mm st=0 sig=562 kcps meas=38 ms age=38 ms
+[DATA] seq=144 t=29008 dist=190 mm st=0 sig=515 kcps meas=38 ms age=38 ms
+[DATA] seq=145 t=29208 dist=176 mm st=0 sig=640 kcps meas=38 ms age=38 ms
+[HB] tick=29266 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[STK] min free bytes: LED=384 HB=1416 Sens=1132 Cons=1408
+[DATA] seq=146 t=29408 dist=192 mm st=0 sig=562 kcps meas=38 ms age=38 ms
+[DATA] seq=147 t=29608 dist=196 mm st=0 sig=539 kcps meas=38 ms age=38 ms
+[DATA] seq=148 t=29808 dist=181 mm st=0 sig=500 kcps meas=38 ms age=38 ms
+[DATA] seq=149 t=30008 dist=182 mm st=0 sig=546 kcps meas=38 ms age=38 ms
+[DATA] seq=150 t=30208 dist=211 mm st=0 sig=515 kcps meas=38 ms age=38 ms
+[HB] tick=30277 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=151 t=30408 dist=185 mm st=0 sig=562 kcps meas=38 ms age=38 ms
+[DATA] seq=152 t=30608 dist=179 mm st=0 sig=515 kcps meas=38 ms age=38 ms
+[DATA] seq=153 t=30808 dist=175 mm st=0 sig=585 kcps meas=38 ms age=38 ms
+[DATA] seq=154 t=31008 dist=183 mm st=0 sig=539 kcps meas=38 ms age=38 ms
+[DATA] seq=155 t=31208 dist=216 mm st=0 sig=523 kcps meas=38 ms age=38 ms
+[HB] tick=31282 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=156 t=31408 dist=186 mm st=0 sig=554 kcps meas=38 ms age=38 ms
+[DATA] seq=157 t=31608 dist=189 mm st=0 sig=554 kcps meas=38 ms age=38 ms
+[DATA] seq=158 t=31808 dist=179 mm st=0 sig=585 kcps meas=38 ms age=38 ms
+[DATA] seq=159 t=32008 dist=173 mm st=0 sig=507 kcps meas=38 ms age=38 ms
+[DATA] seq=160 t=32208 dist=199 mm st=0 sig=578 kcps meas=38 ms age=38 ms
+[HB] tick=32287 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=161 t=32408 dist=165 mm st=0 sig=484 kcps meas=38 ms age=38 ms
+[DATA] seq=162 t=32608 dist=183 mm st=0 sig=601 kcps meas=38 ms age=38 ms
+[DATA] seq=163 t=32808 dist=180 mm st=0 sig=539 kcps meas=38 ms age=38 ms
+[DATA] seq=164 t=33008 dist=192 mm st=0 sig=570 kcps meas=38 ms age=38 ms
+[DATA] seq=165 t=33208 dist=177 mm st=0 sig=515 kcps meas=38 ms age=38 ms
+[HB] tick=33292 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=166 t=33408 dist=163 mm st=0 sig=539 kcps meas=38 ms age=38 ms
+[DATA] seq=167 t=33608 dist=190 mm st=0 sig=562 kcps meas=38 ms age=38 ms
+[DATA] seq=168 t=33808 dist=166 mm st=0 sig=562 kcps meas=38 ms age=38 ms
+[DATA] seq=169 t=34008 dist=177 mm st=0 sig=625 kcps meas=38 ms age=38 ms
+[DATA] seq=170 t=34208 dist=161 mm st=0 sig=546 kcps meas=38 ms age=38 ms
+[HB] tick=34297 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[STK] min free bytes: LED=384 HB=1416 Sens=1132 Cons=1408
+[DATA] seq=171 t=34408 dist=177 mm st=0 sig=601 kcps meas=38 ms age=38 ms
+[DATA] seq=172 t=34608 dist=177 mm st=0 sig=500 kcps meas=38 ms age=38 ms
+[DATA] seq=173 t=34808 dist=183 mm st=0 sig=570 kcps meas=38 ms age=38 ms
+[DATA] seq=174 t=35008 dist=199 mm st=0 sig=546 kcps meas=38 ms age=38 ms
+[DATA] seq=175 t=35208 dist=177 mm st=0 sig=507 kcps meas=38 ms age=38 ms
+[HB] tick=35308 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=176 t=35408 dist=191 mm st=0 sig=500 kcps meas=38 ms age=38 ms
+[DATA] seq=177 t=35608 dist=183 mm st=0 sig=523 kcps meas=38 ms age=38 ms
+[DATA] seq=178 t=35808 dist=211 mm st=0 sig=578 kcps meas=38 ms age=38 ms
+[DATA] seq=179 t=36008 dist=185 mm st=0 sig=625 kcps meas=38 ms age=38 ms
+[DATA] seq=180 t=36208 dist=159 mm st=0 sig=515 kcps meas=38 ms age=38 ms
+[HB] tick=36313 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=181 t=36408 dist=204 mm st=0 sig=460 kcps meas=38 ms age=38 ms
+[DATA] seq=182 t=36608 dist=175 mm st=0 sig=531 kcps meas=38 ms age=38 ms
+[DATA] seq=183 t=36808 dist=180 mm st=0 sig=554 kcps meas=38 ms age=38 ms
+[DATA] seq=184 t=37008 dist=201 mm st=0 sig=507 kcps meas=38 ms age=38 ms
+[DATA] seq=185 t=37208 dist=177 mm st=0 sig=539 kcps meas=38 ms age=38 ms
+[HB] tick=37318 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=186 t=37408 dist=195 mm st=0 sig=515 kcps meas=38 ms age=38 ms
+[DATA] seq=187 t=37608 dist=201 mm st=0 sig=539 kcps meas=38 ms age=38 ms
+[DATA] seq=188 t=37808 dist=194 mm st=0 sig=531 kcps meas=38 ms age=38 ms
+[DATA] seq=189 t=38008 dist=223 mm st=0 sig=523 kcps meas=38 ms age=38 ms
+[DATA] seq=190 t=38208 dist=188 mm st=0 sig=554 kcps meas=38 ms age=38 ms
+[HB] tick=38323 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=191 t=38408 dist=174 mm st=0 sig=562 kcps meas=38 ms age=38 ms
+[DATA] seq=192 t=38608 dist=189 mm st=0 sig=609 kcps meas=38 ms age=38 ms
+[DATA] seq=193 t=38808 dist=170 mm st=0 sig=578 kcps meas=38 ms age=38 ms
+[DATA] seq=194 t=39008 dist=176 mm st=0 sig=539 kcps meas=38 ms age=38 ms
+[DATA] seq=195 t=39208 dist=166 mm st=0 sig=523 kcps meas=38 ms age=38 ms
+[HB] tick=39328 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[STK] min free bytes: LED=384 HB=1416 Sens=1132 Cons=1408
+[DATA] seq=196 t=39408 dist=215 mm st=0 sig=523 kcps meas=38 ms age=38 ms
+[DATA] seq=197 t=39608 dist=188 mm st=0 sig=562 kcps meas=38 ms age=38 ms
+[DATA] seq=198 t=39808 dist=204 mm st=0 sig=523 kcps meas=38 ms age=38 ms
+[DATA] seq=199 t=40008 dist=205 mm st=0 sig=546 kcps meas=38 ms age=38 ms
+[DATA] seq=200 t=40208 dist=189 mm st=0 sig=484 kcps meas=38 ms age=38 ms
+[HB] tick=40339 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=201 t=40408 dist=181 mm st=0 sig=445 kcps meas=38 ms age=38 ms
+[DATA] seq=202 t=40608 dist=197 mm st=0 sig=523 kcps meas=38 ms age=38 ms
+[DATA] seq=203 t=40808 dist=206 mm st=0 sig=523 kcps meas=38 ms age=38 ms
+[DATA] seq=204 t=41008 dist=206 mm st=0 sig=539 kcps meas=38 ms age=38 ms
+[DATA] seq=205 t=41208 dist=212 mm st=0 sig=523 kcps meas=38 ms age=38 ms
+[HB] tick=41344 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=206 t=41408 dist=187 mm st=0 sig=554 kcps meas=38 ms age=38 ms
+[DATA] seq=207 t=41608 dist=167 mm st=0 sig=484 kcps meas=38 ms age=38 ms
+[DATA] seq=208 t=41808 dist=204 mm st=0 sig=492 kcps meas=38 ms age=38 ms
+[DATA] seq=209 t=42008 dist=164 mm st=0 sig=531 kcps meas=38 ms age=38 ms
+[DATA] seq=210 t=42208 dist=204 mm st=0 sig=500 kcps meas=38 ms age=38 ms
+[HB] tick=42349 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=211 t=42408 dist=192 mm st=0 sig=554 kcps meas=38 ms age=38 ms
+[DATA] seq=212 t=42608 dist=175 mm st=0 sig=484 kcps meas=38 ms age=38 ms
+[DATA] seq=213 t=42808 dist=177 mm st=0 sig=539 kcps meas=38 ms age=38 ms
+[DATA] seq=214 t=43008 dist=161 mm st=0 sig=476 kcps meas=38 ms age=38 ms
+[DATA] seq=215 t=43208 dist=189 mm st=0 sig=562 kcps meas=38 ms age=38 ms
+[HB] tick=43354 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=216 t=43408 dist=175 mm st=0 sig=570 kcps meas=38 ms age=38 ms
+[DATA] seq=217 t=43608 dist=188 mm st=0 sig=460 kcps meas=38 ms age=38 ms
+[DATA] seq=218 t=43808 dist=192 mm st=0 sig=562 kcps meas=38 ms age=38 ms
+[DATA] seq=219 t=44008 dist=199 mm st=0 sig=593 kcps meas=38 ms age=38 ms
+[DATA] seq=220 t=44208 dist=165 mm st=0 sig=554 kcps meas=38 ms age=38 ms
+[HB] tick=44359 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[STK] min free bytes: LED=384 HB=1416 Sens=1132 Cons=1408
+[DATA] seq=221 t=44408 dist=192 mm st=0 sig=585 kcps meas=38 ms age=38 ms
+[DATA] seq=222 t=44608 dist=167 mm st=0 sig=507 kcps meas=38 ms age=38 ms
+[DATA] seq=223 t=44808 dist=159 mm st=0 sig=531 kcps meas=38 ms age=38 ms
+[DATA] seq=224 t=45008 dist=189 mm st=0 sig=546 kcps meas=38 ms age=38 ms
+[DATA] seq=225 t=45208 dist=166 mm st=0 sig=562 kcps meas=38 ms age=38 ms
+[HB] tick=45370 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=226 t=45408 dist=164 mm st=0 sig=617 kcps meas=38 ms age=38 ms
+[DATA] seq=227 t=45608 dist=181 mm st=0 sig=539 kcps meas=38 ms age=38 ms
+[DATA] seq=228 t=45808 dist=180 mm st=0 sig=484 kcps meas=38 ms age=38 ms
+[DATA] seq=229 t=46008 dist=189 mm st=0 sig=531 kcps meas=38 ms age=38 ms
+[DATA] seq=230 t=46208 dist=171 mm st=0 sig=468 kcps meas=38 ms age=38 ms
+[HB] tick=46375 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=231 t=46408 dist=176 mm st=0 sig=507 kcps meas=38 ms age=38 ms
+[DATA] seq=232 t=46608 dist=161 mm st=0 sig=468 kcps meas=38 ms age=38 ms
+[DATA] seq=233 t=46808 dist=148 mm st=0 sig=531 kcps meas=38 ms age=38 ms
+[DATA] seq=234 t=47008 dist=163 mm st=0 sig=453 kcps meas=38 ms age=38 ms
+[DATA] seq=235 t=47208 dist=158 mm st=0 sig=531 kcps meas=38 ms age=38 ms
+[HB] tick=47380 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=236 t=47408 dist=188 mm st=0 sig=523 kcps meas=38 ms age=38 ms
+[DATA] seq=237 t=47608 dist=180 mm st=0 sig=554 kcps meas=38 ms age=38 ms
+[DATA] seq=238 t=47808 dist=182 mm st=0 sig=500 kcps meas=38 ms age=38 ms
+[DATA] seq=239 t=48008 dist=163 mm st=0 sig=531 kcps meas=38 ms age=38 ms
+[DATA] seq=240 t=48208 dist=175 mm st=0 sig=390 kcps meas=38 ms age=38 ms
+[HB] tick=48385 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=241 t=48408 dist=162 mm st=0 sig=492 kcps meas=38 ms age=38 ms
+[DATA] seq=242 t=48608 dist=150 mm st=0 sig=515 kcps meas=38 ms age=38 ms
+[DATA] seq=243 t=48808 dist=172 mm st=0 sig=554 kcps meas=38 ms age=38 ms
+[DATA] seq=244 t=49008 dist=181 mm st=0 sig=484 kcps meas=38 ms age=38 ms
+[DATA] seq=245 t=49208 dist=187 mm st=0 sig=539 kcps meas=38 ms age=38 ms
+[HB] tick=49390 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[STK] min free bytes: LED=384 HB=1416 Sens=1132 Cons=1408
+[DATA] seq=246 t=49408 dist=191 mm st=0 sig=562 kcps meas=38 ms age=38 ms
+[DATA] seq=247 t=49608 dist=170 mm st=0 sig=546 kcps meas=38 ms age=38 ms
+[DATA] seq=248 t=49808 dist=185 mm st=0 sig=484 kcps meas=38 ms age=38 ms
+[DATA] seq=249 t=50008 dist=148 mm st=0 sig=523 kcps meas=38 ms age=38 ms
+[DATA] seq=250 t=50208 dist=162 mm st=0 sig=507 kcps meas=38 ms age=38 ms
+[HB] tick=50401 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=251 t=50408 dist=175 mm st=0 sig=523 kcps meas=38 ms age=38 ms
+[DATA] seq=252 t=50608 dist=151 mm st=0 sig=500 kcps meas=38 ms age=38 ms
+[DATA] seq=253 t=50808 dist=149 mm st=0 sig=507 kcps meas=38 ms age=38 ms
+[DATA] seq=254 t=51008 dist=172 mm st=0 sig=507 kcps meas=38 ms age=38 ms
+[DATA] seq=255 t=51208 dist=185 mm st=0 sig=531 kcps meas=38 ms age=38 ms
+[HB] tick=51406 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=256 t=51408 dist=168 mm st=0 sig=507 kcps meas=38 ms age=38 ms
+[DATA] seq=257 t=51608 dist=182 mm st=0 sig=507 kcps meas=38 ms age=38 ms
+[DATA] seq=258 t=51808 dist=184 mm st=0 sig=578 kcps meas=38 ms age=38 ms
+[DATA] seq=259 t=52008 dist=157 mm st=0 sig=492 kcps meas=38 ms age=38 ms
+[DATA] seq=260 t=52208 dist=174 mm st=0 sig=507 kcps meas=38 ms age=38 ms
+[HB] tick=52414 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=261 t=52408 dist=178 mm st=0 sig=507 kcps meas=38 ms age=38 ms
+[DATA] seq=262 t=52608 dist=200 mm st=0 sig=484 kcps meas=38 ms age=38 ms
+[DATA] seq=263 t=52808 dist=156 mm st=0 sig=578 kcps meas=38 ms age=38 ms
+[DATA] seq=264 t=53008 dist=181 mm st=0 sig=554 kcps meas=38 ms age=38 ms
+[DATA] seq=265 t=53208 dist=205 mm st=0 sig=570 kcps meas=38 ms age=38 ms
+[HB] tick=53419 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=266 t=53408 dist=204 mm st=0 sig=546 kcps meas=38 ms age=38 ms
+[DATA] seq=267 t=53608 dist=177 mm st=0 sig=531 kcps meas=38 ms age=38 ms
+[DATA] seq=268 t=53808 dist=187 mm st=0 sig=546 kcps meas=38 ms age=38 ms
+[DATA] seq=269 t=54008 dist=159 mm st=0 sig=539 kcps meas=38 ms age=38 ms
+[DATA] seq=270 t=54208 dist=195 mm st=0 sig=570 kcps meas=38 ms age=38 ms
+[HB] tick=54424 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[STK] min free bytes: LED=384 HB=1416 Sens=1132 Cons=1408
+[DATA] seq=271 t=54408 dist=179 mm st=0 sig=437 kcps meas=38 ms age=38 ms
+[DATA] seq=272 t=54608 dist=192 mm st=0 sig=531 kcps meas=38 ms age=38 ms
+[DATA] seq=273 t=54808 dist=185 mm st=0 sig=476 kcps meas=38 ms age=38 ms
+[DATA] seq=274 t=55008 dist=169 mm st=0 sig=531 kcps meas=38 ms age=38 ms
+[DATA] seq=275 t=55208 dist=187 mm st=0 sig=515 kcps meas=38 ms age=38 ms
+[HB] tick=55435 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=276 t=55408 dist=177 mm st=0 sig=523 kcps meas=38 ms age=38 ms
+[DATA] seq=277 t=55608 dist=164 mm st=0 sig=578 kcps meas=38 ms age=38 ms
+[DATA] seq=278 t=55808 dist=187 mm st=0 sig=562 kcps meas=38 ms age=38 ms
+[DATA] seq=279 t=56008 dist=183 mm st=0 sig=515 kcps meas=38 ms age=38 ms
+[DATA] seq=280 t=56208 dist=176 mm st=0 sig=531 kcps meas=38 ms age=38 ms
+[HB] tick=56440 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=281 t=56408 dist=167 mm st=0 sig=554 kcps meas=38 ms age=38 ms
+[DATA] seq=282 t=56608 dist=180 mm st=0 sig=531 kcps meas=38 ms age=38 ms
+[DATA] seq=283 t=56808 dist=194 mm st=0 sig=585 kcps meas=38 ms age=38 ms
+[DATA] seq=284 t=57008 dist=183 mm st=0 sig=515 kcps meas=38 ms age=38 ms
+[DATA] seq=285 t=57208 dist=183 mm st=0 sig=492 kcps meas=38 ms age=38 ms
+[DATA] seq=286 t=57408 dist=170 mm st=0 sig=531 kcps meas=38 ms age=38 ms
+[HB] tick=57455 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=287 t=57608 dist=197 mm st=0 sig=500 kcps meas=38 ms age=38 ms
+[DATA] seq=288 t=57808 dist=214 mm st=0 sig=539 kcps meas=38 ms age=38 ms
+[DATA] seq=289 t=58008 dist=183 mm st=0 sig=554 kcps meas=38 ms age=38 ms
+[DATA] seq=290 t=58208 dist=157 mm st=0 sig=468 kcps meas=38 ms age=38 ms
+[DATA] seq=291 t=58408 dist=200 mm st=0 sig=554 kcps meas=38 ms age=38 ms
+[HB] tick=58460 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=292 t=58608 dist=177 mm st=0 sig=539 kcps meas=38 ms age=38 ms
+[DATA] seq=293 t=58808 dist=157 mm st=0 sig=515 kcps meas=38 ms age=38 ms
+[DATA] seq=294 t=59008 dist=163 mm st=0 sig=554 kcps meas=38 ms age=38 ms
+[DATA] seq=295 t=59208 dist=183 mm st=0 sig=476 kcps meas=38 ms age=38 ms
+[DATA] seq=296 t=59408 dist=191 mm st=0 sig=531 kcps meas=38 ms age=38 ms
+[HB] tick=59465 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[STK] min free bytes: LED=384 HB=1416 Sens=1132 Cons=1408
+[DATA] seq=297 t=59608 dist=170 mm st=0 sig=554 kcps meas=38 ms age=38 ms
+[DATA] seq=298 t=59808 dist=172 mm st=0 sig=523 kcps meas=38 ms age=38 ms
+[DATA] seq=299 t=60008 dist=189 mm st=0 sig=492 kcps meas=38 ms age=38 ms
+[DATA] seq=300 t=60208 dist=177 mm st=0 sig=515 kcps meas=38 ms age=38 ms
+[DATA] seq=301 t=60408 dist=173 mm st=0 sig=562 kcps meas=38 ms age=38 ms
+[HB] tick=60476 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=302 t=60608 dist=156 mm st=0 sig=539 kcps meas=38 ms age=38 ms
+[DATA] seq=303 t=60808 dist=175 mm st=0 sig=515 kcps meas=38 ms age=38 ms
+[DATA] seq=304 t=61008 dist=184 mm st=0 sig=492 kcps meas=38 ms age=38 ms
+[DATA] seq=305 t=61208 dist=156 mm st=0 sig=515 kcps meas=38 ms age=38 ms
+[DATA] seq=306 t=61408 dist=190 mm st=0 sig=515 kcps meas=38 ms age=38 ms
+[HB] tick=61481 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=307 t=61608 dist=177 mm st=0 sig=554 kcps meas=38 ms age=38 ms
+[DATA] seq=308 t=61808 dist=187 mm st=0 sig=539 kcps meas=38 ms age=38 ms
+[DATA] seq=309 t=62008 dist=193 mm st=0 sig=539 kcps meas=38 ms age=38 ms
+[DATA] seq=310 t=62208 dist=197 mm st=0 sig=539 kcps meas=38 ms age=38 ms
+[DATA] seq=311 t=62408 dist=180 mm st=0 sig=585 kcps meas=38 ms age=38 ms
+[HB] tick=62486 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=312 t=62608 dist=189 mm st=0 sig=570 kcps meas=38 ms age=38 ms
+[DATA] seq=313 t=62808 dist=174 mm st=0 sig=531 kcps meas=38 ms age=38 ms
+[DATA] seq=314 t=63008 dist=164 mm st=0 sig=570 kcps meas=38 ms age=38 ms
+[DATA] seq=315 t=63208 dist=157 mm st=0 sig=593 kcps meas=38 ms age=38 ms
+[DATA] seq=316 t=63408 dist=180 mm st=0 sig=539 kcps meas=38 ms age=38 ms
+[HB] tick=63491 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=317 t=63608 dist=165 mm st=0 sig=507 kcps meas=38 ms age=38 ms
+[DATA] seq=318 t=63808 dist=160 mm st=0 sig=492 kcps meas=38 ms age=38 ms
+[DATA] seq=319 t=64008 dist=191 mm st=0 sig=554 kcps meas=38 ms age=38 ms
+[DATA] seq=320 t=64208 dist=192 mm st=0 sig=515 kcps meas=38 ms age=38 ms
+[DATA] seq=321 t=64408 dist=191 mm st=0 sig=492 kcps meas=38 ms age=38 ms
+[HB] tick=64496 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[STK] min free bytes: LED=384 HB=1416 Sens=1132 Cons=1408
+[DATA] seq=322 t=64608 dist=187 mm st=0 sig=539 kcps meas=38 ms age=38 ms
+[DATA] seq=323 t=64808 dist=178 mm st=0 sig=570 kcps meas=38 ms age=38 ms
+[DATA] seq=324 t=65008 dist=197 mm st=0 sig=523 kcps meas=38 ms age=38 ms
+[DATA] seq=325 t=65208 dist=184 mm st=0 sig=515 kcps meas=38 ms age=38 ms
+[DATA] seq=326 t=65408 dist=178 mm st=0 sig=507 kcps meas=38 ms age=38 ms
+[HB] tick=65507 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=327 t=65608 dist=182 mm st=0 sig=578 kcps meas=38 ms age=38 ms
+[DATA] seq=328 t=65808 dist=176 mm st=0 sig=539 kcps meas=38 ms age=38 ms
+[DATA] seq=329 t=66008 dist=188 mm st=0 sig=585 kcps meas=38 ms age=38 ms
+[DATA] seq=330 t=66208 dist=194 mm st=0 sig=523 kcps meas=38 ms age=38 ms
+[DATA] seq=331 t=66408 dist=188 mm st=0 sig=515 kcps meas=38 ms age=38 ms
+[HB] tick=66512 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=332 t=66608 dist=170 mm st=0 sig=578 kcps meas=38 ms age=38 ms
+[DATA] seq=333 t=66808 dist=139 mm st=0 sig=562 kcps meas=38 ms age=38 ms
+[DATA] seq=334 t=67008 dist=164 mm st=0 sig=554 kcps meas=38 ms age=38 ms
+[DATA] seq=335 t=67208 dist=177 mm st=0 sig=578 kcps meas=38 ms age=38 ms
+[DATA] seq=336 t=67408 dist=190 mm st=0 sig=554 kcps meas=38 ms age=38 ms
+[HB] tick=67517 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=337 t=67608 dist=177 mm st=0 sig=531 kcps meas=38 ms age=38 ms
+[DATA] seq=338 t=67808 dist=201 mm st=0 sig=523 kcps meas=38 ms age=38 ms
+[DATA] seq=339 t=68008 dist=203 mm st=0 sig=492 kcps meas=38 ms age=38 ms
+[DATA] seq=340 t=68208 dist=179 mm st=0 sig=531 kcps meas=38 ms age=38 ms
+[DATA] seq=341 t=68408 dist=180 mm st=0 sig=500 kcps meas=38 ms age=38 ms
+[HB] tick=68522 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=342 t=68608 dist=170 mm st=0 sig=546 kcps meas=38 ms age=38 ms
+[DATA] seq=343 t=68808 dist=199 mm st=0 sig=578 kcps meas=38 ms age=38 ms
+[DATA] seq=344 t=69008 dist=179 mm st=0 sig=531 kcps meas=38 ms age=38 ms
+[DATA] seq=345 t=69208 dist=170 mm st=0 sig=515 kcps meas=38 ms age=38 ms
+[DATA] seq=346 t=69408 dist=177 mm st=0 sig=578 kcps meas=38 ms age=38 ms
+[HB] tick=69527 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[STK] min free bytes: LED=384 HB=1416 Sens=1132 Cons=1408
+[DATA] seq=347 t=69608 dist=179 mm st=0 sig=515 kcps meas=38 ms age=38 ms
+[DATA] seq=348 t=69808 dist=145 mm st=0 sig=492 kcps meas=38 ms age=38 ms
+[DATA] seq=349 t=70008 dist=184 mm st=0 sig=578 kcps meas=38 ms age=38 ms
+[DATA] seq=350 t=70208 dist=206 mm st=0 sig=468 kcps meas=38 ms age=38 ms
+[DATA] seq=351 t=70408 dist=159 mm st=0 sig=531 kcps meas=38 ms age=38 ms
+[HB] tick=70538 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=352 t=70608 dist=170 mm st=0 sig=460 kcps meas=38 ms age=38 ms
+[DATA] seq=353 t=70808 dist=187 mm st=0 sig=546 kcps meas=38 ms age=38 ms
+[DATA] seq=354 t=71008 dist=148 mm st=0 sig=562 kcps meas=38 ms age=38 ms
+[DATA] seq=355 t=71208 dist=192 mm st=0 sig=609 kcps meas=38 ms age=38 ms
+[DATA] seq=356 t=71408 dist=155 mm st=0 sig=515 kcps meas=38 ms age=38 ms
+[HB] tick=71543 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=357 t=71608 dist=175 mm st=0 sig=539 kcps meas=38 ms age=38 ms
+[DATA] seq=358 t=71808 dist=175 mm st=0 sig=570 kcps meas=38 ms age=38 ms
+[DATA] seq=359 t=72008 dist=164 mm st=0 sig=546 kcps meas=38 ms age=38 ms
+[DATA] seq=360 t=72208 dist=179 mm st=0 sig=539 kcps meas=38 ms age=38 ms
+[DATA] seq=361 t=72408 dist=161 mm st=0 sig=460 kcps meas=38 ms age=38 ms
+[HB] tick=72548 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=362 t=72608 dist=182 mm st=0 sig=585 kcps meas=38 ms age=38 ms
+[DATA] seq=363 t=72808 dist=170 mm st=0 sig=492 kcps meas=38 ms age=38 ms
+[DATA] seq=364 t=73008 dist=170 mm st=0 sig=554 kcps meas=38 ms age=38 ms
+[DATA] seq=365 t=73208 dist=206 mm st=0 sig=570 kcps meas=38 ms age=38 ms
+[DATA] seq=366 t=73408 dist=158 mm st=0 sig=515 kcps meas=38 ms age=38 ms
+[HB] tick=73553 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=367 t=73608 dist=199 mm st=0 sig=484 kcps meas=38 ms age=38 ms
+[DATA] seq=368 t=73808 dist=192 mm st=0 sig=507 kcps meas=38 ms age=38 ms
+[DATA] seq=369 t=74008 dist=168 mm st=0 sig=539 kcps meas=38 ms age=38 ms
+[DATA] seq=370 t=74208 dist=165 mm st=0 sig=515 kcps meas=38 ms age=38 ms
+[DATA] seq=371 t=74408 dist=164 mm st=0 sig=484 kcps meas=38 ms age=38 ms
+[HB] tick=74558 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[STK] min free bytes: LED=384 HB=1416 Sens=1132 Cons=1408
+[DATA] seq=372 t=74608 dist=169 mm st=0 sig=578 kcps meas=38 ms age=38 ms
+[DATA] seq=373 t=74808 dist=188 mm st=0 sig=562 kcps meas=38 ms age=38 ms
+[DATA] seq=374 t=75008 dist=164 mm st=0 sig=593 kcps meas=38 ms age=38 ms
+[DATA] seq=375 t=75208 dist=156 mm st=0 sig=546 kcps meas=38 ms age=38 ms
+[DATA] seq=376 t=75408 dist=192 mm st=0 sig=531 kcps meas=38 ms age=38 ms
+[HB] tick=75569 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=377 t=75608 dist=134 mm st=0 sig=484 kcps meas=38 ms age=38 ms
+[DATA] seq=378 t=75808 dist=155 mm st=0 sig=546 kcps meas=38 ms age=38 ms
+[DATA] seq=379 t=76008 dist=197 mm st=0 sig=539 kcps meas=38 ms age=38 ms
+[DATA] seq=380 t=76208 dist=168 mm st=0 sig=539 kcps meas=38 ms age=38 ms
+[DATA] seq=381 t=76408 dist=156 mm st=0 sig=546 kcps meas=38 ms age=38 ms
+[HB] tick=76574 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=382 t=76608 dist=189 mm st=0 sig=492 kcps meas=38 ms age=38 ms
+[DATA] seq=383 t=76808 dist=180 mm st=0 sig=500 kcps meas=38 ms age=38 ms
+[DATA] seq=384 t=77008 dist=187 mm st=0 sig=523 kcps meas=38 ms age=38 ms
+[DATA] seq=385 t=77208 dist=169 mm st=0 sig=554 kcps meas=38 ms age=38 ms
+[DATA] seq=386 t=77408 dist=176 mm st=0 sig=562 kcps meas=38 ms age=38 ms
+[HB] tick=77579 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=387 t=77608 dist=189 mm st=0 sig=453 kcps meas=38 ms age=38 ms
+[DATA] seq=388 t=77808 dist=185 mm st=0 sig=492 kcps meas=38 ms age=38 ms
+[DATA] seq=389 t=78008 dist=185 mm st=0 sig=523 kcps meas=38 ms age=38 ms
+[DATA] seq=390 t=78208 dist=171 mm st=0 sig=484 kcps meas=38 ms age=38 ms
+[DATA] seq=391 t=78408 dist=215 mm st=0 sig=531 kcps meas=38 ms age=38 ms
+[HB] tick=78584 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=392 t=78608 dist=162 mm st=0 sig=531 kcps meas=38 ms age=38 ms
+[DATA] seq=393 t=78808 dist=178 mm st=0 sig=546 kcps meas=38 ms age=38 ms
+[DATA] 
