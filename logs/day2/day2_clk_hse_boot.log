@@ -1,0 +1,61 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2026.09.30 15:14:15 =~=~=~=~=~=~=~=~=~=~=~=
+[DATA] seq=142 t=28608 dist=94 mm st=0 sig=8960 kcps meas=37 ms
+[DATA] seq=143 t=28808 dist=92 mm st=0 sig=8945 kcps meas=37 ms
+[DATA] seq=144 t=29008 dist=94 mm st=0 sig=8992 kcps meas=37 ms
+[DATA] seq=145 t=29208 dist=94 mm st=0 sig=9023 kcps meas=37 ms
+[HB] tick=29270 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[STK] min free bytes: LED=384 HB=1416 Sens=1132 Cons=1424
+[DATA] seq=146 t=29408 dist=92 mm st=0 sig=8867 kcps meas=37 ms
+[DATA] seq=147 t=29608 dist=89 mm st=0 sig=8796 kcps meas=37 ms
+[DATA] seq=148 t=29808 dist=89 mm st=0 sig=8820 kcps meas=37 ms
+[DATA] seq=149 t=30008 dist=91 mm st=0 sig=8726 kcps meas=37 ms
+[DATA] seq=150 t=30208 dist=90 mm st=0 sig=8679 kcps meas=37 ms
+[HB] tick=30281 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=151 t=30408 dist=89 mm st=0 sig=8789 kcps meas=37 ms
+[DATA] seq=152 t=30608 dist=88 mm st=0 sig=8570 kcps meas=37 ms
+[DATA] seq=153 t=30808 dist=92 mm st=0 sig=8796 kcps meas=37 ms
+[DATA] seq=154 t=31008 dist=89 mm st=0 sig=8679 kcps meas=37 ms
+[DATA] seq=155 t=31208 dist=90 mm st=0 sig=8320 kcps meas=37 ms
+[HB] tick=31286 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=156 t=31408 dist=90 mm st=0 sig=8976 kcps meas=37 ms
+[DATA] seq=157 t=31608 dist=89 mm st=0 sig=8531 kcps meas=37 ms
+[DATA] seq=158 t=31808 dist=90 mm st=0 sig=8375 kcps meas=37 ms
+[DATA] seq=159 t=32008 dist=90 mm st=0 sig=7921 kcps meas=37 ms
+[DATA] seq=160 t=32208 dist=92 mm st=0 sig=7718 kcps meas=37 ms
+[HB] tick=32291 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=161 t=32408 dist=90 mm st=0 sig=7710 kcps meas=37 ms
+
+=== f446-rtos-logger day2 boot ===
+[RST] csr=0x04000000 PIN
+[CLK] sysclk=84000000 Hz sws=PLL pll_in=HSE hse_on=1 hse_byp=1
+[I2C] VL53L0X @0x29: ACK
+[HB] tick=1 vl=INIT q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[VL] init OK spad=3 aperture=1 vhv=23 phase=1
+[VL] state INIT -> RUN (tick=208)
+[DATA] seq=0 t=212 dist=93 mm st=0 sig=7328 kcps meas=37 ms
+[DATA] seq=1 t=408 dist=92 mm st=0 sig=8015 kcps meas=37 ms
+[DATA] seq=2 t=608 dist=94 mm st=0 sig=8171 kcps meas=37 ms
+[DATA] seq=3 t=808 dist=92 mm st=0 sig=8179 kcps meas=37 ms
+[DATA] seq=4 t=1008 dist=91 mm st=0 sig=8203 kcps meas=37 ms
+[HB] tick=1083 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=5 t=1208 dist=89 mm st=0 sig=8359 kcps meas=37 ms
+[DATA] seq=6 t=1408 dist=92 mm st=0 sig=8265 kcps meas=37 ms
+[DATA] seq=7 t=1608 dist=96 mm st=0 sig=8187 kcps meas=37 ms
+[DATA] seq=8 t=1808 dist=94 mm st=0 sig=8242 kcps meas=37 ms
+[DATA] seq=9 t=2008 dist=88 mm st=0 sig=8203 kcps meas=37 ms
+[HB] tick=2088 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=10 t=2208 dist=89 mm st=0 sig=8117 kcps meas=37 ms
+[DATA] seq=11 t=2408 dist=90 mm st=0 sig=8140 kcps meas=37 ms
+[DATA] seq=12 t=2608 dist=91 mm st=0 sig=8328 kcps meas=37 ms
+[DATA] seq=13 t=2808 dist=92 mm st=0 sig=8234 kcps meas=37 ms
+[DATA] seq=14 t=3008 dist=96 mm st=0 sig=8203 kcps meas=37 ms
+[HB] tick=3093 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[DATA] seq=15 t=3208 dist=91 mm st=0 sig=8226 kcps meas=37 ms
+[DATA] seq=16 t=3408 dist=95 mm st=0 sig=8203 kcps meas=37 ms
+[DATA] seq=17 t=3608 dist=95 mm st=0 sig=8296 kcps meas=37 ms
+[DATA] seq=18 t=3808 dist=91 mm st=0 sig=8125 kcps meas=37 ms
+[DATA] seq=19 t=4008 dist=94 mm st=0 sig=8203 kcps meas=37 ms
+[HB] tick=4098 vl=RUN q=0/8 drop=0 miss=0 err=0 last=0 rec=0
+[STK] min free bytes: LED=384 HB=1416 Sens=1132 Cons=1424
+[DATA] seq=20 t=4208 dist=95 mm st=0 sig=8289 kcps meas=37 ms
+[DATA] seq
